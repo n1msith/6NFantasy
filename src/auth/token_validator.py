@@ -2,6 +2,7 @@
 
 from datetime import datetime
 import jwt
+from jwt.exceptions import InvalidTokenError
 
 class TokenError(Exception):
     """Custom exception for token-related errors"""
@@ -53,7 +54,7 @@ def check_token_expiry(token: str) -> dict:
             'expiry_date': exp_date
         }
         
-    except jwt.InvalidTokenError:
+    except InvalidTokenError:
         return {
             'is_valid': False,
             'message': 'Invalid token format',
