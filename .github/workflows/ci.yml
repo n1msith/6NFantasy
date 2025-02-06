@@ -1,3 +1,5 @@
+#cy.yml
+
 name: Python Script CI
 
 on: [push, pull_request]
