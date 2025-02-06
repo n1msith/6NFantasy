@@ -3,8 +3,7 @@
 from datetime import datetime
 import jwt
 import traceback
-print(jwt.__version__)
-print(jwt.__file__)
+
 
 class TokenError(Exception):
     """Custom exception for token-related errors"""
