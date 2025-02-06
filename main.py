@@ -1,4 +1,8 @@
 #!/usr/bin/env python3
+print("Starting script...")
+import jwt
+print(jwt.__version__)
+print(jwt.__file__)
 
 """
 Six Nations Fantasy Rugby Stats Extractor
@@ -22,6 +26,7 @@ from config.settings import (
     get_input_filename,
     get_output_filename
 )
+
 
 def setup_directories():
     """Create necessary data directories if they don't exist"""
