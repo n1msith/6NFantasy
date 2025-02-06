@@ -23,12 +23,12 @@ jobs:
 
     - name: Create output directory
       run: mkdir -p data/output
-          
+
     - name: Run main script
       run: python main.py
 
     - name: Upload JSON output
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: stats-output
         path: data/output/*.json      
