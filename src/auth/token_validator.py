@@ -55,13 +55,14 @@ def check_token_expiry(token: str) -> dict:
             'expiry_date': exp_date
         }
         
-    #except PyJWTError:
-    #    return {
-    #        'is_valid': False,
-    #        'message': 'Invalid token format',
-    #        'expires_in': None,
-    #        'expiry_date': None
-    #    }
+    except PyJWTError:
+        return {
+            'is_valid': False,
+            'message': 'Invalid token format',
+            'expires_in': None,
+            'expiry_date': None
+        }
+    """
     except Exception as e:
         print(f"Full exception details:")
         traceback.print_exc()
@@ -71,7 +72,7 @@ def check_token_expiry(token: str) -> dict:
             'expires_in': None,
             'expiry_date': None
         }
-
+    """
 def validate_token(token: str) -> tuple[bool, str]:
     """
     Validate token format and expiration
