@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 print("Starting script...")
 import jwt
-print(jwt.__version__)
+print("JWT imported")
 print(jwt.__file__)
 
 """
