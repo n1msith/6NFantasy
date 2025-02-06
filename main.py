@@ -33,7 +33,7 @@ def main():
     try:
         # Ensure directories exist
         setup_directories()
-        
+        print(f"Token (first 10 chars): {API_TOKEN[:10] if API_TOKEN else 'No token found'}")
         # Check token validity
         if display_token_info(API_TOKEN):
             # Set which round to process
