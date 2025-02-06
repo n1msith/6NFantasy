@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-print("Starting script...")
-import jwt
-print("JWT imported")
-print(jwt.__file__)
-
 """
 Six Nations Fantasy Rugby Stats Extractor
 
