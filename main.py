@@ -12,8 +12,9 @@ Description:
 import json
 from pathlib import Path
 from src.auth.token_validator import display_token_info
-from src.processors.api_stats_extractor import analyze_six_nations
+from src.processors.api_stats_extractor import get_six_nations_stats
 from src.processors.fantasy_value_extractor import extract_fantasy_values, combine_with_api_data
+from analysis.analyse_stats import run_analysis
 from config.settings import (
     API_TOKEN, 
     RAW_DATA_DIR, 
@@ -37,26 +38,34 @@ def main():
         # Check token validity
         if display_token_info(API_TOKEN):
             # Set which round to process
-            matchday = 1
+            matchday = 2
+            extract_data = True
             
             # Extract API data
-            api_data = analyze_six_nations(extract_data=True, token=API_TOKEN, matchday=matchday)
+            round_stats = get_six_nations_stats(extract_data=extract_data, token=API_TOKEN, matchday=matchday)
             
             # Extract fantasy spreadsheet data
             input_file = Path(get_input_filename(matchday))
+            output_file = get_output_filename(matchday)
+            
             if input_file.exists():
                 fantasy_values = extract_fantasy_values(str(input_file))
                 
                 # Combine the data
-                combined_data = combine_with_api_data(api_data, fantasy_values)
+                combined_data = combine_with_api_data(round_stats, fantasy_values, matchday)
                 
                 # Save combined data
-                output_file = get_output_filename(matchday)
                 with open(output_file, 'w') as f:
                     json.dump(combined_data, f, indent=2)
                 print(f"Successfully saved combined data to {output_file}")
             else:
                 print(f"Warning: Fantasy values file not found at {input_file}")
+                with open(output_file, 'w') as f:
+                    json.dump(round_stats, f, indent=2)
+                print(f"Successfully saved combined data to {output_file}")                
+            
+            # run the plots
+            run_analysis()                
         
     except Exception as e:
         print(f"Error: {str(e)}")

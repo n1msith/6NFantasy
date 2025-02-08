@@ -114,18 +114,24 @@ def match_player_name(api_player_name: str, fantasy_names: List[str]) -> str:
     
     return None
 
-def combine_with_api_data(api_data: List[Dict[str, Any]],
-                           fantasy_values: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+def combine_with_api_data(api_data: Dict[str, Any],
+                         fantasy_values: List[Dict[str, Any]],
+                         round_number: int) -> Dict[str, Any]:
     """
-    Combine API data with fantasy values
+    Combine API data with fantasy values for a specific round
    
     Args:
-        api_data: List of player data from API (full squad)
+        api_data: Dictionary containing extraction_date, round, and players list
         fantasy_values: List of player fantasy values (selected players)
+        round_number: The round number to update
        
     Returns:
         Updated API data with fantasy values added
     """
+    # Verify we have the correct round
+    if api_data['round'] != round_number:
+        raise ValueError(f"API data is for round {api_data['round']}, but round {round_number} was requested")
+
     # Tracking variables
     total_fantasy_players = len(fantasy_values)
     combined_players = 0
@@ -133,18 +139,17 @@ def combine_with_api_data(api_data: List[Dict[str, Any]],
    
     # Create a copy of api_data to avoid modifying the original
     updated_api_data = api_data.copy()
-   
+    
     # Loop through fantasy names
     for fantasy_player in fantasy_values:
         # Try to find a matching player in API data
         matched_player = None
-        for api_player in updated_api_data:
-            #print(api_player['name'])
+        for api_player in updated_api_data['players']:
             matched_name = match_player_name(api_player['name'], [fantasy_player['name']])
             if matched_name:
                 matched_player = api_player
                 break
-        
+
         # Update player with fantasy value if matched
         if matched_player:
             matched_player['fantasy_value'] = fantasy_player['fantasy_value']
@@ -155,8 +160,9 @@ def combine_with_api_data(api_data: List[Dict[str, Any]],
             # Raise an exception if no match found to highlight the need for investigation
             #raise ValueError(f"No API player found for {fantasy_player['name']} - requires investigation")
             print(f"No API player found for {fantasy_player['name']} - requires investigation")
+            continue
             
-        if matched_player['position'] != fantasy_player['fantasy_position_group'] and fantasy_player['fantasy_position_group'] != "Subs":
+        if matched_player['position'].lower() != fantasy_player['fantasy_position_group'].lower() and fantasy_player['fantasy_position_group'] != "Subs":
             print(f"{matched_player['name']} out of position. Normally {matched_player['position']} but playing at {fantasy_player['fantasy_position_group']}")
    
     # Print summary of combination

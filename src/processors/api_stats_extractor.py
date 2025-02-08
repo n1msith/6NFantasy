@@ -8,7 +8,7 @@ from ..auth.token_validator import TokenError
 from ..api.client import extract_six_nations_stats
 from config.settings import get_output_filename
 
-def analyze_six_nations(
+def get_six_nations_stats(
     extract_data: bool = False, 
     token: Optional[str] = None,
     matchday: int = 1
@@ -34,6 +34,7 @@ def analyze_six_nations(
                 raise ValueError("Token required for data extraction. Please provide a valid token.")
             data = extract_six_nations_stats(token, matchday)
         else:
+            print("loading stats json")
             data_file = Path(get_output_filename(matchday))
             if not data_file.exists():
                 raise FileNotFoundError(

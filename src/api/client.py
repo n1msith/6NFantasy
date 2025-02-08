@@ -138,13 +138,15 @@ def extract_six_nations_stats(token: str, matchday: int = 1) -> List[Dict[str, A
                 "extraction_date": datetime.now().strftime("%Y-%m-%d"),
                 "round": matchday,
                 "players": [
-                    {**player, "round": matchday} for player in all_data
+                    #{**player, "round": matchday} for player in all_data
+                    {**player} for player in all_data
                 ]
             }
             
-            with open(output_file, 'w') as f:
-                json.dump(output_data, f, indent=2)
-            print(f"Successfully saved data for {len(all_data)} players to {output_file}")
+            # dont think we need the save here
+            #with open(output_file, 'w') as f:
+            #    json.dump(output_data, f, indent=2)
+            #print(f"Successfully saved data for {len(all_data)} players to {output_file}")
         else:
             raise ValueError("No data was collected")
 
@@ -163,4 +165,4 @@ def extract_six_nations_stats(token: str, matchday: int = 1) -> List[Dict[str, A
         print(f"\nUnexpected error: {str(e)}")
         raise
 
-    return all_data
+    return output_data
