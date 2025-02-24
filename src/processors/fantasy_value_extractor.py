@@ -159,7 +159,9 @@ def combine_with_api_data(api_data: Dict[str, Any],
             missed_players += 1
             # Raise an exception if no match found to highlight the need for investigation
             #raise ValueError(f"No API player found for {fantasy_player['name']} - requires investigation")
+            print("==========================================================================")
             print(f"No API player found for {fantasy_player['name']} - requires investigation")
+            print("==========================================================================")
             continue
             
         if matched_player['position'].lower() != fantasy_player['fantasy_position_group'].lower() and fantasy_player['fantasy_position_group'] != "Subs":

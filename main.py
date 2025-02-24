@@ -10,6 +10,7 @@ Description:
 """
 
 import json
+import argparse
 from pathlib import Path
 from src.auth.token_validator import display_token_info
 from src.processors.api_stats_extractor import get_six_nations_stats
@@ -29,30 +30,42 @@ def setup_directories():
     Path(RAW_DATA_DIR).mkdir(parents=True, exist_ok=True)
     Path(OUTPUT_DATA_DIR).mkdir(parents=True, exist_ok=True)
 
+def parse_arguments():
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(description='Six Nations Fantasy Rugby Stats Extractor')
+    parser.add_argument('--extract', 
+                       action='store_true',
+                       default=False,
+                       help='Set to true to extract new data from API')
+    parser.add_argument('--round',
+                       type=int,
+                       default=1,
+                       choices=range(1, 6),
+                       help='Specify which round to process (1-5)')
+    return parser.parse_args()
+
 def main():
     """Main entry point for the stats extraction"""
     try:
+        args = parse_arguments()
         # Ensure directories exist
         setup_directories()
         print(f"Token (first 10 chars): {API_TOKEN[:10] if API_TOKEN else 'No token found'}")
         # Check token validity
         if display_token_info(API_TOKEN):
-            # Set which round to process
-            matchday = 2
-            extract_data = True
             
-            # Extract API data
-            round_stats = get_six_nations_stats(extract_data=extract_data, token=API_TOKEN, matchday=matchday)
+            # Extract API data (optional based on args)
+            round_stats = get_six_nations_stats(extract_data=args.extract, token=API_TOKEN, matchday=args.round)
             
             # Extract fantasy spreadsheet data
-            input_file = Path(get_input_filename(matchday))
-            output_file = get_output_filename(matchday)
+            input_file = Path(get_input_filename(args.round))
+            output_file = get_output_filename(args.round)
             
             if input_file.exists():
                 fantasy_values = extract_fantasy_values(str(input_file))
                 
                 # Combine the data
-                combined_data = combine_with_api_data(round_stats, fantasy_values, matchday)
+                combined_data = combine_with_api_data(round_stats, fantasy_values, args.round)
                 
                 # Save combined data
                 with open(output_file, 'w') as f:
