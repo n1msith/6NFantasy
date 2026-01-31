@@ -8,7 +8,15 @@ from itertools import cycle
 import plotly.express as px
 import math
 
-def run_analysis(round=None):
+FIXTURES = {
+    1: [('France', 'Wales'), ('Scotland', 'Italy'), ('Ireland', 'England')],
+    2: [('Italy', 'Wales'), ('England', 'France'), ('Scotland', 'Ireland')],
+    3: [('Wales', 'Ireland'), ('England', 'Scotland'), ('Italy', 'France')],
+    4: [('Ireland', 'France'), ('Scotland', 'Wales'), ('England', 'Italy')],
+    5: [('Ireland', 'Italy'), ('England', 'Wales'), ('France', 'Scotland')],
+}
+
+def run_analysis(round=None, match=None, max_players_per_position=15):
     """
     Run all analysis visualizations for all available data
     """
@@ -24,12 +32,21 @@ def run_analysis(round=None):
         return
 
     # clean the data
-    df_cleaned = df_clean(df)
+    df_all_rounds = df_clean(df)
 
     # round filtering
     if round != None:
-        df_cleaned= df_cleaned[df_cleaned['round'] == round]
-    
+        df_cleaned = df_all_rounds[df_all_rounds['round'] == round]
+    else:
+        df_cleaned = df_all_rounds
+
+    # match filtering (requires round)
+    if match is not None and round is not None and round in FIXTURES:
+        fixture = FIXTURES[round][match - 1]
+        match_clubs = list(fixture)
+        df_cleaned = df_cleaned[df_cleaned['club'].isin(match_clubs)]
+        print(f"Filtered to match {match}: {fixture[0]} v {fixture[1]}")
+
     print("Unique round values in dataframe:", df_cleaned['round'].unique())
     print("Unique countries values in dataframe:", df_cleaned['club'].unique())
     print("Unique position values in dataframe:", df_cleaned['position'].unique())
@@ -82,10 +99,14 @@ def run_analysis(round=None):
         #df_filt = filter_by_players(df_filt, sub_list)
         
         df_filt = df_cleaned
-        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=30, is_ppm=True)
-        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=30, is_ppm=False)
+        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=True)
+        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=False)
         
         plot_points_distribution_by_category(df_cleaned)
+        plot_match_fantasy_comparison(df_cleaned)
+        plot_player_round_heatmap(df_cleaned, max_players=max_players_per_position)
+        plot_scatter_matrix(df_cleaned)
+        plot_value_profile(df_cleaned, max_players_per_position=max_players_per_position)
 
         # calculate points for a selected team based on previous rounds
         player_list1 = [
@@ -127,8 +148,8 @@ def load_json_data(data_dir):
             'name': player['name'],
             'club': player['club'],
             'position': player['position'],
-            'fantasy_value': player.get('fantasy_value', ''),
-            'fantasy_position_group': player.get('fantasy_position_group', ''),
+            'fantasy_value': player.get('fantasy_value', 0),
+            'fantasy_position_group': player.get('fantasy_position_group', 'Unknown'),
             **player['stats']  # Unpack all stats fields
         }
         for f in files
@@ -428,17 +449,19 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
    
     # Sort by overall PPM or total points depending on mode
     sort_column = 'overall_ppm' if is_ppm else 'total_player_points'
-    df_sorted = (df_filtered
-        .sort_values(['position', sort_column],
-                    ascending=[True, False])
+
+    # Get top N unique players per position (not rows)
+    top_players = (df_filtered
+        .sort_values(['position', sort_column], ascending=[True, False])
+        .drop_duplicates(subset='name')
         .groupby('position')
         .head(max_players_per_position)
-    )
-    df_sorted = (df_filtered
-    .sort_values(['position', sort_column, 'round'],
-                ascending=[True, False, True])
-    .groupby('position')
-    .head(max_players_per_position)
+    )['name']
+
+    # Keep all rows for those players, sorted for display
+    df_sorted = (df_filtered[df_filtered['name'].isin(top_players)]
+        .sort_values(['position', sort_column, 'round'],
+                    ascending=[True, False, True])
     )
 
     #print(df_sorted.head(20))
@@ -447,10 +470,17 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
 
     # Player labels - include relevant total stat and fantasy value
     stat_value = df_sorted[sort_column].round(1 if is_ppm else 0).astype(str)
-    all_labels = df_sorted.apply(
-        lambda row: f"{row['name']} ({row['position']}) [{stat_value.loc[row.name]}, ${fantasy_value_map.loc[row['name']]}]", 
-        axis=1
-    )
+    has_fantasy_values = fantasy_value_map.sum() > 0
+    if has_fantasy_values:
+        all_labels = df_sorted.apply(
+            lambda row: f"{row['name']} ({row['position']}) [{stat_value.loc[row.name]}, ${fantasy_value_map.loc[row['name']]}]",
+            axis=1
+        )
+    else:
+        all_labels = df_sorted.apply(
+            lambda row: f"{row['name']} ({row['position']}) [{stat_value.loc[row.name]}]",
+            axis=1
+        )
 
     round_points = df_sorted.points.sum()
     fantasy_values_rnd = math.ceil(df[df['round'] == fantasy_value_round]['fantasy_value'].sum())
@@ -494,12 +524,13 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
         barmode='stack',
         showlegend=True,
         legend_title='Scoring Categories',
-        height=max(600, len(df_sorted) * 12),
+        height=max(600, df_sorted['name'].nunique() * 20),
         margin=dict(l=250),
         yaxis={
             'autorange': 'reversed',
             'categoryorder': 'array',
-            'categoryarray': all_labels
+            'categoryarray': list(dict.fromkeys(all_labels)),
+            'dtick': 1
         }
     )
    
@@ -509,6 +540,324 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     fig.write_html(html_name)
     print(f"Written to {html_name}")
     return fig
+
+def plot_match_fantasy_comparison(df):
+    """
+    Grouped bar chart showing total fantasy points per team in each match,
+    so you can see which team 'won' the fantasy battle per fixture.
+    """
+    # Sum fantasy points per club per round
+    club_round_pts = df.groupby(['round', 'club'])['points'].sum().reset_index()
+
+    rounds_available = sorted(df['round'].unique())
+    fig = go.Figure()
+
+    x_labels = []
+    home_pts = []
+    away_pts = []
+    home_names = []
+    away_names = []
+
+    for rnd in rounds_available:
+        if rnd not in FIXTURES:
+            continue
+        round_data = club_round_pts[club_round_pts['round'] == rnd]
+        for home, away in FIXTURES[rnd]:
+            label = f"R{rnd}: {home} v {away}"
+            x_labels.append(label)
+            h_pts = round_data.loc[round_data['club'] == home, 'points'].sum()
+            a_pts = round_data.loc[round_data['club'] == away, 'points'].sum()
+            home_pts.append(h_pts)
+            away_pts.append(a_pts)
+            home_names.append(home)
+            away_names.append(away)
+
+    fig.add_trace(go.Bar(
+        x=x_labels,
+        y=home_pts,
+        name='Home',
+        text=[f"{n}<br>{p:.0f}" for n, p in zip(home_names, home_pts)],
+        textposition='inside',
+        marker_color='#1f77b4',
+    ))
+    fig.add_trace(go.Bar(
+        x=x_labels,
+        y=away_pts,
+        name='Away',
+        text=[f"{n}<br>{p:.0f}" for n, p in zip(away_names, away_pts)],
+        textposition='inside',
+        marker_color='#ff7f0e',
+    ))
+
+    fig.update_layout(
+        title='Fantasy Points: Head-to-Head per Match',
+        xaxis_title='Match',
+        yaxis_title='Total Fantasy Points',
+        barmode='group',
+        height=500,
+        width=1100,
+        margin=dict(b=120),
+        legend_title='Team',
+    )
+    fig.update_xaxes(tickangle=30)
+
+    html_name = 'match_fantasy_comparison.html'
+    fig.write_html(html_name)
+    print(f"Written to {html_name}")
+    return fig
+
+
+def plot_player_round_heatmap(df, max_players=50):
+    """
+    Heatmap with players on the Y axis and rounds on the X axis.
+    Colour intensity = fantasy points scored that round.
+    Players are grouped by position and sorted by total points descending.
+    Quickly reveals who is trending up, down, or staying consistent.
+    """
+    rounds = sorted(df['round'].unique())
+
+    # Pivot: one row per player, one column per round
+    pivot = df.pivot_table(index=['name', 'club', 'position'],
+                           columns='round', values='points',
+                           aggfunc='sum', fill_value=0)
+
+    pivot['total'] = pivot.sum(axis=1)
+    pivot = pivot[pivot['total'] > 0]
+    pivot = pivot.sort_values(['position', 'total'], ascending=[True, False])
+
+    # Limit per position to keep the chart readable
+    pivot = pivot.groupby('position').head(max_players)
+
+    # Build labels: "Player (Country, Position) [total]"
+    labels = [f"{name} ({club}, {pos}) [{int(row['total'])}]"
+              for (name, club, pos), row in pivot.iterrows()]
+
+    z = pivot[rounds].values
+    x_labels = [f"Round {r}" for r in rounds]
+
+    fig = go.Figure(data=go.Heatmap(
+        z=z,
+        x=x_labels,
+        y=labels,
+        colorscale='YlOrRd',
+        text=z.astype(int).astype(str),
+        texttemplate='%{text}',
+        textfont=dict(size=10),
+        colorbar=dict(title='Points'),
+        hoverongaps=False,
+    ))
+
+    fig.update_layout(
+        title='Player Fantasy Points per Round',
+        xaxis_title='Round',
+        yaxis_title='Player',
+        height=max(600, len(labels) * 18),
+        width=800,
+        margin=dict(l=300),
+        yaxis=dict(autorange='reversed', dtick=1),
+    )
+
+    html_name = 'player_round_heatmap.html'
+    fig.write_html(html_name)
+    print(f"Written to {html_name}")
+    return fig
+
+
+def plot_scatter_matrix(df, min_total_points=30):
+    """
+    Scatter plot matrix showing relationships between key stats.
+    Each point is a player, coloured by position.
+    Hover shows player name, club, and all stat values.
+    """
+    stat_cols = ['tries', 'tackles', 'meters_carried', 'defenders_beaten',
+                 'breakdown_steals', 'points']
+
+    agg_dict = {col: 'sum' for col in stat_cols}
+    agg_dict['fantasy_value'] = 'max'
+    agg_dict['club'] = 'first'
+
+    df_agg = df.groupby(['name', 'position']).agg(agg_dict).reset_index()
+    df_agg = df_agg[df_agg['points'] >= min_total_points]
+
+    # Readable axis labels
+    label_map = {
+        'tries': 'Tries',
+        'tackles': 'Tackles',
+        'meters_carried': 'Meters',
+        'defenders_beaten': 'Def Beaten',
+        'breakdown_steals': 'Turnovers',
+        'points': 'Fantasy Pts',
+    }
+    # Only include fantasy_value as a dimension if data is available
+    if df_agg['fantasy_value'].sum() > 0:
+        label_map['fantasy_value'] = 'Fantasy Value'
+    df_plot = df_agg.rename(columns=label_map)
+    display_cols = list(label_map.values())
+
+    # Hover text: player name + club
+    df_plot['hover'] = df_agg['name'] + ' (' + df_agg['club'] + ')'
+
+    fig = px.scatter_matrix(
+        df_plot,
+        dimensions=display_cols,
+        color='position',
+        hover_name='hover',
+        opacity=0.7,
+        size_max=8,
+    )
+
+    fig.update_traces(
+        diagonal_visible=False,
+        marker=dict(size=6),
+    )
+
+    fig.update_layout(
+        title='Player Stat Profiles — colour = position, hover for name',
+        height=1000,
+        width=1100,
+        margin=dict(l=60, r=40, t=60, b=40),
+    )
+
+    html_name = 'scatter_matrix.html'
+    fig.write_html(html_name)
+    print(f"Written to {html_name}")
+    return fig
+
+
+def plot_value_profile(df, max_players_per_position=15):
+    """
+    Horizontal stacked bar chart showing each player's fantasy points split into
+    'high-value' (tries, turnovers, MOTM, 50/22, lineout steals, drop goals, assists)
+    vs 'base' (tackles, meters, defenders beaten, offloads, conversions, penalties, scrum wins).
+    Sorted by points-per-dollar (total points / fantasy_value) to highlight efficient picks.
+    """
+    backs = ['Back Three', 'Centre', 'Fly-Half', 'Scrum-Half']
+
+    # Aggregate per player
+    stat_cols = ['tries', 'assists', 'conversions', 'penalties', 'drop_goals',
+                 'defenders_beaten', 'meters_carried', 'kick_50_22', 'tackles',
+                 'breakdown_steals', 'lineout_steals', 'penalties_conceded',
+                 'man_of_match', 'yellow_cards', 'red_cards', 'offloads', 'scrum_wins']
+
+    agg_dict = {col: 'sum' for col in stat_cols}
+    agg_dict['points'] = 'sum'
+    agg_dict['fantasy_value'] = 'max'
+    agg_dict['club'] = 'first'
+
+    df_agg = df.groupby(['name', 'position']).agg(agg_dict).reset_index()
+    df_agg = df_agg[df_agg['points'] > 0]
+
+    # Calculate fantasy point contributions per category
+    is_back = df_agg['position'].isin(backs)
+    high_value = (
+        df_agg['tries'].where(is_back, 0) * 10 +
+        df_agg['tries'].where(~is_back, 0) * 15 +
+        df_agg['breakdown_steals'] * 5 +
+        df_agg['lineout_steals'] * 7 +
+        df_agg['man_of_match'] * 15 +
+        df_agg['kick_50_22'] * 7 +
+        df_agg['drop_goals'] * 5 +
+        df_agg['assists'] * 4
+    )
+
+    base = (
+        df_agg['tackles'] * 1 +
+        (df_agg['meters_carried'] / 10).apply(np.floor) * 1 +
+        df_agg['defenders_beaten'] * 2 +
+        df_agg['offloads'] * 2 +
+        df_agg['conversions'] * 2 +
+        df_agg['penalties'] * 3 +
+        df_agg['scrum_wins'] * 1
+    )
+
+    negative = (
+        df_agg['penalties_conceded'] * -1 +
+        df_agg['yellow_cards'] * -5 +
+        df_agg['red_cards'] * -8
+    )
+
+    df_agg['high_value_pts'] = high_value
+    df_agg['base_pts'] = base
+    df_agg['negative_pts'] = negative
+
+    # Points per dollar
+    has_fantasy_values = df_agg['fantasy_value'].sum() > 0
+    if has_fantasy_values:
+        df_agg['pts_per_dollar'] = (df_agg['points'] / df_agg['fantasy_value']).round(1)
+        sort_col = 'pts_per_dollar'
+    else:
+        sort_col = 'points'
+
+    # Top N per position
+    top_players = (df_agg
+        .sort_values(['position', sort_col], ascending=[True, False])
+        .drop_duplicates(subset='name')
+        .groupby('position')
+        .head(max_players_per_position)
+    )['name']
+
+    df_plot = df_agg[df_agg['name'].isin(top_players)].copy()
+    df_plot = df_plot.sort_values(['position', sort_col], ascending=[True, False])
+
+    # Labels
+    if has_fantasy_values:
+        labels = df_plot.apply(
+            lambda r: f"{r['name']} ({r['position']}) [${r['fantasy_value']}, {r[sort_col]} pts/$]",
+            axis=1
+        )
+    else:
+        labels = df_plot.apply(
+            lambda r: f"{r['name']} ({r['position']}) [{int(r['points'])} pts]",
+            axis=1
+        )
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Bar(
+        y=labels, x=df_plot['high_value_pts'], orientation='h',
+        name='High-Value (tries, turnovers, MOTM, 50/22, assists)',
+        marker_color='#2ca02c',
+        text=df_plot['high_value_pts'].round(0).astype(int),
+        textposition='inside',
+    ))
+    fig.add_trace(go.Bar(
+        y=labels, x=df_plot['base_pts'], orientation='h',
+        name='Base (tackles, meters, beaten, offloads, kicking, scrums)',
+        marker_color='#1f77b4',
+        text=df_plot['base_pts'].round(0).astype(int),
+        textposition='inside',
+    ))
+    if (df_plot['negative_pts'] < 0).any():
+        fig.add_trace(go.Bar(
+            y=labels, x=df_plot['negative_pts'], orientation='h',
+            name='Negative (pens conceded, cards)',
+            marker_color='#d62728',
+            text=df_plot['negative_pts'].round(0).astype(int),
+            textposition='inside',
+        ))
+
+    sort_label = 'Points per $' if has_fantasy_values else 'Total Points'
+    fig.update_layout(
+        title=f'Player Value Profile — High-Value vs Base Points (sorted by {sort_label})',
+        xaxis_title='Fantasy Points',
+        yaxis_title='Player',
+        barmode='stack',
+        showlegend=True,
+        height=max(600, len(df_plot) * 22),
+        margin=dict(l=300),
+        yaxis={
+            'autorange': 'reversed',
+            'categoryorder': 'array',
+            'categoryarray': list(labels),
+            'dtick': 1
+        }
+    )
+
+    html_name = 'value_profile.html'
+    fig.write_html(html_name)
+    print(f"Written to {html_name}")
+    return fig
+
 
 def plot_points_distribution_by_category(df):
     """
