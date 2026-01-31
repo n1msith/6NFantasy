@@ -2,7 +2,7 @@
 
 from datetime import datetime
 import jwt
-import traceback
+from jwt.exceptions import PyJWTError
 
 
 class TokenError(Exception):
@@ -19,6 +19,7 @@ def check_token_expiry(token: str) -> dict:
     Returns:
         dict: Validation results including expiry information
     """
+    token = token.strip()
     try:
         # Decode token without verification (we don't have the secret)
         decoded = jwt.decode(token, options={"verify_signature": False})
