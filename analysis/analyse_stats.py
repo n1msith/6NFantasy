@@ -16,7 +16,7 @@ FIXTURES = {
     5: [('Ireland', 'Italy'), ('England', 'Wales'), ('France', 'Scotland')],
 }
 
-def run_analysis(round=None, match=None, max_players_per_position=15):
+def run_analysis(round=None, match=None, max_players_per_position=15, year=None):
     """
     Run all analysis visualizations for all available data
     """
@@ -24,7 +24,7 @@ def run_analysis(round=None, match=None, max_players_per_position=15):
     
     # Load data
     data_dir = Path('data/output')
-    df = load_json_data(data_dir)
+    df = load_json_data(data_dir, year=year)
     
     if df.empty:
         print("No data available for analysis")
@@ -45,6 +45,16 @@ def run_analysis(round=None, match=None, max_players_per_position=15):
         match_clubs = list(fixture)
         df_cleaned = df_cleaned[df_cleaned['club'].isin(match_clubs)]
         print(f"Filtered to match {match}: {fixture[0]} v {fixture[1]}")
+
+    # Build filter subtitle for plot titles
+    filter_parts = []
+    if year:
+        filter_parts.append(str(year))
+    if round is not None:
+        filter_parts.append(f"Round {round}")
+    if match is not None and round is not None and round in FIXTURES:
+        filter_parts.append(f"{fixture[0]} v {fixture[1]}")
+    subtitle = ' | '.join(filter_parts) if filter_parts else 'All Data'
 
     print("Unique round values in dataframe:", df_cleaned['round'].unique())
     print("Unique countries values in dataframe:", df_cleaned['club'].unique())
@@ -87,9 +97,9 @@ def run_analysis(round=None, match=None, max_players_per_position=15):
         #ppm_vs_player_bar_chart(df_cleaned)
         
         df_supersub, filter_text = filter_by_supersubs(df_cleaned)
-        ppm_vs_player_bar_chart(df_supersub, filter_text)
-        
-        ppm_per_position_bar_chart(df_supersub, filter_text)
+        ppm_vs_player_bar_chart(df_supersub, filter_text, subtitle=subtitle)
+
+        ppm_per_position_bar_chart(df_supersub, filter_text, subtitle=subtitle)
         
         #df_filt = filter_out_tries(df_cleaned)
         #df_filt = filter_by_round(df_cleaned, [1,2,3])
@@ -98,14 +108,14 @@ def run_analysis(round=None, match=None, max_players_per_position=15):
         #df_filt = filter_by_players(df_filt, sub_list)
         
         df_filt = df_cleaned
-        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=True)
-        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=False)
-        
-        plot_points_distribution_by_category(df_cleaned)
-        plot_match_fantasy_comparison(df_cleaned)
-        plot_player_round_heatmap(df_cleaned, max_players=max_players_per_position)
-        plot_scatter_matrix(df_cleaned)
-        plot_value_profile(df_cleaned, max_players_per_position=max_players_per_position)
+        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=True, subtitle=subtitle)
+        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=False, subtitle=subtitle)
+
+        plot_points_distribution_by_category(df_cleaned, subtitle=subtitle)
+        plot_match_fantasy_comparison(df_cleaned, subtitle=subtitle)
+        plot_player_round_heatmap(df_cleaned, max_players=max_players_per_position, subtitle=subtitle)
+        plot_scatter_matrix(df_cleaned, subtitle=subtitle)
+        plot_value_profile(df_cleaned, max_players_per_position=max_players_per_position, subtitle=subtitle)
 
         # calculate points for a selected team based on previous rounds
         player_list1 = [
@@ -132,11 +142,15 @@ def run_analysis(round=None, match=None, max_players_per_position=15):
     except Exception as e:
         print(f"Error during visualization: {str(e)}")
         
-def load_json_data(data_dir):
+def load_json_data(data_dir, year=None):
     """
-    Load all JSON files and flatten into a single DataFrame
+    Load all JSON files and flatten into a single DataFrame.
+    If year is specified, only load files matching that year.
     """
-    files = list(data_dir.glob('*.json'))
+    if year:
+        files = list(data_dir.glob(f'*_{year}_*.json'))
+    else:
+        files = list(data_dir.glob('*.json'))
     print(f"Loading json files: {files}")
     
     # Load all JSON files and compile player data
@@ -242,14 +256,14 @@ def filter_out_tries(df):
     df_filter = df[df['tries'] == 0]
     return df_filter
 
-def ppm_vs_player_bar_chart(df, filter_text='all_players'):
+def ppm_vs_player_bar_chart(df, filter_text='all_players', subtitle=''):
     # Create a horizontal bar chart comparing points per minute and minutes played for substitutes.
     # Points per minute on one set of bars on primary axis
     # Minutes played on another set of bars on secondary axis
     # The bars should not be stacked on top of each other, but should be offset
     # The x axis 0 point should line up with the seconday axis 0 point
     
-    plot_title = f'Points per Minute and Minutes Played. Filterered by {filter_text}'
+    plot_title = f'Points per Minute and Minutes Played. Filterered by {filter_text}<br><sup>{subtitle}</sup>' if subtitle else f'Points per Minute and Minutes Played. Filterered by {filter_text}'
     
     # Sort by points per minute
     df_sorted = df.sort_values('points_per_min', ascending=True)
@@ -330,12 +344,12 @@ def ppm_vs_player_bar_chart(df, filter_text='all_players'):
     print(f"Written to {html_name}")
     return fig  # Optional: return the figure for further manipulation
 
-def ppm_per_position_bar_chart(df, filter_text='all_players'):
+def ppm_per_position_bar_chart(df, filter_text='all_players', subtitle=''):
     """
     Create a horizontal bar chart showing points per minute for substitutes, grouped by position.
     Positions are ordered by their average points.
     """
-    plot_title = f'Points per Minute and Minutes Played. Grouped by position. Filtered by {filter_text}'
+    plot_title = f'Points per Minute and Minutes Played. Grouped by position. Filtered by {filter_text}<br><sup>{subtitle}</sup>' if subtitle else f'Points per Minute and Minutes Played. Grouped by position. Filtered by {filter_text}'
     
     # Calculate average points per position
     position_averages = df.groupby('position')['points_per_min'].mean().sort_values(ascending=False)
@@ -385,7 +399,7 @@ def ppm_per_position_bar_chart(df, filter_text='all_players'):
     return fig
 
 
-def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20, filter_text="None", is_ppm=False):
+def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20, filter_text="None", is_ppm=False, subtitle=''):
     """
     Creates a horizontal bar chart showing the breakdown of fantasy points or points per minute for rugby players,
     sorted by their total points or overall PPM (total points / total minutes) within each position.
@@ -517,7 +531,7 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     # Update title based on display mode
     display_type = 'PPM' if is_ppm else 'Points'
     fig.update_layout(
-        title=f'{display_type} Breakdown by Player and Position. Round points = {round_points}. Total fantasy value = {fantasy_values_rnd}',
+        title=f'{display_type} Breakdown by Player and Position ({subtitle})<br>Round points = {round_points}. Total fantasy value = {fantasy_values_rnd}',
         xaxis_title=display_type,
         yaxis_title='Player',
         barmode='stack',
@@ -540,7 +554,7 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     print(f"Written to {html_name}")
     return fig
 
-def plot_match_fantasy_comparison(df):
+def plot_match_fantasy_comparison(df, subtitle=''):
     """
     Grouped bar chart showing total fantasy points per team in each match,
     so you can see which team 'won' the fantasy battle per fixture.
@@ -589,7 +603,7 @@ def plot_match_fantasy_comparison(df):
     ))
 
     fig.update_layout(
-        title='Fantasy Points: Head-to-Head per Match',
+        title=f'Fantasy Points: Head-to-Head per Match<br><sup>{subtitle}</sup>' if subtitle else 'Fantasy Points: Head-to-Head per Match',
         xaxis_title='Match',
         yaxis_title='Total Fantasy Points',
         barmode='group',
@@ -606,7 +620,7 @@ def plot_match_fantasy_comparison(df):
     return fig
 
 
-def plot_player_round_heatmap(df, max_players=50):
+def plot_player_round_heatmap(df, max_players=50, subtitle=''):
     """
     Heatmap with players on the Y axis and rounds on the X axis.
     Colour intensity = fantasy points scored that round.
@@ -647,7 +661,7 @@ def plot_player_round_heatmap(df, max_players=50):
     ))
 
     fig.update_layout(
-        title='Player Fantasy Points per Round',
+        title=f'Player Fantasy Points per Round<br><sup>{subtitle}</sup>' if subtitle else 'Player Fantasy Points per Round',
         xaxis_title='Round',
         yaxis_title='Player',
         height=max(600, len(labels) * 18),
@@ -662,7 +676,7 @@ def plot_player_round_heatmap(df, max_players=50):
     return fig
 
 
-def plot_scatter_matrix(df, min_total_points=30):
+def plot_scatter_matrix(df, min_total_points=30, subtitle=''):
     """
     Scatter plot matrix showing relationships between key stats.
     Each point is a player, coloured by position.
@@ -711,7 +725,7 @@ def plot_scatter_matrix(df, min_total_points=30):
     )
 
     fig.update_layout(
-        title='Player Stat Profiles — colour = position, hover for name',
+        title=f'Player Stat Profiles — colour = position, hover for name<br><sup>{subtitle}</sup>' if subtitle else 'Player Stat Profiles — colour = position, hover for name',
         height=1000,
         width=1100,
         margin=dict(l=60, r=40, t=60, b=40),
@@ -723,7 +737,7 @@ def plot_scatter_matrix(df, min_total_points=30):
     return fig
 
 
-def plot_value_profile(df, max_players_per_position=15):
+def plot_value_profile(df, max_players_per_position=15, subtitle=''):
     """
     Horizontal stacked bar chart showing each player's fantasy points split into
     'high-value' (tries, turnovers, MOTM, 50/22, lineout steals, drop goals, assists)
@@ -837,7 +851,7 @@ def plot_value_profile(df, max_players_per_position=15):
 
     sort_label = 'Points per $' if has_fantasy_values else 'Total Points'
     fig.update_layout(
-        title=f'Player Value Profile — High-Value vs Base Points (sorted by {sort_label})',
+        title=f'Player Value Profile — High-Value vs Base Points (sorted by {sort_label})<br><sup>{subtitle}</sup>' if subtitle else f'Player Value Profile — High-Value vs Base Points (sorted by {sort_label})',
         xaxis_title='Fantasy Points',
         yaxis_title='Player',
         barmode='stack',
@@ -858,7 +872,7 @@ def plot_value_profile(df, max_players_per_position=15):
     return fig
 
 
-def plot_points_distribution_by_category(df):
+def plot_points_distribution_by_category(df, subtitle=''):
     """
     Creates a stacked bar chart showing the points distribution across different scoring categories,
     with each bar segment representing a different round.
@@ -946,7 +960,7 @@ def plot_points_distribution_by_category(df):
     
     # Customize layout
     fig.update_layout(
-        title='Points Distribution by Scoring Category and Round',
+        title=f'Points Distribution by Scoring Category and Round<br><sup>{subtitle}</sup>' if subtitle else 'Points Distribution by Scoring Category and Round',
         xaxis_title='Scoring Category',
         yaxis_title='Points',
         height=600,

@@ -17,9 +17,10 @@ from src.processors.api_stats_extractor import get_six_nations_stats
 from src.processors.fantasy_value_extractor import extract_fantasy_values, combine_with_api_data
 from analysis.analyse_stats import run_analysis
 from config.settings import (
-    API_TOKEN, 
-    RAW_DATA_DIR, 
+    API_TOKEN,
+    RAW_DATA_DIR,
     OUTPUT_DATA_DIR,
+    YEAR,
     get_input_filename,
     get_output_filename
 )
@@ -51,6 +52,10 @@ def parse_arguments():
                        type=int,
                        default=15,
                        help='Max players per position on breakdown charts (default: 15).')
+    parser.add_argument('--year',
+                       type=int,
+                       default=YEAR,
+                       help=f'Filter analysis to a specific year (default: {YEAR}).')
     return parser.parse_args()
 
 def main():
@@ -65,13 +70,13 @@ def main():
             if not display_token_info(API_TOKEN):
                 print("Token validation failed. Exiting.")
                 return
-
+            #exit(99)
             # Extract API data
             round_stats = get_six_nations_stats(extract_data=True, token=API_TOKEN, matchday=args.round)
 
             # Extract fantasy spreadsheet data
             input_file = Path(get_input_filename(args.round))
-            output_file = get_output_filename(args.round)
+            output_file = Path(get_output_filename(args.round))
 
             if input_file.exists():
                 fantasy_values = extract_fantasy_values(str(input_file))
@@ -94,7 +99,7 @@ def main():
             return
 
         # run the plots
-        run_analysis(round=args.round, match=args.match, max_players_per_position=args.ppp)                
+        run_analysis(round=args.round, match=args.match, max_players_per_position=args.ppp, year=args.year)                
         
     except Exception as e:
         print(f"Error: {str(e)}")

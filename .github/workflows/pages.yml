@@ -37,15 +37,17 @@ jobs:
     - name: Create output directory
       run: mkdir -p data/output
 
-    - name: Generate plots
-      run: python main.py
-
-    - name: Build Pages site
+    - name: Generate plots for each year
       run: |
-        mkdir -p _site
-        mv *.html _site/ 2>/dev/null || true
+        for year in 2025 2026; do
+          echo "=== Generating plots for $year ==="
+          python main.py --year "$year"
+          mkdir -p "_site/$year"
+          mv *.html "_site/$year/" 2>/dev/null || true
+        done
 
-        # Generate index page linking to all plots
+    - name: Build Pages index
+      run: |
         cat > _site/index.html << 'HEREDOC'
         <!DOCTYPE html>
         <html lang="en">
@@ -56,6 +58,7 @@ jobs:
           <style>
             body { font-family: system-ui, sans-serif; max-width: 700px; margin: 2rem auto; padding: 0 1rem; }
             h1 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
+            h2 { margin-top: 1.5rem; color: #555; }
             ul { list-style: none; padding: 0; }
             li { margin: 0.5rem 0; }
             a { color: #1a6; text-decoration: none; font-size: 1.1rem; }
@@ -64,18 +67,24 @@ jobs:
         </head>
         <body>
           <h1>6N Fantasy Rugby Analysis</h1>
-          <ul>
         HEREDOC
 
-        for f in _site/*.html; do
-          name=$(basename "$f")
-          [ "$name" = "index.html" ] && continue
-          label=$(echo "$name" | sed 's/\.html$//' | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')
-          echo "    <li><a href=\"$name\">$label</a></li>" >> _site/index.html
+        for year in 2025 2026; do
+          echo "  <h2>$year</h2>" >> _site/index.html
+          if ls _site/"$year"/*.html 1>/dev/null 2>&1; then
+            echo "  <ul>" >> _site/index.html
+            for f in _site/"$year"/*.html; do
+              name=$(basename "$f")
+              label=$(echo "$name" | sed 's/\.html$//' | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')
+              echo "    <li><a href=\"$year/$name\">$label</a></li>" >> _site/index.html
+            done
+            echo "  </ul>" >> _site/index.html
+          else
+            echo "  <p style=\"color:#999;\">No data available yet.</p>" >> _site/index.html
+          fi
         done
 
         cat >> _site/index.html << 'HEREDOC'
-          </ul>
         </body>
         </html>
         HEREDOC

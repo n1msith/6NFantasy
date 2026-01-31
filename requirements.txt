@@ -17,3 +17,4 @@ requests==2.32.3
 six==1.17.0
 tzdata==2025.1
 urllib3==2.3.0
+PyJWT==2.10.1

@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+YEAR = 2026
+
 # API Configuration
 API_BASE_URL = 'https://fantasy.sixnationsrugby.com/v1'
 API_ENDPOINTS = {
@@ -31,9 +33,9 @@ RAW_DATA_DIR = f'{DATA_DIR}/raw'
 OUTPUT_DATA_DIR = f'{DATA_DIR}/output'
 
 def get_input_filename(matchday: int) -> str:
-    """Generate input filename based on matchday"""
-    return f'{RAW_DATA_DIR}/Fantasy 6 Nations.xlsx - Round {matchday}.csv'
+    """Generate input filename based on matchday, using default YEAR"""
+    return f'{RAW_DATA_DIR}/Fantasy 6 Nations {YEAR}.xlsx - Round {matchday}.csv'
 
 def get_output_filename(matchday: int) -> str:
-    """Generate output filename based on matchday"""
-    return f'{OUTPUT_DATA_DIR}/six_nations_stats_round_{matchday}.json'
+    """Generate output filename based on matchday, using default YEAR"""
+    return f'{OUTPUT_DATA_DIR}/six_nations_stats_{YEAR}_round_{matchday}.json'
