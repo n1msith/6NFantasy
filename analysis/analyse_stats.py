@@ -23,8 +23,7 @@ def run_analysis(round=None, match=None, max_players_per_position=15):
     print("\nRunning analysis...")
     
     # Load data
-    env = 'ci' if os.environ.get('GITHUB_ACTIONS') else 'local'
-    data_dir = Path('stats-output' if env == 'ci' else 'data/output')
+    data_dir = Path('data/output')
     df = load_json_data(data_dir)
     
     if df.empty:
