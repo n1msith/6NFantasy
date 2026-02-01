@@ -148,9 +148,9 @@ def load_json_data(data_dir, year=None):
     If year is specified, only load files matching that year.
     """
     if year:
-        files = list(data_dir.glob(f'*_{year}_*.json'))
+        files = list(data_dir.glob(f'six_nations_stats_{year}_*.json'))
     else:
-        files = list(data_dir.glob('*.json'))
+        files = list(data_dir.glob('six_nations_stats_*.json'))
     print(f"Loading json files: {files}")
     
     # Load all JSON files and compile player data

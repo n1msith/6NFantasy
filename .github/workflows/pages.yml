@@ -44,6 +44,10 @@ jobs:
           python main.py --year "$year"
           mkdir -p "_site/$year"
           mv *.html "_site/$year/" 2>/dev/null || true
+          # Copy extract summary HTML if it exists
+          if [ -f "data/output/extract_summary_${year}.html" ]; then
+            cp "data/output/extract_summary_${year}.html" "_site/$year/extract_summary.html"
+          fi
         done
 
     - name: Build Pages index
@@ -73,8 +77,14 @@ jobs:
           echo "  <h2>$year</h2>" >> _site/index.html
           if ls _site/"$year"/*.html 1>/dev/null 2>&1; then
             echo "  <ul>" >> _site/index.html
+            # Show extract summary link first if it exists
+            if [ -f "_site/$year/extract_summary.html" ]; then
+              echo "    <li><a href=\"$year/extract_summary.html\"><strong>Extract Summary</strong></a></li>" >> _site/index.html
+            fi
             for f in _site/"$year"/*.html; do
               name=$(basename "$f")
+              # Skip the summary since we already listed it above
+              [ "$name" = "extract_summary.html" ] && continue
               label=$(echo "$name" | sed 's/\.html$//' | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')
               echo "    <li><a href=\"$year/$name\">$label</a></li>" >> _site/index.html
             done

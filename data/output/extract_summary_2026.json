@@ -1,0 +1,23 @@
+{
+  "generated_date": "2026-02-01",
+  "year": 2026,
+  "rounds": [
+    {
+      "round": 1,
+      "file": "six_nations_stats_2026_round_1.json",
+      "extraction_date": "2026-02-01",
+      "total_players": 228,
+      "has_data": false,
+      "players_added": [],
+      "players_removed": [],
+      "stat_changes": [
+        {
+          "player": "D. Sheehan",
+          "field": "matches_played",
+          "old": "1",
+          "new": ""
+        }
+      ]
+    }
+  ]
+}

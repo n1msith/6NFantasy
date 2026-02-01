@@ -38,12 +38,18 @@ jobs:
           python main.py --extract --round "$round" --year 2026 || echo "Round $round: no data or error, skipping"
         done
 
+    - name: Generate extract summary
+      run: python main.py --summary --year 2026
+
     - name: Commit and push new data
       id: commit
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git add data/output/six_nations_stats_2026_*.json
+        git add data/output/extract_diff_2026_*.json
+        git add data/output/extract_summary_2026.json
+        git add data/output/extract_summary_2026.html
         if git diff --cached --quiet; then
           echo "No new data to commit"
           echo "has_changes=false" >> "$GITHUB_OUTPUT"

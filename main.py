@@ -15,6 +15,7 @@ from pathlib import Path
 from src.auth.token_validator import display_token_info
 from src.processors.api_stats_extractor import get_six_nations_stats
 from src.processors.fantasy_value_extractor import extract_fantasy_values, combine_with_api_data
+from src.processors.extract_summary import compare_extract, generate_summary
 from analysis.analyse_stats import run_analysis
 from config.settings import (
     API_TOKEN,
@@ -56,6 +57,10 @@ def parse_arguments():
                        type=int,
                        default=YEAR,
                        help=f'Filter analysis to a specific year (default: {YEAR}).')
+    parser.add_argument('--summary',
+                       action='store_true',
+                       default=False,
+                       help='Generate extract summary from per-round diffs.')
     return parser.parse_args()
 
 def main():
@@ -78,6 +83,12 @@ def main():
             input_file = Path(get_input_filename(args.round))
             output_file = Path(get_output_filename(args.round))
 
+            # Load previous data for diff comparison
+            previous_data = None
+            if output_file.exists():
+                with open(output_file) as f:
+                    previous_data = json.load(f)
+
             if input_file.exists():
                 fantasy_values = extract_fantasy_values(str(input_file))
 
@@ -90,9 +101,21 @@ def main():
                 print(f"Successfully saved combined data to {output_file}")
             else:
                 print(f"Warning: Fantasy values file not found at {input_file}")
+                combined_data = round_stats
                 with open(output_file, 'w') as f:
                     json.dump(round_stats, f, indent=2)
                 print(f"Successfully saved combined data to {output_file}")
+
+            # Save per-round diff
+            diff = compare_extract(previous_data, combined_data, args.round, args.year)
+            diff_file = Path(OUTPUT_DATA_DIR) / f"extract_diff_{args.year}_round_{args.round}.json"
+            with open(diff_file, 'w') as f:
+                json.dump(diff, f, indent=2)
+            print(f"Diff saved to {diff_file}")
+
+        if args.summary:
+            generate_summary(args.year, OUTPUT_DATA_DIR)
+            return
 
         if args.match and not args.round:
             print("Error: --match requires --round to be specified.")
