@@ -1,0 +1,29 @@
+{
+  "round": 5,
+  "file": "six_nations_stats_2026_round_5.json",
+  "extraction_date": "2026-02-02",
+  "total_players": 228,
+  "has_data": false,
+  "players_added": [
+    "A. Clark",
+    "D. Aldegheri",
+    "K. Hardy",
+    "L. Pani",
+    "S. Costelow",
+    "S. Cummings",
+    "S. McDowall",
+    "T. Stewart"
+  ],
+  "players_removed": [
+    "D. Cherry",
+    "E. Todaro",
+    "J. Brennan",
+    "J. Dobie",
+    "K. Rowe",
+    "M. Bradbury",
+    "N. Smith",
+    "T. O'Toole",
+    "T. Rogers"
+  ],
+  "stat_changes": []
+}

@@ -1,23 +1,132 @@
 {
-  "generated_date": "2026-02-01",
+  "generated_date": "2026-02-02",
   "year": 2026,
   "rounds": [
     {
       "round": 1,
       "file": "six_nations_stats_2026_round_1.json",
-      "extraction_date": "2026-02-01",
+      "extraction_date": "2026-02-02",
       "total_players": 228,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
-      "stat_changes": [
-        {
-          "player": "D. Sheehan",
-          "field": "matches_played",
-          "old": "1",
-          "new": ""
-        }
-      ]
+      "stat_changes": []
+    },
+    {
+      "round": 2,
+      "file": "six_nations_stats_2026_round_2.json",
+      "extraction_date": "2026-02-02",
+      "total_players": 228,
+      "has_data": false,
+      "players_added": [
+        "A. Clark",
+        "D. Aldegheri",
+        "K. Hardy",
+        "L. Pani",
+        "S. Costelow",
+        "S. Cummings",
+        "S. McDowall",
+        "T. Stewart"
+      ],
+      "players_removed": [
+        "D. Cherry",
+        "E. Todaro",
+        "J. Brennan",
+        "J. Dobie",
+        "K. Rowe",
+        "M. Bradbury",
+        "N. Smith",
+        "T. O'Toole",
+        "T. Rogers"
+      ],
+      "stat_changes": []
+    },
+    {
+      "round": 3,
+      "file": "six_nations_stats_2026_round_3.json",
+      "extraction_date": "2026-02-02",
+      "total_players": 228,
+      "has_data": false,
+      "players_added": [
+        "A. Clark",
+        "D. Aldegheri",
+        "K. Hardy",
+        "L. Pani",
+        "S. Costelow",
+        "S. Cummings",
+        "S. McDowall",
+        "T. Stewart"
+      ],
+      "players_removed": [
+        "D. Cherry",
+        "E. Todaro",
+        "J. Brennan",
+        "J. Dobie",
+        "K. Rowe",
+        "M. Bradbury",
+        "N. Smith",
+        "T. O'Toole",
+        "T. Rogers"
+      ],
+      "stat_changes": []
+    },
+    {
+      "round": 4,
+      "file": "six_nations_stats_2026_round_4.json",
+      "extraction_date": "2026-02-02",
+      "total_players": 228,
+      "has_data": false,
+      "players_added": [
+        "A. Clark",
+        "D. Aldegheri",
+        "K. Hardy",
+        "L. Pani",
+        "S. Costelow",
+        "S. Cummings",
+        "S. McDowall",
+        "T. Stewart"
+      ],
+      "players_removed": [
+        "D. Cherry",
+        "E. Todaro",
+        "J. Brennan",
+        "J. Dobie",
+        "K. Rowe",
+        "M. Bradbury",
+        "N. Smith",
+        "T. O'Toole",
+        "T. Rogers"
+      ],
+      "stat_changes": []
+    },
+    {
+      "round": 5,
+      "file": "six_nations_stats_2026_round_5.json",
+      "extraction_date": "2026-02-02",
+      "total_players": 228,
+      "has_data": false,
+      "players_added": [
+        "A. Clark",
+        "D. Aldegheri",
+        "K. Hardy",
+        "L. Pani",
+        "S. Costelow",
+        "S. Cummings",
+        "S. McDowall",
+        "T. Stewart"
+      ],
+      "players_removed": [
+        "D. Cherry",
+        "E. Todaro",
+        "J. Brennan",
+        "J. Dobie",
+        "K. Rowe",
+        "M. Bradbury",
+        "N. Smith",
+        "T. O'Toole",
+        "T. Rogers"
+      ],
+      "stat_changes": []
     }
   ]
 }
