@@ -42,6 +42,7 @@ jobs:
         for year in 2025 2026; do
           echo "=== Generating plots for $year ==="
           python main.py --year "$year"
+          python -c "from src.processors.extract_summary import generate_fixtures_page; generate_fixtures_page(year=$year)"
           mkdir -p "_site/$year"
           mv *.html "_site/$year/" 2>/dev/null || true
           # Copy extract summary HTML if it exists
@@ -77,14 +78,18 @@ jobs:
           echo "  <h2>$year</h2>" >> _site/index.html
           if ls _site/"$year"/*.html 1>/dev/null 2>&1; then
             echo "  <ul>" >> _site/index.html
-            # Show extract summary link first if it exists
+            # Show fixtures and extract summary links first if they exist
+            if [ -f "_site/$year/fixtures_${year}.html" ]; then
+              echo "    <li><a href=\"$year/fixtures_${year}.html\"><strong>Fixtures</strong></a></li>" >> _site/index.html
+            fi
             if [ -f "_site/$year/extract_summary.html" ]; then
               echo "    <li><a href=\"$year/extract_summary.html\"><strong>Extract Summary</strong></a></li>" >> _site/index.html
             fi
             for f in _site/"$year"/*.html; do
               name=$(basename "$f")
-              # Skip the summary since we already listed it above
+              # Skip pages already listed above
               [ "$name" = "extract_summary.html" ] && continue
+              [ "$name" = "fixtures_${year}.html" ] && continue
               label=$(echo "$name" | sed 's/\.html$//' | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')
               echo "    <li><a href=\"$year/$name\">$label</a></li>" >> _site/index.html
             done

@@ -10,7 +10,74 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-from config.settings import get_fixtures, FIXTURE_DATES, TEAM_COLOURS
+from config.settings import get_fixtures, FIXTURE_DATES, TEAM_COLOURS, YEAR
+
+
+def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
+    """
+    Generate a standalone fixtures HTML page for the given year.
+    Returns the path to the generated HTML file.
+    """
+    if year is None:
+        year = YEAR
+    fixtures = get_fixtures(year)
+    if not fixtures:
+        print(f"No fixtures found for {year}")
+        return None
+
+    fixture_dates = FIXTURE_DATES.get(year, {})
+
+    rounds_html = ""
+    for rnd in sorted(fixtures.keys()):
+        date_str = fixture_dates.get(rnd, "")
+        date_label = f" &mdash; {date_str}" if date_str else ""
+        rounds_html += f'  <h3>Round {rnd}{date_label}</h3>\n'
+        rounds_html += '  <div class="fixtures-round">\n'
+        for home, away in fixtures[rnd]:
+            home_colour = TEAM_COLOURS.get(home, '#333')
+            away_colour = TEAM_COLOURS.get(away, '#333')
+            rounds_html += f"""    <div class="fixture-card">
+      <span class="team" style="border-left: 4px solid {home_colour}; padding-left: 0.5rem;">{home}</span>
+      <span class="vs">v</span>
+      <span class="team" style="border-right: 4px solid {away_colour}; padding-right: 0.5rem; text-align: right;">{away}</span>
+    </div>\n"""
+        rounds_html += '  </div>\n'
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fixtures &mdash; {year}</title>
+  <style>
+    body {{ font-family: system-ui, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; color: #222; }}
+    h1 {{ border-bottom: 2px solid #333; padding-bottom: 0.5rem; }}
+    h3 {{ margin-bottom: 0.5rem; }}
+    .fixtures-round {{ display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }}
+    .fixture-card {{ display: flex; align-items: center; gap: 0.6rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.6rem 1.2rem; min-width: 230px; }}
+    .fixture-card .team {{ font-weight: 600; flex: 1; }}
+    .fixture-card .vs {{ color: #999; font-size: 0.85em; }}
+    a {{ color: #1a6; }}
+  </style>
+</head>
+<body>
+  <h1>Fixtures &mdash; {year}</h1>
+{rounds_html}
+  <p style="margin-top:2rem;color:#999;font-size:0.85em;">
+    <a href="../index.html">&larr; Back to index</a>
+  </p>
+</body>
+</html>"""
+
+    if output_dir:
+        out_path = Path(output_dir) / f"fixtures_{year}.html"
+    else:
+        out_path = Path(f"fixtures_{year}.html")
+
+    with open(out_path, "w") as f:
+        f.write(html)
+    print(f"Fixtures HTML written to {out_path}")
+    return str(out_path)
 
 
 def compare_extract(old_data: Optional[Dict], new_data: Dict, round_num: int, year: int) -> Dict:
@@ -123,37 +190,18 @@ def _build_summary_html(summary: Dict) -> str:
         n_added = len(r.get("players_added", []))
         n_removed = len(r.get("players_removed", []))
         data_badge = "Yes" if r.get("has_data") else "No"
+        extract_date = r.get("extraction_date", "N/A")
         overview_rows += f"""
         <tr>
           <td>Round {r['round']}</td>
           <td><code>{r['file']}</code></td>
           <td>{r['total_players']}</td>
           <td>{data_badge}</td>
+          <td>{extract_date}</td>
           <td>{n_added}</td>
           <td>{n_removed}</td>
           <td>{n_changes}</td>
         </tr>"""
-
-    # Build fixtures section
-    fixtures = get_fixtures(year)
-    fixture_dates = FIXTURE_DATES.get(year, {})
-    fixtures_html = ""
-    if fixtures:
-        fixtures_html += "<h2>Fixtures</h2>\n"
-        for rnd in sorted(fixtures.keys()):
-            date_str = fixture_dates.get(rnd, "")
-            date_label = f" &mdash; {date_str}" if date_str else ""
-            fixtures_html += f'    <h3>Round {rnd}{date_label}</h3>\n'
-            fixtures_html += '    <div class="fixtures-round">\n'
-            for home, away in fixtures[rnd]:
-                home_colour = TEAM_COLOURS.get(home, '#333')
-                away_colour = TEAM_COLOURS.get(away, '#333')
-                fixtures_html += f"""      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid {home_colour}; padding-left: 0.5rem;">{home}</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid {away_colour}; padding-right: 0.5rem; text-align: right;">{away}</span>
-      </div>\n"""
-            fixtures_html += '    </div>\n'
 
     # Build per-round detail sections
     detail_sections = ""
@@ -234,10 +282,6 @@ def _build_summary_html(summary: Dict) -> str:
     summary {{ cursor: pointer; font-weight: 600; padding: 0.4rem 0; }}
     details table {{ font-size: 0.9em; }}
     a {{ color: #1a6; }}
-    .fixtures-round {{ display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }}
-    .fixture-card {{ display: flex; align-items: center; gap: 0.6rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.5rem 1rem; min-width: 220px; }}
-    .fixture-card .team {{ font-weight: 600; flex: 1; }}
-    .fixture-card .vs {{ color: #999; font-size: 0.85em; }}
   </style>
 </head>
 <body>
@@ -251,15 +295,13 @@ def _build_summary_html(summary: Dict) -> str:
   <table>
     <thead>
       <tr>
-        <th>Round</th><th>File</th><th>Players</th><th>Has Data</th>
+        <th>Round</th><th>File</th><th>Players</th><th>Has Data</th><th>Extracted</th>
         <th>Added</th><th>Removed</th><th>Stat Changes</th>
       </tr>
     </thead>
     <tbody>{overview_rows}
     </tbody>
   </table>
-
-  {fixtures_html}
 
   <h2>Details</h2>
   {detail_sections}
