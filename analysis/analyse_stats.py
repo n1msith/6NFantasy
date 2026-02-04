@@ -8,27 +8,24 @@ from itertools import cycle
 import plotly.express as px
 import math
 
-FIXTURES = {
-    1: [('France', 'Wales'), ('Scotland', 'Italy'), ('Ireland', 'England')],
-    2: [('Italy', 'Wales'), ('England', 'France'), ('Scotland', 'Ireland')],
-    3: [('Wales', 'Ireland'), ('England', 'Scotland'), ('Italy', 'France')],
-    4: [('Ireland', 'France'), ('Scotland', 'Wales'), ('England', 'Italy')],
-    5: [('Ireland', 'Italy'), ('England', 'Wales'), ('France', 'Scotland')],
-}
+from config.settings import get_fixtures
+
 
 def run_analysis(round=None, match=None, max_players_per_position=15, year=None):
     """
     Run all analysis visualizations for all available data
     """
     print("\nRunning analysis...")
-    
+
     # Load data
     data_dir = Path('data/output')
     df = load_json_data(data_dir, year=year)
-    
+
     if df.empty:
         print("No data available for analysis")
         return
+
+    fixtures = get_fixtures(year)
 
     # clean the data
     df_all_rounds = df_clean(df)
@@ -40,8 +37,8 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
         df_cleaned = df_all_rounds
 
     # match filtering (requires round)
-    if match is not None and round is not None and round in FIXTURES:
-        fixture = FIXTURES[round][match - 1]
+    if match is not None and round is not None and round in fixtures:
+        fixture = fixtures[round][match - 1]
         match_clubs = list(fixture)
         df_cleaned = df_cleaned[df_cleaned['club'].isin(match_clubs)]
         print(f"Filtered to match {match}: {fixture[0]} v {fixture[1]}")
@@ -52,7 +49,7 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
         filter_parts.append(str(year))
     if round is not None:
         filter_parts.append(f"Round {round}")
-    if match is not None and round is not None and round in FIXTURES:
+    if match is not None and round is not None and round in fixtures:
         filter_parts.append(f"{fixture[0]} v {fixture[1]}")
     subtitle = ' | '.join(filter_parts) if filter_parts else 'All Data'
 
@@ -112,7 +109,7 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
         plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=False, subtitle=subtitle)
 
         plot_points_distribution_by_category(df_cleaned, subtitle=subtitle)
-        plot_match_fantasy_comparison(df_cleaned, subtitle=subtitle)
+        plot_match_fantasy_comparison(df_cleaned, fixtures=fixtures, subtitle=subtitle)
         plot_player_round_heatmap(df_cleaned, max_players=max_players_per_position, subtitle=subtitle)
         plot_scatter_matrix(df_cleaned, subtitle=subtitle)
         plot_value_profile(df_cleaned, max_players_per_position=max_players_per_position, subtitle=subtitle)
@@ -554,11 +551,14 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     print(f"Written to {html_name}")
     return fig
 
-def plot_match_fantasy_comparison(df, subtitle=''):
+def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
     """
     Grouped bar chart showing total fantasy points per team in each match,
     so you can see which team 'won' the fantasy battle per fixture.
     """
+    if fixtures is None:
+        fixtures = get_fixtures()
+
     # Sum fantasy points per club per round
     club_round_pts = df.groupby(['round', 'club'])['points'].sum().reset_index()
 
@@ -572,10 +572,10 @@ def plot_match_fantasy_comparison(df, subtitle=''):
     away_names = []
 
     for rnd in rounds_available:
-        if rnd not in FIXTURES:
+        if rnd not in fixtures:
             continue
         round_data = club_round_pts[club_round_pts['round'] == rnd]
-        for home, away in FIXTURES[rnd]:
+        for home, away in fixtures[rnd]:
             label = f"R{rnd}: {home} v {away}"
             x_labels.append(label)
             h_pts = round_data.loc[round_data['club'] == home, 'points'].sum()

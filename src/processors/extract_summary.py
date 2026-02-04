@@ -10,6 +10,8 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+from config.settings import get_fixtures, FIXTURE_DATES, TEAM_COLOURS
+
 
 def compare_extract(old_data: Optional[Dict], new_data: Dict, round_num: int, year: int) -> Dict:
     """
@@ -132,6 +134,27 @@ def _build_summary_html(summary: Dict) -> str:
           <td>{n_changes}</td>
         </tr>"""
 
+    # Build fixtures section
+    fixtures = get_fixtures(year)
+    fixture_dates = FIXTURE_DATES.get(year, {})
+    fixtures_html = ""
+    if fixtures:
+        fixtures_html += "<h2>Fixtures</h2>\n"
+        for rnd in sorted(fixtures.keys()):
+            date_str = fixture_dates.get(rnd, "")
+            date_label = f" &mdash; {date_str}" if date_str else ""
+            fixtures_html += f'    <h3>Round {rnd}{date_label}</h3>\n'
+            fixtures_html += '    <div class="fixtures-round">\n'
+            for home, away in fixtures[rnd]:
+                home_colour = TEAM_COLOURS.get(home, '#333')
+                away_colour = TEAM_COLOURS.get(away, '#333')
+                fixtures_html += f"""      <div class="fixture-card">
+        <span class="team" style="border-left: 4px solid {home_colour}; padding-left: 0.5rem;">{home}</span>
+        <span class="vs">v</span>
+        <span class="team" style="border-right: 4px solid {away_colour}; padding-right: 0.5rem; text-align: right;">{away}</span>
+      </div>\n"""
+            fixtures_html += '    </div>\n'
+
     # Build per-round detail sections
     detail_sections = ""
     for r in rounds:
@@ -211,6 +234,10 @@ def _build_summary_html(summary: Dict) -> str:
     summary {{ cursor: pointer; font-weight: 600; padding: 0.4rem 0; }}
     details table {{ font-size: 0.9em; }}
     a {{ color: #1a6; }}
+    .fixtures-round {{ display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }}
+    .fixture-card {{ display: flex; align-items: center; gap: 0.6rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.5rem 1rem; min-width: 220px; }}
+    .fixture-card .team {{ font-weight: 600; flex: 1; }}
+    .fixture-card .vs {{ color: #999; font-size: 0.85em; }}
   </style>
 </head>
 <body>
@@ -231,6 +258,8 @@ def _build_summary_html(summary: Dict) -> str:
     <tbody>{overview_rows}
     </tbody>
   </table>
+
+  {fixtures_html}
 
   <h2>Details</h2>
   {detail_sections}
