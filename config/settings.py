@@ -36,11 +36,11 @@ OUTPUT_DATA_DIR = f'{DATA_DIR}/output'
 # score is (home_pts, away_pts) or None if not yet played.
 FIXTURES = {
     2025: {
-        1: [('France', 'Wales', (16, 21)), ('Scotland', 'Italy', (17, 13)), ('Ireland', 'England', (34, 11))],
-        2: [('Italy', 'Wales', (24, 29)), ('England', 'France', (14, 16)), ('Scotland', 'Ireland', (23, 13))],
-        3: [('Wales', 'Ireland', (24, 19)), ('England', 'Scotland', (23, 22)), ('Italy', 'France', (14, 31))],
-        4: [('Ireland', 'France', (7, 14)), ('Scotland', 'Wales', (17, 10)), ('England', 'Italy', (20, 36))],
-        5: [('Ireland', 'Italy', (22, 33)), ('England', 'Wales', (31, 19)), ('France', 'Scotland', (39, 12))],
+        1: [('France', 'Wales', (43, 0)), ('Scotland', 'Italy', (31, 19)), ('Ireland', 'England', (27, 22))],
+        2: [('Italy', 'Wales', (22, 15)), ('England', 'France', (26, 25)), ('Scotland', 'Ireland', (18, 32))],
+        3: [('Wales', 'Ireland', (18, 27)), ('England', 'Scotland', (16, 15)), ('Italy', 'France', (24, 73))],
+        4: [('Ireland', 'France', (27, 42)), ('Scotland', 'Wales', (35, 29)), ('England', 'Italy', (47, 24))],
+        5: [('Italy', 'Ireland', (17, 22)), ('Wales', 'Englang', (14, 68)), ('France', 'Scotland', (35, 16))],
     },
     2026: {
         1: [('France', 'Ireland', None), ('Italy', 'Scotland', None), ('England', 'Wales', None)],
