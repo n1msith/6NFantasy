@@ -4,34 +4,7 @@
   "extraction_date": "2026-02-04",
   "total_players": 228,
   "has_data": false,
-  "players_added": [
-    "A. Fischer",
-    "A. Mitchell",
-    "B. Bohan",
-    "B. Carter",
-    "C. Frawley",
-    "D. Edwards",
-    "M. Gallagher",
-    "O. Chessum"
-  ],
-  "players_removed": [
-    "A. Izekor",
-    "A. Zambonin",
-    "B. Murray",
-    "E. James",
-    "G. da Re",
-    "J. Dobie",
-    "J. Evans",
-    "K. Rowe",
-    "M. Bradbury",
-    "N. Brex",
-    "N. Smith",
-    "P. Mauvaka",
-    "R. Neti",
-    "T. Jordan",
-    "T. O'Toole",
-    "T. Rogers",
-    "T. Williams"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
