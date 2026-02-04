@@ -6,7 +6,7 @@ summary reports (JSON + HTML) showing what changed.
 """
 
 import json
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
@@ -152,7 +152,7 @@ def generate_summary(year: int, output_dir: str) -> Dict:
                 rounds.append(json.load(f))
 
     summary = {
-        "generated_date": str(date.today()),
+        "generated_date": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "year": year,
         "rounds": rounds,
     }
@@ -190,14 +190,12 @@ def _build_summary_html(summary: Dict) -> str:
         n_added = len(r.get("players_added", []))
         n_removed = len(r.get("players_removed", []))
         data_badge = "Yes" if r.get("has_data") else "No"
-        extract_date = r.get("extraction_date", "N/A")
         overview_rows += f"""
         <tr>
           <td>Round {r['round']}</td>
           <td><code>{r['file']}</code></td>
           <td>{r['total_players']}</td>
           <td>{data_badge}</td>
-          <td>{extract_date}</td>
           <td>{n_added}</td>
           <td>{n_removed}</td>
           <td>{n_changes}</td>
@@ -295,7 +293,7 @@ def _build_summary_html(summary: Dict) -> str:
   <table>
     <thead>
       <tr>
-        <th>Round</th><th>File</th><th>Players</th><th>Has Data</th><th>Extracted</th>
+        <th>Round</th><th>File</th><th>Players</th><th>Has Data</th>
         <th>Added</th><th>Removed</th><th>Stat Changes</th>
       </tr>
     </thead>
