@@ -39,7 +39,7 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
     # match filtering (requires round)
     if match is not None and round is not None and round in fixtures:
         fixture = fixtures[round][match - 1]
-        match_clubs = list(fixture)
+        match_clubs = [fixture[0], fixture[1]]
         df_cleaned = df_cleaned[df_cleaned['club'].isin(match_clubs)]
         print(f"Filtered to match {match}: {fixture[0]} v {fixture[1]}")
 
@@ -575,7 +575,7 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
         if rnd not in fixtures:
             continue
         round_data = club_round_pts[club_round_pts['round'] == rnd]
-        for home, away in fixtures[rnd]:
+        for home, away, *_ in fixtures[rnd]:
             label = f"R{rnd}: {home} v {away}"
             x_labels.append(label)
             h_pts = round_data.loc[round_data['club'] == home, 'points'].sum()

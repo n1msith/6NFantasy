@@ -32,20 +32,22 @@ DATA_DIR = 'data'
 RAW_DATA_DIR = f'{DATA_DIR}/raw'
 OUTPUT_DATA_DIR = f'{DATA_DIR}/output'
 
+# FIXTURES[year][round] = [(home, away, score), ...]
+# score is (home_pts, away_pts) or None if not yet played.
 FIXTURES = {
     2025: {
-        1: [('France', 'Wales'), ('Scotland', 'Italy'), ('Ireland', 'England')],
-        2: [('Italy', 'Wales'), ('England', 'France'), ('Scotland', 'Ireland')],
-        3: [('Wales', 'Ireland'), ('England', 'Scotland'), ('Italy', 'France')],
-        4: [('Ireland', 'France'), ('Scotland', 'Wales'), ('England', 'Italy')],
-        5: [('Ireland', 'Italy'), ('England', 'Wales'), ('France', 'Scotland')],
+        1: [('France', 'Wales', (16, 21)), ('Scotland', 'Italy', (17, 13)), ('Ireland', 'England', (34, 11))],
+        2: [('Italy', 'Wales', (24, 29)), ('England', 'France', (14, 16)), ('Scotland', 'Ireland', (23, 13))],
+        3: [('Wales', 'Ireland', (24, 19)), ('England', 'Scotland', (23, 22)), ('Italy', 'France', (14, 31))],
+        4: [('Ireland', 'France', (7, 14)), ('Scotland', 'Wales', (17, 10)), ('England', 'Italy', (20, 36))],
+        5: [('Ireland', 'Italy', (22, 33)), ('England', 'Wales', (31, 19)), ('France', 'Scotland', (39, 12))],
     },
     2026: {
-        1: [('France', 'Ireland'), ('Italy', 'Scotland'), ('England', 'Wales')],
-        2: [('Ireland', 'Italy'), ('Scotland', 'England'), ('Wales', 'France')],
-        3: [('England', 'Ireland'), ('Wales', 'Scotland'), ('France', 'Italy')],
-        4: [('Ireland', 'Wales'), ('Scotland', 'France'), ('Italy', 'England')],
-        5: [('Ireland', 'Scotland'), ('Wales', 'Italy'), ('France', 'England')],
+        1: [('France', 'Ireland', None), ('Italy', 'Scotland', None), ('England', 'Wales', None)],
+        2: [('Ireland', 'Italy', None), ('Scotland', 'England', None), ('Wales', 'France', None)],
+        3: [('England', 'Ireland', None), ('Wales', 'Scotland', None), ('France', 'Italy', None)],
+        4: [('Ireland', 'Wales', None), ('Scotland', 'France', None), ('Italy', 'England', None)],
+        5: [('Ireland', 'Scotland', None), ('Wales', 'Italy', None), ('France', 'England', None)],
     },
 }
 

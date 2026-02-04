@@ -33,12 +33,17 @@ def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
         date_label = f" &mdash; {date_str}" if date_str else ""
         rounds_html += f'  <h3>Round {rnd}{date_label}</h3>\n'
         rounds_html += '  <div class="fixtures-round">\n'
-        for home, away in fixtures[rnd]:
+        for home, away, score in fixtures[rnd]:
             home_colour = TEAM_COLOURS.get(home, '#333')
             away_colour = TEAM_COLOURS.get(away, '#333')
+            if score:
+                h_score, a_score = score
+                score_html = f'<span class="score">{h_score} - {a_score}</span>'
+            else:
+                score_html = '<span class="vs">v</span>'
             rounds_html += f"""    <div class="fixture-card">
       <span class="team" style="border-left: 4px solid {home_colour}; padding-left: 0.5rem;">{home}</span>
-      <span class="vs">v</span>
+      {score_html}
       <span class="team" style="border-right: 4px solid {away_colour}; padding-right: 0.5rem; text-align: right;">{away}</span>
     </div>\n"""
         rounds_html += '  </div>\n'
@@ -57,6 +62,7 @@ def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
     .fixture-card {{ display: flex; align-items: center; gap: 0.6rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.6rem 1.2rem; min-width: 230px; }}
     .fixture-card .team {{ font-weight: 600; flex: 1; }}
     .fixture-card .vs {{ color: #999; font-size: 0.85em; }}
+    .fixture-card .score {{ font-weight: 700; font-size: 0.95em; white-space: nowrap; }}
     a {{ color: #1a6; }}
   </style>
 </head>
