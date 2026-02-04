@@ -1,10 +1,20 @@
 {
   "round": 3,
   "file": "six_nations_stats_2026_round_3.json",
-  "extraction_date": "2026-02-03",
-  "total_players": 226,
+  "extraction_date": "2026-02-04",
+  "total_players": 228,
   "has_data": false,
   "players_added": [
+    "A. Fischer",
+    "A. Mitchell",
+    "B. Bohan",
+    "B. Carter",
+    "C. Frawley",
+    "D. Edwards",
+    "M. Gallagher",
+    "O. Chessum"
+  ],
+  "players_removed": [
     "A. Izekor",
     "A. Zambonin",
     "B. Murray",
@@ -22,16 +32,6 @@
     "T. O'Toole",
     "T. Rogers",
     "T. Williams"
-  ],
-  "players_removed": [
-    "A. Fischer",
-    "A. Mitchell",
-    "B. Bohan",
-    "B. Carter",
-    "C. Frawley",
-    "D. Edwards",
-    "M. Gallagher",
-    "O. Chessum"
   ],
   "stat_changes": []
 }
