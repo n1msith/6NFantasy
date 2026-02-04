@@ -1,6 +1,6 @@
 {
-  "round": 1,
-  "file": "six_nations_stats_2026_round_1.json",
+  "round": 2,
+  "file": "six_nations_stats_2026_round_2.json",
   "extraction_date": "2026-02-04",
   "total_players": 228,
   "has_data": false,
