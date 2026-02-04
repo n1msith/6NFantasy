@@ -17,10 +17,6 @@
     summary { cursor: pointer; font-weight: 600; padding: 0.4rem 0; }
     details table { font-size: 0.9em; }
     a { color: #1a6; }
-    .fixtures-round { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
-    .fixture-card { display: flex; align-items: center; gap: 0.6rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.5rem 1rem; min-width: 220px; }
-    .fixture-card .team { font-weight: 600; flex: 1; }
-    .fixture-card .vs { color: #999; font-size: 0.85em; }
   </style>
 </head>
 <body>
@@ -34,7 +30,7 @@
   <table>
     <thead>
       <tr>
-        <th>Round</th><th>File</th><th>Players</th><th>Has Data</th>
+        <th>Round</th><th>File</th><th>Players</th><th>Has Data</th><th>Extracted</th>
         <th>Added</th><th>Removed</th><th>Stat Changes</th>
       </tr>
     </thead>
@@ -44,6 +40,7 @@
           <td><code>six_nations_stats_2026_round_1.json</code></td>
           <td>228</td>
           <td>No</td>
+          <td>2026-02-04</td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
@@ -53,6 +50,7 @@
           <td><code>six_nations_stats_2026_round_2.json</code></td>
           <td>228</td>
           <td>No</td>
+          <td>2026-02-04</td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
@@ -62,6 +60,7 @@
           <td><code>six_nations_stats_2026_round_3.json</code></td>
           <td>228</td>
           <td>No</td>
+          <td>2026-02-04</td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
@@ -71,6 +70,7 @@
           <td><code>six_nations_stats_2026_round_4.json</code></td>
           <td>228</td>
           <td>No</td>
+          <td>2026-02-04</td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
@@ -80,105 +80,13 @@
           <td><code>six_nations_stats_2026_round_5.json</code></td>
           <td>228</td>
           <td>No</td>
+          <td>2026-02-04</td>
           <td>0</td>
           <td>0</td>
           <td>0</td>
         </tr>
     </tbody>
   </table>
-
-  <h2>Fixtures</h2>
-    <h3>Round 1 &mdash; Thu 5 Feb / Sat 7 Feb</h3>
-    <div class="fixtures-round">
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #003399; padding-left: 0.5rem;">France</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #169B62; padding-right: 0.5rem; text-align: right;">Ireland</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #008C45; padding-left: 0.5rem;">Italy</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #005EB8; padding-right: 0.5rem; text-align: right;">Scotland</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #E8003A; padding-left: 0.5rem;">England</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #D4213D; padding-right: 0.5rem; text-align: right;">Wales</span>
-      </div>
-    </div>
-    <h3>Round 2 &mdash; Sat 14 Feb / Sun 15 Feb</h3>
-    <div class="fixtures-round">
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #169B62; padding-left: 0.5rem;">Ireland</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #008C45; padding-right: 0.5rem; text-align: right;">Italy</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #005EB8; padding-left: 0.5rem;">Scotland</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #E8003A; padding-right: 0.5rem; text-align: right;">England</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #D4213D; padding-left: 0.5rem;">Wales</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #003399; padding-right: 0.5rem; text-align: right;">France</span>
-      </div>
-    </div>
-    <h3>Round 3 &mdash; Sat 21 Feb / Sun 22 Feb</h3>
-    <div class="fixtures-round">
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #E8003A; padding-left: 0.5rem;">England</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #169B62; padding-right: 0.5rem; text-align: right;">Ireland</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #D4213D; padding-left: 0.5rem;">Wales</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #005EB8; padding-right: 0.5rem; text-align: right;">Scotland</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #003399; padding-left: 0.5rem;">France</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #008C45; padding-right: 0.5rem; text-align: right;">Italy</span>
-      </div>
-    </div>
-    <h3>Round 4 &mdash; Fri 6 Mar / Sat 7 Mar</h3>
-    <div class="fixtures-round">
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #169B62; padding-left: 0.5rem;">Ireland</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #D4213D; padding-right: 0.5rem; text-align: right;">Wales</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #005EB8; padding-left: 0.5rem;">Scotland</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #003399; padding-right: 0.5rem; text-align: right;">France</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #008C45; padding-left: 0.5rem;">Italy</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #E8003A; padding-right: 0.5rem; text-align: right;">England</span>
-      </div>
-    </div>
-    <h3>Round 5 &mdash; Sat 14 Mar</h3>
-    <div class="fixtures-round">
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #169B62; padding-left: 0.5rem;">Ireland</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #005EB8; padding-right: 0.5rem; text-align: right;">Scotland</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #D4213D; padding-left: 0.5rem;">Wales</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #008C45; padding-right: 0.5rem; text-align: right;">Italy</span>
-      </div>
-      <div class="fixture-card">
-        <span class="team" style="border-left: 4px solid #003399; padding-left: 0.5rem;">France</span>
-        <span class="vs">v</span>
-        <span class="team" style="border-right: 4px solid #E8003A; padding-right: 0.5rem; text-align: right;">England</span>
-      </div>
-    </div>
-
 
   <h2>Details</h2>
   
