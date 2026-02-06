@@ -1,344 +1,225 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-02-05",
+  "extraction_date": "2026-02-06",
   "total_players": 228,
   "has_data": true,
   "players_added": [
-    "M. Guillard",
-    "Y. Moefana"
+    "M. Fagerson"
   ],
-  "players_removed": [],
+  "players_removed": [
+    "M. Lamaro"
+  ],
   "stat_changes": [
     {
       "player": "A. Jelonch",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
+      "field": "points",
+      "old": "29.0",
+      "new": "30.0"
     },
     {
-      "player": "C. Doris",
+      "player": "A. Jelonch",
+      "field": "tackles",
+      "old": 16,
+      "new": 17
+    },
+    {
+      "player": "B. Serin",
       "field": "defenders_beaten",
-      "old": 2,
-      "new": 3
+      "old": "",
+      "new": 2
     },
     {
-      "player": "C. Doris",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "C. Doris",
+      "player": "B. Serin",
       "field": "meters_carried",
-      "old": 28,
-      "new": 29
+      "old": "",
+      "new": 22
     },
     {
-      "player": "C. Doris",
+      "player": "B. Serin",
       "field": "points",
-      "old": "31.0",
-      "new": "34.0"
+      "old": "",
+      "new": "6.0"
     },
     {
-      "player": "C. Doris",
-      "field": "tackles",
-      "old": 14,
-      "new": 15
-    },
-    {
-      "player": "H. Auradou",
-      "field": "matches_played",
-      "old": 24,
-      "new": 30
-    },
-    {
-      "player": "J. Gibson-Park",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "J. Gibson-Park",
+      "player": "C. Casey",
       "field": "points",
-      "old": "11.0",
-      "new": "12.0"
+      "old": "",
+      "new": "1.0"
     },
     {
-      "player": "J. Gibson-Park",
+      "player": "C. Casey",
       "field": "tackles",
-      "old": 3,
-      "new": 4
+      "old": "",
+      "new": 1
     },
     {
-      "player": "J. Stockdale",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "J. Stockdale",
-      "field": "meters_carried",
-      "old": 30,
-      "new": 33
-    },
-    {
-      "player": "L. Bielle-Biarrey",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "L. Nouchi",
-      "field": "defenders_beaten",
-      "old": 1,
-      "new": 3
-    },
-    {
-      "player": "L. Nouchi",
-      "field": "matches_played",
-      "old": 11,
-      "new": 18
-    },
-    {
-      "player": "L. Nouchi",
-      "field": "points",
-      "old": "15.0",
-      "new": "21.0"
-    },
-    {
-      "player": "L. Nouchi",
-      "field": "tackles",
-      "old": 10,
-      "new": 12
-    },
-    {
-      "player": "M. Jalibert",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "M. Jalibert",
-      "field": "meters_carried",
-      "old": 70,
-      "new": 71
-    },
-    {
-      "player": "M. Jalibert",
+      "player": "E. Meafou",
       "field": "offloads",
-      "old": 2,
-      "new": 3
+      "old": "",
+      "new": 1
     },
     {
-      "player": "M. Jalibert",
+      "player": "E. Meafou",
       "field": "points",
-      "old": "43.0",
-      "new": "46.0"
+      "old": "9.0",
+      "new": "11.0"
     },
     {
-      "player": "M. Jalibert",
+      "player": "F. Bealham",
+      "field": "matches_played",
+      "old": 20,
+      "new": 21
+    },
+    {
+      "player": "J. Loughman",
+      "field": "matches_played",
+      "old": 60,
+      "new": 59
+    },
+    {
+      "player": "J. Loughman",
+      "field": "points",
+      "old": "13.0",
+      "new": "14.0"
+    },
+    {
+      "player": "J. Loughman",
       "field": "tackles",
       "old": 10,
       "new": 11
     },
     {
-      "player": "M. Milne",
-      "field": "matches_played",
-      "old": 14,
-      "new": 20
-    },
-    {
-      "player": "N. Depoortere",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "N. Depoortere",
-      "field": "meters_carried",
-      "old": 55,
-      "new": 61
-    },
-    {
-      "player": "N. Depoortere",
-      "field": "points",
-      "old": "34.0",
-      "new": "36.0"
-    },
-    {
-      "player": "N. Depoortere",
-      "field": "tackles",
-      "old": 13,
-      "new": 14
-    },
-    {
-      "player": "N. Timoney",
-      "field": "matches_played",
-      "old": 24,
-      "new": 30
-    },
-    {
-      "player": "O. Jegou",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "O. Jegou",
-      "field": "points",
-      "old": "30.0",
-      "new": "31.0"
-    },
-    {
-      "player": "O. Jegou",
-      "field": "tackles",
-      "old": 14,
-      "new": 15
-    },
-    {
-      "player": "P. Mauvaka",
-      "field": "breakdown_steals",
-      "old": "",
-      "new": 1
-    },
-    {
-      "player": "P. Mauvaka",
-      "field": "matches_played",
-      "old": 24,
-      "new": 30
-    },
-    {
-      "player": "P. Mauvaka",
-      "field": "points",
-      "old": "15.0",
-      "new": "20.0"
-    },
-    {
-      "player": "R. Montagne",
-      "field": "matches_played",
-      "old": 24,
-      "new": 30
-    },
-    {
-      "player": "R. Montagne",
-      "field": "points",
-      "old": "19.0",
-      "new": "18.0"
-    },
-    {
-      "player": "R. Montagne",
-      "field": "tackles",
-      "old": 11,
-      "new": 10
-    },
-    {
-      "player": "S. McCloskey",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "S. Prendergast",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "S. Prendergast",
-      "field": "meters_carried",
-      "old": 15,
-      "new": 23
-    },
-    {
-      "player": "S. Prendergast",
-      "field": "points",
-      "old": "29.0",
-      "new": "31.0"
-    },
-    {
-      "player": "S. Prendergast",
-      "field": "tackles",
-      "old": 11,
-      "new": 12
-    },
-    {
-      "player": "T. Attissogbe",
+      "player": "L. Nouchi",
       "field": "defenders_beaten",
-      "old": 1,
-      "new": 2
+      "old": 3,
+      "new": 1
     },
     {
-      "player": "T. Attissogbe",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "T. Attissogbe",
-      "field": "meters_carried",
-      "old": 34,
-      "new": 35
-    },
-    {
-      "player": "T. Attissogbe",
+      "player": "L. Nouchi",
       "field": "points",
-      "old": "19.0",
-      "new": "31.0"
+      "old": "21.0",
+      "new": "17.0"
     },
     {
-      "player": "T. Attissogbe",
-      "field": "tries",
+      "player": "M. Jalibert",
+      "field": "assists",
       "old": "",
       "new": 1
     },
     {
-      "player": "T. Beirne",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "T. Beirne",
-      "field": "points",
-      "old": "38.0",
-      "new": "39.0"
-    },
-    {
-      "player": "T. Beirne",
-      "field": "tackles",
-      "old": 14,
-      "new": 15
-    },
-    {
-      "player": "T. Ramos",
-      "field": "conversions",
-      "old": 3,
-      "new": 4
-    },
-    {
-      "player": "T. Ramos",
-      "field": "matches_played",
-      "old": 74,
-      "new": 80
-    },
-    {
-      "player": "T. Ramos",
+      "player": "M. Jalibert",
       "field": "meters_carried",
-      "old": 113,
-      "new": 116
+      "old": 71,
+      "new": 73
     },
     {
-      "player": "T. Ramos",
+      "player": "M. Jalibert",
       "field": "offloads",
       "old": 3,
       "new": 4
     },
     {
+      "player": "M. Jalibert",
+      "field": "points",
+      "old": "46.0",
+      "new": "52.0"
+    },
+    {
+      "player": "M. Milne",
+      "field": "matches_played",
+      "old": 20,
+      "new": 21
+    },
+    {
+      "player": "M. Milne",
+      "field": "points",
+      "old": "17.0",
+      "new": "18.0"
+    },
+    {
+      "player": "M. Milne",
+      "field": "tackles",
+      "old": 2,
+      "new": 3
+    },
+    {
+      "player": "N. Timoney",
+      "field": "points",
+      "old": "32.0",
+      "new": "33.0"
+    },
+    {
+      "player": "N. Timoney",
+      "field": "tackles",
+      "old": 3,
+      "new": 4
+    },
+    {
+      "player": "S. McCloskey",
+      "field": "points",
+      "old": "26.0",
+      "new": "27.0"
+    },
+    {
+      "player": "S. McCloskey",
+      "field": "tackles",
+      "old": 9,
+      "new": 10
+    },
+    {
+      "player": "S. Prendergast",
+      "field": "points",
+      "old": "31.0",
+      "new": "32.0"
+    },
+    {
+      "player": "S. Prendergast",
+      "field": "tackles",
+      "old": 12,
+      "new": 13
+    },
+    {
+      "player": "T. Attissogbe",
+      "field": "meters_carried",
+      "old": 35,
+      "new": 45
+    },
+    {
+      "player": "T. Attissogbe",
+      "field": "points",
+      "old": "31.0",
+      "new": "32.0"
+    },
+    {
+      "player": "T. Clarkson",
+      "field": "matches_played",
+      "old": 60,
+      "new": 59
+    },
+    {
+      "player": "T. Clarkson",
+      "field": "points",
+      "old": "9.0",
+      "new": "8.0"
+    },
+    {
+      "player": "T. Clarkson",
+      "field": "tackles",
+      "old": 6,
+      "new": 5
+    },
+    {
+      "player": "T. Ramos",
+      "field": "offloads",
+      "old": 4,
+      "new": 3
+    },
+    {
       "player": "T. Ramos",
       "field": "points",
-      "old": "44.0",
-      "new": "48.0"
+      "old": "48.0",
+      "new": "46.0"
     }
   ]
 }

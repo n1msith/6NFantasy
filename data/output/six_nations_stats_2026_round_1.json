@@ -1,7 +1,34 @@
 {
-  "extraction_date": "2026-02-05",
+  "extraction_date": "2026-02-06",
   "round": 1,
   "players": [
+    {
+      "name": "M. Jalibert",
+      "club": "France",
+      "position": "Fly-Half",
+      "stats": {
+        "matches_played": 80,
+        "man_of_match": "",
+        "tries": 1,
+        "assists": 1,
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 11,
+        "meters_carried": 73,
+        "defenders_beaten": 5,
+        "offloads": 4,
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": 1,
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "52.0"
+      }
+    },
     {
       "name": "L. Bielle-Biarrey",
       "club": "France",
@@ -44,33 +71,6 @@
         "tackles": "",
         "meters_carried": 116,
         "defenders_beaten": 6,
-        "offloads": 4,
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": 1,
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "48.0"
-      }
-    },
-    {
-      "name": "M. Jalibert",
-      "club": "France",
-      "position": "Fly-Half",
-      "stats": {
-        "matches_played": 80,
-        "man_of_match": "",
-        "tries": 1,
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 11,
-        "meters_carried": 71,
-        "defenders_beaten": 5,
         "offloads": 3,
         "kick_50_22": "",
         "lineout_steals": "",
@@ -203,7 +203,7 @@
         "conversions": "",
         "penalties": "",
         "drop_goals": "",
-        "tackles": 3,
+        "tackles": 4,
         "meters_carried": 38,
         "defenders_beaten": 2,
         "offloads": "",
@@ -215,7 +215,7 @@
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
-        "points": "32.0"
+        "points": "33.0"
       }
     },
     {
@@ -230,7 +230,7 @@
         "conversions": 2,
         "penalties": "",
         "drop_goals": "",
-        "tackles": 12,
+        "tackles": 13,
         "meters_carried": 23,
         "defenders_beaten": 3,
         "offloads": 2,
@@ -242,7 +242,7 @@
         "penalties_conceded": 1,
         "yellow_cards": "",
         "red_cards": "",
-        "points": "31.0"
+        "points": "32.0"
       }
     },
     {
@@ -258,7 +258,7 @@
         "penalties": "",
         "drop_goals": "",
         "tackles": 8,
-        "meters_carried": 35,
+        "meters_carried": 45,
         "defenders_beaten": 2,
         "offloads": 3,
         "kick_50_22": "",
@@ -269,7 +269,7 @@
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
-        "points": "31.0"
+        "points": "32.0"
       }
     },
     {
@@ -338,7 +338,7 @@
         "conversions": "",
         "penalties": "",
         "drop_goals": "",
-        "tackles": 16,
+        "tackles": 17,
         "meters_carried": 5,
         "defenders_beaten": 1,
         "offloads": 2,
@@ -350,7 +350,7 @@
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
-        "points": "29.0"
+        "points": "30.0"
       }
     },
     {
@@ -365,7 +365,7 @@
         "conversions": "",
         "penalties": "",
         "drop_goals": "",
-        "tackles": 9,
+        "tackles": 10,
         "meters_carried": 30,
         "defenders_beaten": 3,
         "offloads": 2,
@@ -377,7 +377,7 @@
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
-        "points": "26.0"
+        "points": "27.0"
       }
     },
     {
@@ -428,33 +428,6 @@
         "breakdown_steals": "",
         "critere_18": 2,
         "scrum_wins": "",
-        "penalties_conceded": 1,
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "21.0"
-      }
-    },
-    {
-      "name": "L. Nouchi",
-      "club": "France",
-      "position": "Back Row",
-      "stats": {
-        "matches_played": 18,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 12,
-        "meters_carried": 23,
-        "defenders_beaten": 3,
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": 2,
         "penalties_conceded": 1,
         "yellow_cards": "",
         "red_cards": "",
@@ -547,14 +520,14 @@
       "club": "Ireland",
       "position": "Prop",
       "stats": {
-        "matches_played": 20,
+        "matches_played": 21,
         "man_of_match": "",
         "tries": 1,
         "assists": "",
         "conversions": "",
         "penalties": "",
         "drop_goals": "",
-        "tackles": 2,
+        "tackles": 3,
         "meters_carried": 4,
         "defenders_beaten": "",
         "offloads": "",
@@ -564,6 +537,33 @@
         "critere_18": "",
         "scrum_wins": "",
         "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "18.0"
+      }
+    },
+    {
+      "name": "L. Nouchi",
+      "club": "France",
+      "position": "Back Row",
+      "stats": {
+        "matches_played": 18,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 12,
+        "meters_carried": 23,
+        "defenders_beaten": 1,
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": 2,
+        "penalties_conceded": 1,
         "yellow_cards": "",
         "red_cards": "",
         "points": "17.0"
@@ -651,6 +651,33 @@
       }
     },
     {
+      "name": "J. Loughman",
+      "club": "Ireland",
+      "position": "Prop",
+      "stats": {
+        "matches_played": 59,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 11,
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": 4,
+        "penalties_conceded": 1,
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "14.0"
+      }
+    },
+    {
       "name": "D. Sheehan",
       "club": "Ireland",
       "position": "Hooker",
@@ -699,33 +726,6 @@
         "critere_18": "",
         "scrum_wins": "",
         "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "13.0"
-      }
-    },
-    {
-      "name": "J. Loughman",
-      "club": "Ireland",
-      "position": "Prop",
-      "stats": {
-        "matches_played": 60,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 10,
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": 4,
-        "penalties_conceded": 1,
         "yellow_cards": "",
         "red_cards": "",
         "points": "13.0"
@@ -840,6 +840,33 @@
       }
     },
     {
+      "name": "E. Meafou",
+      "club": "France",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": 30,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 7,
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": 1,
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": 3,
+        "penalties_conceded": 1,
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "11.0"
+      }
+    },
+    {
       "name": "F. Cros",
       "club": "France",
       "position": "Back Row",
@@ -921,45 +948,18 @@
       }
     },
     {
-      "name": "E. Meafou",
-      "club": "France",
-      "position": "Second Row",
-      "stats": {
-        "matches_played": 30,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 7,
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": 3,
-        "penalties_conceded": 1,
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "9.0"
-      }
-    },
-    {
       "name": "T. Clarkson",
       "club": "Ireland",
       "position": "Prop",
       "stats": {
-        "matches_played": 60,
+        "matches_played": 59,
         "man_of_match": "",
         "tries": "",
         "assists": "",
         "conversions": "",
         "penalties": "",
         "drop_goals": "",
-        "tackles": 6,
+        "tackles": 5,
         "meters_carried": 2,
         "defenders_beaten": "",
         "offloads": "",
@@ -971,7 +971,7 @@
         "penalties_conceded": 1,
         "yellow_cards": "",
         "red_cards": "",
-        "points": "9.0"
+        "points": "8.0"
       }
     },
     {
@@ -1044,6 +1044,33 @@
         "meters_carried": 18,
         "defenders_beaten": "",
         "offloads": 1,
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "6.0"
+      }
+    },
+    {
+      "name": "B. Serin",
+      "club": "France",
+      "position": "Scrum-Half",
+      "stats": {
+        "matches_played": 6,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": 22,
+        "defenders_beaten": 2,
+        "offloads": "",
         "kick_50_22": "",
         "lineout_steals": "",
         "breakdown_steals": "",
@@ -1164,33 +1191,6 @@
       }
     },
     {
-      "name": "F. Bealham",
-      "club": "Ireland",
-      "position": "Prop",
-      "stats": {
-        "matches_played": 20,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": 3,
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
       "name": "C. Casey",
       "club": "Ireland",
       "position": "Scrum-Half",
@@ -1202,7 +1202,7 @@
         "conversions": "",
         "penalties": "",
         "drop_goals": "",
-        "tackles": "",
+        "tackles": 1,
         "meters_carried": "",
         "defenders_beaten": "",
         "offloads": "",
@@ -1214,15 +1214,15 @@
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
-        "points": ""
+        "points": "1.0"
       }
     },
     {
-      "name": "B. Serin",
-      "club": "France",
-      "position": "Scrum-Half",
+      "name": "F. Bealham",
+      "club": "Ireland",
+      "position": "Prop",
       "stats": {
-        "matches_played": 6,
+        "matches_played": 21,
         "man_of_match": "",
         "tries": "",
         "assists": "",
@@ -1230,7 +1230,7 @@
         "penalties": "",
         "drop_goals": "",
         "tackles": "",
-        "meters_carried": "",
+        "meters_carried": 3,
         "defenders_beaten": "",
         "offloads": "",
         "kick_50_22": "",
@@ -1461,33 +1461,6 @@
       }
     },
     {
-      "name": "G. Ford",
-      "club": "England",
-      "position": "Fly-Half",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
       "name": "H. Pollock",
       "club": "England",
       "position": "Back Row",
@@ -1515,9 +1488,9 @@
       }
     },
     {
-      "name": "M. Itoje",
-      "club": "England",
-      "position": "Second Row",
+      "name": "P. Garbisi",
+      "club": "Italy",
+      "position": "Fly-Half",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -1542,9 +1515,36 @@
       }
     },
     {
-      "name": "P. Garbisi",
-      "club": "Italy",
+      "name": "G. Ford",
+      "club": "England",
       "position": "Fly-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "M. Itoje",
+      "club": "England",
+      "position": "Second Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -1598,6 +1598,33 @@
     {
       "name": "L. Cannone",
       "club": "Italy",
+      "position": "Back Row",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "M. Fagerson",
+      "club": "Scotland",
       "position": "Back Row",
       "stats": {
         "matches_played": "",
@@ -1759,33 +1786,6 @@
     },
     {
       "name": "L. Cannone",
-      "club": "Italy",
-      "position": "Back Row",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "M. Lamaro",
       "club": "Italy",
       "position": "Back Row",
       "stats": {
@@ -2163,6 +2163,60 @@
       }
     },
     {
+      "name": "N. Brex",
+      "club": "Italy",
+      "position": "Centre",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "P. Schoeman",
+      "club": "Scotland",
+      "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "C. Cunningham-South",
       "club": "England",
       "position": "Back Row",
@@ -2219,87 +2273,6 @@
     {
       "name": "G. Pepper",
       "club": "England",
-      "position": "Back Row",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "P. Schoeman",
-      "club": "Scotland",
-      "position": "Prop",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "N. Brex",
-      "club": "Italy",
-      "position": "Centre",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "M. Zuliani",
-      "club": "Italy",
       "position": "Back Row",
       "stats": {
         "matches_played": "",
@@ -2382,6 +2355,33 @@
       "name": "O. Chessum",
       "club": "England",
       "position": "Second Row",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "M. Zuliani",
+      "club": "Italy",
+      "position": "Back Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",

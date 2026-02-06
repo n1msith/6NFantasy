@@ -1,10 +1,30 @@
 {
   "round": 5,
   "file": "six_nations_stats_2026_round_5.json",
-  "extraction_date": "2026-02-05",
+  "extraction_date": "2026-02-06",
   "total_players": 228,
   "has_data": false,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "B. Kinghorn",
+    "B. Serin",
+    "D. Edwards",
+    "D. Lake",
+    "H. Pollock",
+    "I. Feyi-Waboso",
+    "L. Rees-Zammit",
+    "M. Zuliani"
+  ],
+  "players_removed": [
+    "A. Mann",
+    "D. Graham",
+    "F. Russell",
+    "G. Ford",
+    "G. da Re",
+    "J. Dempsey",
+    "J. Ritchie",
+    "M. Guillard",
+    "P. Schoeman",
+    "T. Jordan"
+  ],
   "stat_changes": []
 }
