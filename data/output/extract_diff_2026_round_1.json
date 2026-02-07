@@ -1,225 +1,43 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-02-06",
-  "total_players": 228,
+  "extraction_date": "2026-02-07",
+  "total_players": 229,
   "has_data": true,
   "players_added": [
-    "M. Fagerson"
+    "A. Izekor",
+    "D. Graham",
+    "D. van der Merwe",
+    "G. Furbank",
+    "J. Botham",
+    "J. Kenningham",
+    "L. Lynagh",
+    "M. Lamaro",
+    "N. Smith",
+    "R. Buros",
+    "S. Costelow",
+    "T. Roebuck",
+    "T. di Bartolomeo"
   ],
   "players_removed": [
-    "M. Lamaro"
+    "A. Mann",
+    "B. Kinghorn",
+    "D. Cherry",
+    "E. Ashman",
+    "E. Iyogun",
+    "F. Burke",
+    "G. Colombe",
+    "H. Jones",
+    "J. Dempsey",
+    "J. Ritchie",
+    "K. Rowe",
+    "M. Gallagher",
+    "R. Davies",
+    "S. Tuipulotu",
+    "T. Dan",
+    "T. Daubagna",
+    "T. Menoncello",
+    "T. Plumtree"
   ],
-  "stat_changes": [
-    {
-      "player": "A. Jelonch",
-      "field": "points",
-      "old": "29.0",
-      "new": "30.0"
-    },
-    {
-      "player": "A. Jelonch",
-      "field": "tackles",
-      "old": 16,
-      "new": 17
-    },
-    {
-      "player": "B. Serin",
-      "field": "defenders_beaten",
-      "old": "",
-      "new": 2
-    },
-    {
-      "player": "B. Serin",
-      "field": "meters_carried",
-      "old": "",
-      "new": 22
-    },
-    {
-      "player": "B. Serin",
-      "field": "points",
-      "old": "",
-      "new": "6.0"
-    },
-    {
-      "player": "C. Casey",
-      "field": "points",
-      "old": "",
-      "new": "1.0"
-    },
-    {
-      "player": "C. Casey",
-      "field": "tackles",
-      "old": "",
-      "new": 1
-    },
-    {
-      "player": "E. Meafou",
-      "field": "offloads",
-      "old": "",
-      "new": 1
-    },
-    {
-      "player": "E. Meafou",
-      "field": "points",
-      "old": "9.0",
-      "new": "11.0"
-    },
-    {
-      "player": "F. Bealham",
-      "field": "matches_played",
-      "old": 20,
-      "new": 21
-    },
-    {
-      "player": "J. Loughman",
-      "field": "matches_played",
-      "old": 60,
-      "new": 59
-    },
-    {
-      "player": "J. Loughman",
-      "field": "points",
-      "old": "13.0",
-      "new": "14.0"
-    },
-    {
-      "player": "J. Loughman",
-      "field": "tackles",
-      "old": 10,
-      "new": 11
-    },
-    {
-      "player": "L. Nouchi",
-      "field": "defenders_beaten",
-      "old": 3,
-      "new": 1
-    },
-    {
-      "player": "L. Nouchi",
-      "field": "points",
-      "old": "21.0",
-      "new": "17.0"
-    },
-    {
-      "player": "M. Jalibert",
-      "field": "assists",
-      "old": "",
-      "new": 1
-    },
-    {
-      "player": "M. Jalibert",
-      "field": "meters_carried",
-      "old": 71,
-      "new": 73
-    },
-    {
-      "player": "M. Jalibert",
-      "field": "offloads",
-      "old": 3,
-      "new": 4
-    },
-    {
-      "player": "M. Jalibert",
-      "field": "points",
-      "old": "46.0",
-      "new": "52.0"
-    },
-    {
-      "player": "M. Milne",
-      "field": "matches_played",
-      "old": 20,
-      "new": 21
-    },
-    {
-      "player": "M. Milne",
-      "field": "points",
-      "old": "17.0",
-      "new": "18.0"
-    },
-    {
-      "player": "M. Milne",
-      "field": "tackles",
-      "old": 2,
-      "new": 3
-    },
-    {
-      "player": "N. Timoney",
-      "field": "points",
-      "old": "32.0",
-      "new": "33.0"
-    },
-    {
-      "player": "N. Timoney",
-      "field": "tackles",
-      "old": 3,
-      "new": 4
-    },
-    {
-      "player": "S. McCloskey",
-      "field": "points",
-      "old": "26.0",
-      "new": "27.0"
-    },
-    {
-      "player": "S. McCloskey",
-      "field": "tackles",
-      "old": 9,
-      "new": 10
-    },
-    {
-      "player": "S. Prendergast",
-      "field": "points",
-      "old": "31.0",
-      "new": "32.0"
-    },
-    {
-      "player": "S. Prendergast",
-      "field": "tackles",
-      "old": 12,
-      "new": 13
-    },
-    {
-      "player": "T. Attissogbe",
-      "field": "meters_carried",
-      "old": 35,
-      "new": 45
-    },
-    {
-      "player": "T. Attissogbe",
-      "field": "points",
-      "old": "31.0",
-      "new": "32.0"
-    },
-    {
-      "player": "T. Clarkson",
-      "field": "matches_played",
-      "old": 60,
-      "new": 59
-    },
-    {
-      "player": "T. Clarkson",
-      "field": "points",
-      "old": "9.0",
-      "new": "8.0"
-    },
-    {
-      "player": "T. Clarkson",
-      "field": "tackles",
-      "old": 6,
-      "new": 5
-    },
-    {
-      "player": "T. Ramos",
-      "field": "offloads",
-      "old": 4,
-      "new": 3
-    },
-    {
-      "player": "T. Ramos",
-      "field": "points",
-      "old": "48.0",
-      "new": "46.0"
-    }
-  ]
+  "stat_changes": []
 }
