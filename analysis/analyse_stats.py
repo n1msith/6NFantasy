@@ -452,6 +452,8 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     # Add total stats to the aggregated dataframe
     df_aggregated = df_aggregated.merge(player_totals, on='name', how='left')
 
+    fantasy_points = calculate_fantasy_points(df_aggregated)
+
     # Filter based on total points
     df_filtered = df_aggregated[df_aggregated['total_player_points'] > min_points]
    

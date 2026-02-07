@@ -123,7 +123,7 @@ Player data structure (JSON):
 - **Supersubs**: 3× points multiplier for bench players
 - **Budget cap**: 230 points for team selection
 
-**Note**: `calculate_fantasy_points()` in analyse_stats.py reconstructs scoring by category (tries, tackles, etc.) but is only used for the `plot_points_distribution_by_category` visualization. Most analysis uses the API-provided `points` directly.
+**Note**: `calculate_fantasy_points()` in analyse_stats.py reconstructs scoring by category (tries, tackles, etc.) and is used for breakdown visualizations (`plot_player_points_breakdown` and `plot_points_distribution_by_category`). Most other analysis uses the API-provided `points` directly.
 
 ## CI/CD
 
