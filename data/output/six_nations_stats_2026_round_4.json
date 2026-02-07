@@ -2244,9 +2244,9 @@
       }
     },
     {
-      "name": "K. Gourgues",
-      "club": "France",
-      "position": "Centre",
+      "name": "F. Ruzza",
+      "club": "Italy",
+      "position": "Second Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -2271,9 +2271,9 @@
       }
     },
     {
-      "name": "F. Ruzza",
-      "club": "Italy",
-      "position": "Second Row",
+      "name": "K. Gourgues",
+      "club": "France",
+      "position": "Centre",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -2649,6 +2649,33 @@
       }
     },
     {
+      "name": "J. Adams",
+      "club": "Wales",
+      "position": "Back Three",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "critere_18": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "F. Dingwall",
       "club": "England",
       "position": "Centre",
@@ -2678,33 +2705,6 @@
     {
       "name": "T. Roebuck",
       "club": "England",
-      "position": "Back Three",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "critere_18": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "J. Adams",
-      "club": "Wales",
       "position": "Back Three",
       "stats": {
         "matches_played": "",
@@ -4458,9 +4458,9 @@
       }
     },
     {
-      "name": "A. Griffin",
+      "name": "H. Deaves",
       "club": "Wales",
-      "position": "Prop",
+      "position": "Back Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4485,9 +4485,9 @@
       }
     },
     {
-      "name": "H. Deaves",
+      "name": "A. Griffin",
       "club": "Wales",
-      "position": "Back Row",
+      "position": "Prop",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5862,9 +5862,9 @@
       }
     },
     {
-      "name": "D. Aldegheri",
-      "club": "France",
-      "position": "Prop",
+      "name": "L. Belcher",
+      "club": "Wales",
+      "position": "Hooker",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5889,9 +5889,9 @@
       }
     },
     {
-      "name": "L. Belcher",
-      "club": "Wales",
-      "position": "Hooker",
+      "name": "D. Aldegheri",
+      "club": "France",
+      "position": "Prop",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
