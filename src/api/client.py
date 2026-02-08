@@ -60,6 +60,7 @@ def extract_six_nations_stats(token: str, matchday: int = 1) -> List[Dict[str, A
     }
 
     all_data = []
+    seen_players = set()  # Track seen players to avoid duplicates
     page = 0
 
     try:
@@ -104,18 +105,25 @@ def extract_six_nations_stats(token: str, matchday: int = 1) -> List[Dict[str, A
                     break
 
                 for player in data['joueurs']:
+                    player_name = player['nomaffiche']
+
+                    # Skip duplicates
+                    if player_name in seen_players:
+                        continue
+                    seen_players.add(player_name)
+
                     translated_stats = {}
                     for stat in player['criteres']:
                         stat_name = PARAM_MAP.get(stat['nom'], stat['nom'])
                         translated_stats[stat_name] = stat['value']
 
                     player_data = {
-                        'name': player['nomaffiche'],
+                        'name': player_name,
                         'club': player['club'],
                         'position': player['position'],
                         'stats': translated_stats
                     }
-                    
+
                     # Correct the position before adding to all_data
                     corrected_player = correct_player_position(player_data)
                     all_data.append(corrected_player)

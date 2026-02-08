@@ -24,6 +24,7 @@ PARAM_MAP = {
     'critere_2': 'penalties_conceded',
     'critere_13': 'yellow_cards',
     'critere_14': 'red_cards',
+    'critere_18': 'kicks_retained',  # New in 2026
     'moyenne_points': 'points'
 }
 

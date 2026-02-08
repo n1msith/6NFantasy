@@ -71,6 +71,72 @@ TEAM_COLOURS = {
     'England':  '#E8003A',
 }
 
+# Fantasy scoring rules by year
+# Keys match DataFrame column names from the API
+SCORING_RULES = {
+    2025: {
+        # Attacking
+        'tries_back': 10,
+        'tries_forward': 15,
+        'assists': 4,
+        'conversions': 2,
+        'penalties': 3,
+        'drop_goals': 5,
+        'defenders_beaten': 2,
+        'meters_carried': 0.1,  # 1 pt per 10m
+        'kick_50_22': 7,
+        'offloads': 2,
+        'scrum_wins': 1,
+        # Defensive
+        'tackles': 1,
+        'breakdown_steals': 5,
+        'lineout_steals': 7,
+        'penalties_conceded': -1,
+        # General
+        'man_of_match': 15,
+        'yellow_cards': -5,
+        'red_cards': -8,
+        # Budget
+        'budget': 230,
+    },
+    2026: {
+        # Attacking
+        'tries_back': 10,
+        'tries_forward': 15,
+        'assists': 4,
+        'conversions': 2,
+        'penalties': 3,
+        'drop_goals': 5,
+        'defenders_beaten': 2,
+        'meters_carried': 0.1,  # 1 pt per 10m
+        'kick_50_22': 7,
+        'kicks_retained': 2,  # NEW in 2026
+        'offloads': 2,
+        'scrum_wins': 1,
+        # Defensive
+        'tackles': 1,
+        'breakdown_steals': 5,
+        'lineout_steals': 7,
+        'penalties_conceded': -1,
+        # General
+        'man_of_match': 15,
+        'yellow_cards': -5,
+        'red_cards': -8,
+        # Budget
+        'budget': 200,
+    },
+}
+
+
+def get_scoring_rules(year=None) -> dict:
+    """Get scoring rules for a given year. Falls back to most recent year if not found."""
+    if year is None:
+        year = YEAR
+    if year in SCORING_RULES:
+        return SCORING_RULES[year]
+    # Fall back to most recent year
+    return SCORING_RULES[max(SCORING_RULES.keys())]
+
 
 def get_fixtures(year: int = None) -> dict:
     """Get fixtures for a given year. Falls back to empty dict if year not found."""

@@ -7,8 +7,9 @@ import plotly.graph_objects as go
 from itertools import cycle
 import plotly.express as px
 import math
+from pulp import LpMaximize, LpProblem, LpVariable, lpSum, LpStatus, PULP_CBC_CMD
 
-from config.settings import get_fixtures
+from config.settings import get_fixtures, get_scoring_rules
 
 
 def run_analysis(round=None, match=None, max_players_per_position=15, year=None):
@@ -105,14 +106,15 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
         #df_filt = filter_by_players(df_filt, sub_list)
         
         df_filt = df_cleaned
-        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=True, subtitle=subtitle)
-        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=False, subtitle=subtitle)
+        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=True, subtitle=subtitle, year=year)
+        plot_player_points_breakdown(df_filt, min_points=10, max_players_per_position=max_players_per_position, is_ppm=False, subtitle=subtitle, year=year)
 
-        plot_points_distribution_by_category(df_cleaned, subtitle=subtitle)
+        plot_points_distribution_by_category(df_cleaned, subtitle=subtitle, year=year)
         plot_match_fantasy_comparison(df_cleaned, fixtures=fixtures, subtitle=subtitle)
         plot_player_round_heatmap(df_cleaned, max_players=max_players_per_position, subtitle=subtitle)
         plot_scatter_matrix(df_cleaned, subtitle=subtitle)
         plot_value_profile(df_cleaned, max_players_per_position=max_players_per_position, subtitle=subtitle)
+        optimize_squad(df_cleaned, year=year, subtitle=subtitle)
 
         # calculate points for a selected team based on previous rounds
         player_list1 = [
@@ -196,38 +198,57 @@ def df_clean(df):
     df_cleaned = df[df['points'] != 0]
     return df_cleaned
     
-def calculate_fantasy_points(df):
+def calculate_fantasy_points(df, year=None):
+    """
+    Calculate fantasy points breakdown by category using year-specific scoring rules.
+
+    Args:
+        df: DataFrame with player stats
+        year: Scoring year (uses data year if None)
+    """
+    # Get scoring rules for the year
+    rules = get_scoring_rules(year)
+
     # Define position groups
     backs = ['Back Three', 'Centre', 'Fly-Half', 'Scrum-Half']
     forwards = ['Prop', 'Hooker', 'Second Row', 'Back Row']
-    
+
     # Initialize try points based on position
-    tries_back = df.apply(lambda row: row['tries'] * 10 if row['position'] in backs else 0, axis=1)
-    tries_forward = df.apply(lambda row: row['tries'] * 15 if row['position'] in forwards else 0, axis=1)
-    
+    tries_back = df.apply(
+        lambda row: row['tries'] * rules['tries_back'] if row['position'] in backs else 0, axis=1
+    )
+    tries_forward = df.apply(
+        lambda row: row['tries'] * rules['tries_forward'] if row['position'] in forwards else 0, axis=1
+    )
+
     fantasy_points = {
-        # attacking
+        # Attacking
         'tries_back': tries_back,
         'tries_forward': tries_forward,
-        'assists': df['assists'] * 4,
-        'conversions': df['conversions'] * 2,
-        'penalties': df['penalties'] * 3,
-        'drop_goals': df['drop_goals'] * 5,
-        'defenders_beaten': df['defenders_beaten'] * 2,
-        'meters': (df['meters_carried'] / 10).apply(np.floor) * 1,  # Floor to nearest 10m
-        'kick_50_22': df['kick_50_22'] * 7,
-        'offloads': df['offloads'] * 2,
-        'scrum_wins': df['scrum_wins'] * 1, # 2 if offload
-        # defensive
-        'tackles': df['tackles'] * 1,
-        'breakdown_steals': df['breakdown_steals'] * 5,
-        'lineout_steals': df['lineout_steals'] * 7,
-        'penalties_conceded': df['penalties_conceded'] * -1,
-        # general
-        'man_of_match': df['man_of_match'] * 15,
-        'yellow_cards': df['yellow_cards'] * -5,
-        'red_cards': df['red_cards'] * -8
+        'assists': df['assists'] * rules['assists'],
+        'conversions': df['conversions'] * rules['conversions'],
+        'penalties': df['penalties'] * rules['penalties'],
+        'drop_goals': df['drop_goals'] * rules['drop_goals'],
+        'defenders_beaten': df['defenders_beaten'] * rules['defenders_beaten'],
+        'meters': (df['meters_carried'] * rules['meters_carried']).apply(np.floor),  # Floor to nearest 10m
+        'kick_50_22': df['kick_50_22'] * rules['kick_50_22'],
+        'offloads': df['offloads'] * rules['offloads'],
+        'scrum_wins': df['scrum_wins'] * rules['scrum_wins'],
+        # Defensive
+        'tackles': df['tackles'] * rules['tackles'],
+        'breakdown_steals': df['breakdown_steals'] * rules['breakdown_steals'],
+        'lineout_steals': df['lineout_steals'] * rules['lineout_steals'],
+        'penalties_conceded': df['penalties_conceded'] * rules['penalties_conceded'],
+        # General
+        'man_of_match': df['man_of_match'] * rules['man_of_match'],
+        'yellow_cards': df['yellow_cards'] * rules['yellow_cards'],
+        'red_cards': df['red_cards'] * rules['red_cards'],
     }
+
+    # Add kicks_retained if present in rules (new in 2026)
+    if 'kicks_retained' in rules and 'kicks_retained' in df.columns:
+        fantasy_points['kicks_retained'] = df['kicks_retained'] * rules['kicks_retained']
+
     return fantasy_points
 
 # ==================================================================================================================
@@ -396,7 +417,7 @@ def ppm_per_position_bar_chart(df, filter_text='all_players', subtitle=''):
     return fig
 
 
-def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20, filter_text="None", is_ppm=False, subtitle=''):
+def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20, filter_text="None", is_ppm=False, subtitle='', year=None):
     """
     Creates a horizontal bar chart showing the breakdown of fantasy points or points per minute for rugby players,
     sorted by their total points or overall PPM (total points / total minutes) within each position.
@@ -452,7 +473,7 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     # Add total stats to the aggregated dataframe
     df_aggregated = df_aggregated.merge(player_totals, on='name', how='left')
 
-    fantasy_points = calculate_fantasy_points(df_aggregated)
+    fantasy_points = calculate_fantasy_points(df_aggregated, year=year)
 
     # Filter based on total points
     df_filtered = df_aggregated[df_aggregated['total_player_points'] > min_points]
@@ -872,19 +893,21 @@ def plot_value_profile(df, max_players_per_position=15, subtitle=''):
     return fig
 
 
-def plot_points_distribution_by_category(df, subtitle=''):
+def plot_points_distribution_by_category(df, subtitle='', year=None):
     """
     Creates a stacked bar chart showing the points distribution across different scoring categories,
     with each bar segment representing a different round.
-   
+
     Parameters:
     -----------
     df : pandas.DataFrame
         DataFrame containing player stats and points with a 'round' column
+    year : int, optional
+        Year for scoring rules (uses default if None)
     """
 
     # Calculate points for each category
-    fantasy_points = calculate_fantasy_points(df)
+    fantasy_points = calculate_fantasy_points(df, year=year)
     
     # Get all unique rounds
     rounds = sorted(df['round'].unique())
@@ -979,5 +1002,169 @@ def plot_points_distribution_by_category(df, subtitle=''):
     html_name = 'points_distribution_by_category_and_round.html'
     fig.write_html(html_name)
     print(f"Written to {html_name}")
-    
+
+    return fig
+
+
+def optimize_squad(df, year=None, subtitle=''):
+    """
+    Uses Integer Linear Programming to find the optimal 15-player squad
+    within the budget constraint, maximizing total expected points.
+
+    Squad structure (standard rugby):
+    - 2 Props, 1 Hooker, 2 Second Row, 3 Back Row (forwards = 8)
+    - 1 Scrum-Half, 1 Fly-Half, 2 Centres, 3 Back Three (backs = 7)
+
+    Parameters:
+    -----------
+    df : pandas.DataFrame
+        DataFrame with player stats including 'fantasy_value' and 'points'
+    year : int
+        Year for scoring rules (determines budget). If None, uses default from settings.
+    subtitle : str
+        Subtitle for the chart
+    """
+    # Get budget from year-specific scoring rules
+    rules = get_scoring_rules(year)
+    budget = rules.get('budget', 230)  # Fallback to 230 if not specified
+
+    # Position requirements for a rugby squad
+    POSITION_REQUIREMENTS = {
+        'Prop': 2,
+        'Hooker': 1,
+        'Second Row': 2,
+        'Back Row': 3,
+        'Scrum-Half': 1,
+        'Fly-Half': 1,
+        'Centre': 2,
+        'Back Three': 3
+    }
+
+    # Aggregate player stats - use most recent round's data
+    df_latest = df.sort_values('round', ascending=False).drop_duplicates(subset=['name'], keep='first')
+
+    # Filter to players with fantasy values
+    df_valid = df_latest[df_latest['fantasy_value'] > 0].copy()
+
+    if df_valid.empty:
+        print("No players with fantasy values found. Cannot optimize.")
+        return None
+
+    # Calculate average points per round for each player
+    player_avg_points = df.groupby('name')['points'].mean()
+    df_valid['avg_points'] = df_valid['name'].map(player_avg_points)
+
+    # Create the optimization problem
+    prob = LpProblem("Fantasy_Squad_Optimizer", LpMaximize)
+
+    # Create binary decision variables for each player
+    players = df_valid['name'].tolist()
+    player_vars = LpVariable.dicts("player", players, cat='Binary')
+
+    # Objective: Maximize total average points
+    prob += lpSum([player_vars[p] * df_valid[df_valid['name'] == p]['avg_points'].values[0]
+                   for p in players]), "Total_Points"
+
+    # Budget constraint (max only - let optimizer find best value)
+    prob += lpSum([player_vars[p] * df_valid[df_valid['name'] == p]['fantasy_value'].values[0]
+                   for p in players]) <= budget, "Budget"
+
+    # Position constraints
+    for position, required in POSITION_REQUIREMENTS.items():
+        position_players = df_valid[df_valid['position'] == position]['name'].tolist()
+        prob += lpSum([player_vars[p] for p in position_players]) == required, f"Position_{position}"
+
+    # Solve the problem (suppress solver output)
+    prob.solve(PULP_CBC_CMD(msg=0))
+
+    if LpStatus[prob.status] != 'Optimal':
+        print(f"Optimization failed: {LpStatus[prob.status]}")
+        return None
+
+    # Extract selected players
+    selected = []
+    for p in players:
+        if player_vars[p].value() == 1:
+            player_data = df_valid[df_valid['name'] == p].iloc[0]
+            selected.append({
+                'name': p,
+                'position': player_data['position'],
+                'club': player_data['club'],
+                'value': player_data['fantasy_value'],
+                'avg_points': player_data['avg_points'],
+                'pts_per_dollar': player_data['avg_points'] / player_data['fantasy_value']
+            })
+
+    # Sort by position order for display
+    position_order = ['Prop', 'Hooker', 'Second Row', 'Back Row', 'Scrum-Half', 'Fly-Half', 'Centre', 'Back Three']
+    selected_df = pd.DataFrame(selected)
+    selected_df['pos_order'] = selected_df['position'].map({p: i for i, p in enumerate(position_order)})
+    selected_df = selected_df.sort_values('pos_order')
+
+    total_value = selected_df['value'].sum()
+    total_points = selected_df['avg_points'].sum()
+
+    # Identify captain (highest avg points - doubling them gives most benefit)
+    captain_idx = selected_df['avg_points'].idxmax()
+    captain = selected_df.loc[captain_idx]
+    captain_bonus = captain['avg_points']  # Captain doubles, so bonus = their base points
+    total_with_captain = total_points + captain_bonus
+
+    # Mark captain in display
+    selected_df['is_captain'] = selected_df.index == captain_idx
+    display_names = selected_df.apply(
+        lambda r: f"(C) {r['name']}" if r['is_captain'] else r['name'], axis=1
+    )
+
+    # Create visualization - table with squad
+    fig = go.Figure()
+
+    # Add table
+    fig.add_trace(go.Table(
+        header=dict(
+            values=['Position', 'Player', 'Team', 'Value ($)', 'Avg Pts', 'Pts/$'],
+            fill_color='#2c3e50',
+            font=dict(color='white', size=12),
+            align='left'
+        ),
+        cells=dict(
+            values=[
+                selected_df['position'],
+                display_names,
+                selected_df['club'],
+                selected_df['value'].round(1),
+                selected_df['avg_points'].round(1),
+                selected_df['pts_per_dollar'].round(2)
+            ],
+            fill_color=[['#ffd700' if selected_df.iloc[i]['is_captain'] else ('#ecf0f1' if i % 2 == 0 else 'white') for i in range(len(selected_df))]],
+            align='left',
+            height=25
+        )
+    ))
+
+    fig.update_layout(
+        title=f'Optimal Squad (Budget: ${budget}, Used: ${total_value:.1f}, Projected Pts: {total_with_captain:.1f} with Captain)<br><sup>{subtitle}</sup>' if subtitle else f'Optimal Squad (Budget: ${budget}, Used: ${total_value:.1f}, Projected Pts: {total_with_captain:.1f} with Captain)',
+        height=500,
+        width=800,
+        margin=dict(t=80, b=20)
+    )
+
+    html_name = 'optimal_squad.html'
+    fig.write_html(html_name)
+    print(f"Written to {html_name}")
+
+    # Print summary
+    print(f"\n{'='*60}")
+    print(f"OPTIMAL SQUAD (Budget: ${budget})")
+    print(f"{'='*60}")
+    print(f"Total Value: ${total_value:.1f} / ${budget}")
+    print(f"Base Points: {total_points:.1f}")
+    print(f"Captain: {captain['name']} (+{captain_bonus:.1f} pts)")
+    print(f"Total with Captain: {total_with_captain:.1f}")
+    print(f"{'='*60}")
+    for _, row in selected_df.iterrows():
+        marker = "(C)" if row['is_captain'] else "   "
+        print(f"{marker} {row['position']:12} {row['name']:22} {row['club']:10} ${row['value']:5.1f}  {row['avg_points']:5.1f} pts")
+    print(f"{'='*60}")
+
     return fig
