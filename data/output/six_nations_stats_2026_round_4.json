@@ -1,5 +1,5 @@
 {
-  "extraction_date": "2026-02-07",
+  "extraction_date": "2026-02-08",
   "round": 4,
   "players": [
     {
@@ -27,7 +27,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 17.1
     },
     {
       "name": "L. Bielle-Biarrey",
@@ -54,7 +55,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 16.3
     },
     {
       "name": "B. Earl",
@@ -81,7 +83,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 16.2
     },
     {
       "name": "D. Sheehan",
@@ -108,7 +111,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 15.9
     },
     {
       "name": "C. Doris",
@@ -135,7 +139,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 15.6
     },
     {
       "name": "A. Dupont",
@@ -162,7 +167,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 15.5
     },
     {
       "name": "T. Freeman",
@@ -189,7 +195,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 15.2
     },
     {
       "name": "T. Menoncello",
@@ -216,7 +223,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 14.6
     },
     {
       "name": "G. Ford",
@@ -243,7 +251,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 14.4
     },
     {
       "name": "M. Jalibert",
@@ -270,7 +279,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 14.0
     },
     {
       "name": "L. Cannone",
@@ -297,7 +307,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.9
     },
     {
       "name": "S. Underhill",
@@ -324,7 +335,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.9
     },
     {
       "name": "M. Lamaro",
@@ -351,7 +363,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.8
     },
     {
       "name": "J. Dempsey",
@@ -378,7 +391,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.8
     },
     {
       "name": "T. Beirne",
@@ -405,7 +419,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.8
     },
     {
       "name": "D. van der Merwe",
@@ -432,7 +447,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.7
     },
     {
       "name": "B. Kinghorn",
@@ -459,7 +475,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.7
     },
     {
       "name": "T. Curry",
@@ -486,7 +503,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.6
     },
     {
       "name": "H. Jones",
@@ -513,7 +531,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.3
     },
     {
       "name": "M. Fagerson",
@@ -540,7 +559,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.1
     },
     {
       "name": "M. Fagerson",
@@ -567,7 +587,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.1
     },
     {
       "name": "H. Pollock",
@@ -594,7 +615,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.0
     },
     {
       "name": "J. Marchand",
@@ -621,7 +643,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 13.0
     },
     {
       "name": "J. Conan",
@@ -648,7 +671,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.9
     },
     {
       "name": "P. Garbisi",
@@ -675,7 +699,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.8
     },
     {
       "name": "F. Cros",
@@ -702,7 +727,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.8
     },
     {
       "name": "M. Itoje",
@@ -729,7 +755,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.8
     },
     {
       "name": "D. Graham",
@@ -756,7 +783,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.7
     },
     {
       "name": "J. Lowe",
@@ -783,7 +811,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.7
     },
     {
       "name": "I. Feyi-Waboso",
@@ -810,7 +839,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.7
     },
     {
       "name": "F. Russell",
@@ -837,7 +867,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.7
     },
     {
       "name": "J. Lowe",
@@ -864,7 +895,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.7
     },
     {
       "name": "S. Tuipulotu",
@@ -891,7 +923,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.6
     },
     {
       "name": "J. Gibson-Park",
@@ -918,7 +951,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.6
     },
     {
       "name": "A. Wainwright",
@@ -945,7 +979,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.6
     },
     {
       "name": "R. Darge",
@@ -972,7 +1007,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.5
     },
     {
       "name": "D. Fischetti",
@@ -999,7 +1035,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.3
     },
     {
       "name": "E. Ashman",
@@ -1026,7 +1063,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.3
     },
     {
       "name": "M. Smith",
@@ -1053,7 +1091,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.3
     },
     {
       "name": "J. van der Flier",
@@ -1080,7 +1119,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.3
     },
     {
       "name": "M. Smith",
@@ -1107,7 +1147,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.3
     },
     {
       "name": "N. Depoortere",
@@ -1134,7 +1175,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.2
     },
     {
       "name": "M. Ioane",
@@ -1161,7 +1203,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.2
     },
     {
       "name": "E. Genge",
@@ -1188,7 +1231,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.2
     },
     {
       "name": "Z. Fagerson",
@@ -1215,7 +1259,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.1
     },
     {
       "name": "D. Jenkins",
@@ -1242,7 +1287,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.1
     },
     {
       "name": "L. Cowan-Dickie",
@@ -1269,7 +1315,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.0
     },
     {
       "name": "S. Prendergast",
@@ -1296,7 +1343,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.0
     },
     {
       "name": "G. Pepper",
@@ -1323,7 +1371,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 12.0
     },
     {
       "name": "O. Chessum",
@@ -1350,7 +1399,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.9
     },
     {
       "name": "M. Zuliani",
@@ -1377,7 +1427,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.9
     },
     {
       "name": "P. Mauvaka",
@@ -1404,7 +1455,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.8
     },
     {
       "name": "B. White",
@@ -1431,7 +1483,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.8
     },
     {
       "name": "C. Ollivon",
@@ -1458,7 +1511,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.7
     },
     {
       "name": "M. Guillard",
@@ -1485,7 +1539,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.7
     },
     {
       "name": "B. Thomas",
@@ -1512,7 +1567,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.5
     },
     {
       "name": "G. Nicotera",
@@ -1539,7 +1595,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.5
     },
     {
       "name": "T. Williams",
@@ -1566,7 +1623,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.4
     },
     {
       "name": "J. McCarthy",
@@ -1593,7 +1651,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.2
     },
     {
       "name": "J. George",
@@ -1620,7 +1679,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.2
     },
     {
       "name": "D. Edwards",
@@ -1647,7 +1707,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.2
     },
     {
       "name": "N. Brex",
@@ -1674,7 +1735,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.2
     },
     {
       "name": "J. Crowley",
@@ -1701,7 +1763,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.1
     },
     {
       "name": "R. Kelleher",
@@ -1728,7 +1791,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.1
     },
     {
       "name": "L. Lynagh",
@@ -1755,7 +1819,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.1
     },
     {
       "name": "T. Attissogbe",
@@ -1782,7 +1847,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.0
     },
     {
       "name": "P. Schoeman",
@@ -1809,7 +1875,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.0
     },
     {
       "name": "T. O'Brien",
@@ -1836,7 +1903,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.0
     },
     {
       "name": "G. Ringrose",
@@ -1863,7 +1931,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 11.0
     },
     {
       "name": "A. Jelonch",
@@ -1890,7 +1959,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.9
     },
     {
       "name": "D. Lake",
@@ -1917,7 +1987,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.9
     },
     {
       "name": "A. Mitchell",
@@ -1944,7 +2015,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "N. Cannone",
@@ -1971,7 +2043,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "H. Keenan",
@@ -1998,7 +2071,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "J. Ritchie",
@@ -2025,7 +2099,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "B. Murray",
@@ -2052,7 +2127,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "M. Ojomoh",
@@ -2079,7 +2155,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "C. Cunningham-South",
@@ -2106,7 +2183,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.8
     },
     {
       "name": "T. Jordan",
@@ -2133,7 +2211,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.7
     },
     {
       "name": "A. Coles",
@@ -2160,7 +2239,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.7
     },
     {
       "name": "T. Plumtree",
@@ -2187,7 +2267,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.7
     },
     {
       "name": "A. Coles",
@@ -2214,7 +2295,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.7
     },
     {
       "name": "O. Jegou",
@@ -2241,7 +2323,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.3
     },
     {
       "name": "F. Ruzza",
@@ -2268,7 +2351,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.1
     },
     {
       "name": "K. Gourgues",
@@ -2295,7 +2379,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.1
     },
     {
       "name": "B. Spencer",
@@ -2322,7 +2407,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.0
     },
     {
       "name": "K. Steyn",
@@ -2349,7 +2435,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.0
     },
     {
       "name": "J. Gros",
@@ -2376,7 +2463,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.0
     },
     {
       "name": "J. Heyes",
@@ -2403,7 +2491,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 10.0
     },
     {
       "name": "F. Bealham",
@@ -2430,7 +2519,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.9
     },
     {
       "name": "E. Daly",
@@ -2457,7 +2547,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "J. Evans",
@@ -2484,7 +2575,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "C. Baille",
@@ -2511,7 +2603,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "A. Hastings",
@@ -2538,7 +2631,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "J. Osborne",
@@ -2565,7 +2659,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "J. Bayliss",
@@ -2592,7 +2687,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "T. Furlong",
@@ -2619,7 +2715,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "N. Timoney",
@@ -2646,7 +2743,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.8
     },
     {
       "name": "J. Adams",
@@ -2673,7 +2771,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.7
     },
     {
       "name": "F. Dingwall",
@@ -2700,7 +2799,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.7
     },
     {
       "name": "T. Roebuck",
@@ -2727,7 +2827,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.6
     },
     {
       "name": "F. Steward",
@@ -2754,7 +2855,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.5
     },
     {
       "name": "A. Mann",
@@ -2781,7 +2883,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.5
     },
     {
       "name": "E. Meafou",
@@ -2808,7 +2911,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.5
     },
     {
       "name": "A. Beard",
@@ -2835,7 +2939,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.4
     },
     {
       "name": "J. Dobie",
@@ -2862,7 +2967,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.3
     },
     {
       "name": "J. Ryan",
@@ -2889,7 +2995,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.3
     },
     {
       "name": "A. Zambonin",
@@ -2916,7 +3023,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.3
     },
     {
       "name": "A. Fusco",
@@ -2943,7 +3051,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.2
     },
     {
       "name": "J. Stockdale",
@@ -2970,7 +3079,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.2
     },
     {
       "name": "E. Mee",
@@ -2997,7 +3107,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.1
     },
     {
       "name": "S. Cummings",
@@ -3024,7 +3135,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.0
     },
     {
       "name": "C. Casey",
@@ -3051,7 +3163,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.0
     },
     {
       "name": "L. Pani",
@@ -3078,7 +3191,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 9.0
     },
     {
       "name": "H. Slade",
@@ -3105,7 +3219,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "C. Woki",
@@ -3132,7 +3247,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "O. Smith",
@@ -3159,7 +3275,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "C. Frawley",
@@ -3186,7 +3303,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "G. Hiddleston",
@@ -3213,7 +3331,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "M. Bradbury",
@@ -3240,7 +3359,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "R. Hutchinson",
@@ -3267,7 +3387,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "G. Hiddleston",
@@ -3294,7 +3415,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "G. Arfeuil",
@@ -3321,7 +3443,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "M. Bradbury",
@@ -3348,7 +3471,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "U. Seunes",
@@ -3375,7 +3499,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "C. Frawley",
@@ -3402,7 +3527,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "G. Thomas",
@@ -3429,7 +3555,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "T. Rogers",
@@ -3456,7 +3583,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "O. Smith",
@@ -3483,7 +3611,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.8
     },
     {
       "name": "S. Ferrari",
@@ -3510,7 +3639,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.7
     },
     {
       "name": "C. Prendergast",
@@ -3537,7 +3667,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.6
     },
     {
       "name": "G. Brown",
@@ -3564,7 +3695,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.6
     },
     {
       "name": "B. Serin",
@@ -3591,7 +3723,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.3
     },
     {
       "name": "T. di Bartolomeo",
@@ -3618,7 +3751,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.3
     },
     {
       "name": "B. Carter",
@@ -3645,7 +3779,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.1
     },
     {
       "name": "K. Hardy",
@@ -3672,7 +3807,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 8.0
     },
     {
       "name": "M. Lamothe",
@@ -3699,7 +3835,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "J. Brennan",
@@ -3726,7 +3863,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "H. Auradou",
@@ -3753,7 +3891,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. Varney",
@@ -3780,7 +3919,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "H. Auradou",
@@ -3807,7 +3947,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "N. Nene",
@@ -3834,7 +3975,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. McDowall",
@@ -3861,7 +4003,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "T. Stewart",
@@ -3888,7 +4031,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "F. Burke",
@@ -3915,7 +4059,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "C. Izuchukwu",
@@ -3942,7 +4087,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "T. Farrell",
@@ -3969,7 +4115,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "R. Baloucoune",
@@ -3996,7 +4143,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "H. Byrne",
@@ -4023,7 +4171,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. Varney",
@@ -4050,7 +4199,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "H. Byrne",
@@ -4077,7 +4227,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. Varney",
@@ -4104,7 +4255,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. Costelow",
@@ -4131,7 +4283,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "K. Rowe",
@@ -4158,7 +4311,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. McDowall",
@@ -4185,7 +4339,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "D. Cherry",
@@ -4212,7 +4367,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "P. Dimcheff",
@@ -4239,7 +4395,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "F. Burke",
@@ -4266,7 +4423,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "J. Gray",
@@ -4293,7 +4451,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "G. Gilchrist",
@@ -4320,7 +4479,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "S. Costelow",
@@ -4347,7 +4507,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "K. Rowe",
@@ -4374,7 +4535,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.9
     },
     {
       "name": "B. Rodd",
@@ -4401,7 +4563,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.8
     },
     {
       "name": "N. Smith",
@@ -4428,7 +4591,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.8
     },
     {
       "name": "J. Macleod",
@@ -4455,7 +4619,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.7
     },
     {
       "name": "H. Deaves",
@@ -4482,7 +4647,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.6
     },
     {
       "name": "A. Griffin",
@@ -4509,7 +4675,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.5
     },
     {
       "name": "E. James",
@@ -4536,7 +4703,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.2
     },
     {
       "name": "M. Grady",
@@ -4563,7 +4731,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.2
     },
     {
       "name": "M. Spagnolo",
@@ -4590,7 +4759,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.2
     },
     {
       "name": "T. Francis",
@@ -4617,7 +4787,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.1
     },
     {
       "name": "T. Clarkson",
@@ -4644,7 +4815,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.1
     },
     {
       "name": "M. Williamson",
@@ -4671,7 +4843,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.1
     },
     {
       "name": "R. Carre",
@@ -4698,7 +4871,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.0
     },
     {
       "name": "L. Marin",
@@ -4725,7 +4899,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 7.0
     },
     {
       "name": "F. Douglas",
@@ -4752,7 +4927,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "N. Doak",
@@ -4779,7 +4955,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "E. Edogbo",
@@ -4806,7 +4983,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Postlethwaite",
@@ -4833,7 +5011,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Zilocchi",
@@ -4860,7 +5039,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "M. Milne",
@@ -4887,7 +5067,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "N. Doak",
@@ -4914,7 +5095,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "E. Edogbo",
@@ -4941,7 +5123,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Postlethwaite",
@@ -4968,7 +5151,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Zilocchi",
@@ -4995,7 +5179,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "R. Sutherland",
@@ -5022,7 +5207,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Turner",
@@ -5049,7 +5235,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Hawkins",
@@ -5076,7 +5263,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "F. Douglas",
@@ -5103,7 +5291,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Warr",
@@ -5130,7 +5319,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Postlethwaite",
@@ -5157,7 +5347,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Zilocchi",
@@ -5184,7 +5375,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "D. Odiase",
@@ -5211,7 +5403,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "D. Mazza",
@@ -5238,7 +5431,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "S. Locatelli",
@@ -5265,7 +5459,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "R. Sutherland",
@@ -5292,7 +5487,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Turner",
@@ -5319,7 +5515,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "F. Douglas",
@@ -5346,7 +5543,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Warr",
@@ -5373,7 +5571,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "O. Watkin",
@@ -5400,7 +5599,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Turner",
@@ -5427,7 +5627,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Hamer-Webb",
@@ -5454,7 +5655,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "L. Hennessey",
@@ -5481,7 +5683,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "F. Douglas",
@@ -5508,7 +5711,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "G. Warr",
@@ -5535,7 +5739,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "O. Watkin",
@@ -5562,7 +5767,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "R. Davies",
@@ -5589,7 +5795,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Hawkins",
@@ -5616,7 +5823,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Botham",
@@ -5643,7 +5851,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.9
     },
     {
       "name": "J. Loughman",
@@ -5670,7 +5879,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.4
     },
     {
       "name": "R. Favretto",
@@ -5697,7 +5907,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.4
     },
     {
       "name": "T. Davison",
@@ -5724,7 +5935,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.2
     },
     {
       "name": "A. Garbisi",
@@ -5751,7 +5963,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.2
     },
     {
       "name": "N. McBeth",
@@ -5778,7 +5991,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.2
     },
     {
       "name": "R. Neti",
@@ -5805,7 +6019,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.1
     },
     {
       "name": "M. Hasa",
@@ -5832,7 +6047,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.1
     },
     {
       "name": "E. Millar-Mills",
@@ -5859,7 +6075,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.1
     },
     {
       "name": "L. Belcher",
@@ -5886,7 +6103,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.1
     },
     {
       "name": "D. Aldegheri",
@@ -5913,7 +6131,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 6.0
     },
     {
       "name": "T. Tatafu",
@@ -5940,7 +6159,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "E. Iyogun",
@@ -5967,7 +6187,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "B. Sela",
@@ -5994,7 +6215,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "T. Staniforth",
@@ -6021,7 +6243,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "T. Tatafu",
@@ -6048,7 +6271,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "B. Bohan",
@@ -6075,7 +6299,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "D. Rae",
@@ -6102,7 +6327,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "A. Craig",
@@ -6129,7 +6355,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "F. Thomas",
@@ -6156,7 +6383,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     },
     {
       "name": "S. Wainwright",
@@ -6183,7 +6411,8 @@
         "yellow_cards": "",
         "red_cards": "",
         "points": ""
-      }
+      },
+      "fantasy_value": 5.9
     }
   ]
 }
