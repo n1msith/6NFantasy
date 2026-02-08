@@ -8,6 +8,7 @@ numpy==2.2.2
 packaging==24.2
 pandas==2.2.3
 plotly==6.0.0
+PuLP==2.9.0
 pycparser==2.22
 PyJWT==2.10.1
 python-dateutil==2.9.0.post0
