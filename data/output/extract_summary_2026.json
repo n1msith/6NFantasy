@@ -1,22 +1,239 @@
 {
-  "generated_date": "2026-02-08 04:27",
+  "generated_date": "2026-02-08 14:16",
   "year": 2026,
   "rounds": [
     {
       "round": 1,
       "file": "six_nations_stats_2026_round_1.json",
       "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "total_players": 202,
       "has_data": true,
       "players_added": [],
       "players_removed": [],
-      "stat_changes": []
+      "stat_changes": [
+        {
+          "player": "A. Dupont",
+          "field": "critere_18",
+          "old": 5,
+          "new": ""
+        },
+        {
+          "player": "A. Dupont",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "A. Fusco",
+          "field": "critere_18",
+          "old": 3,
+          "new": ""
+        },
+        {
+          "player": "A. Fusco",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Mitchell",
+          "field": "critere_18",
+          "old": 2,
+          "new": ""
+        },
+        {
+          "player": "A. Mitchell",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "B. White",
+          "field": "critere_18",
+          "old": 7,
+          "new": ""
+        },
+        {
+          "player": "B. White",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "D. Edwards",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "D. Edwards",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Dingwall",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "F. Dingwall",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Ford",
+          "field": "critere_18",
+          "old": 2,
+          "new": ""
+        },
+        {
+          "player": "G. Ford",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "G. Horne",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "G. Horne",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "H. Arundell",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "H. Arundell",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "critere_18",
+          "old": 3,
+          "new": ""
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Osborne",
+          "field": "critere_18",
+          "old": 2,
+          "new": ""
+        },
+        {
+          "player": "J. Osborne",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "critere_18",
+          "old": 2,
+          "new": ""
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Brex",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "N. Brex",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Prendergast",
+          "field": "critere_18",
+          "old": 2,
+          "new": ""
+        },
+        {
+          "player": "S. Prendergast",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Ramos",
+          "field": "critere_18",
+          "old": 1,
+          "new": ""
+        },
+        {
+          "player": "T. Ramos",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Williams",
+          "field": "critere_18",
+          "old": 5,
+          "new": ""
+        },
+        {
+          "player": "T. Williams",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 5
+        }
+      ]
     },
     {
       "round": 2,
       "file": "six_nations_stats_2026_round_2.json",
       "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
@@ -26,7 +243,7 @@
       "round": 3,
       "file": "six_nations_stats_2026_round_3.json",
       "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
@@ -36,7 +253,7 @@
       "round": 4,
       "file": "six_nations_stats_2026_round_4.json",
       "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
@@ -46,7 +263,7 @@
       "round": 5,
       "file": "six_nations_stats_2026_round_5.json",
       "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
