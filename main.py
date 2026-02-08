@@ -15,6 +15,7 @@ from pathlib import Path
 from src.auth.token_validator import display_token_info
 from src.processors.api_stats_extractor import get_six_nations_stats
 from src.processors.fantasy_value_extractor import extract_fantasy_values, combine_with_api_data
+from src.api.client import extract_player_values
 from src.processors.extract_summary import compare_extract, generate_summary
 from analysis.analyse_stats import run_analysis
 from config.settings import (
@@ -79,8 +80,6 @@ def main():
             # Extract API data
             round_stats = get_six_nations_stats(extract_data=True, token=API_TOKEN, matchday=args.round)
 
-            # Extract fantasy spreadsheet data
-            input_file = Path(get_input_filename(args.round))
             output_file = Path(get_output_filename(args.round))
 
             # Load previous data for diff comparison
@@ -89,22 +88,25 @@ def main():
                 with open(output_file) as f:
                     previous_data = json.load(f)
 
-            if input_file.exists():
-                fantasy_values = extract_fantasy_values(str(input_file))
+            # Extract player values from API (pass player names for lookup)
+            player_names = [p['name'] for p in round_stats['players']]
+            player_values = extract_player_values(API_TOKEN, player_names)
 
-                # Combine the data
-                combined_data = combine_with_api_data(round_stats, fantasy_values, args.round)
+            # Add values to player stats
+            combined_data = round_stats.copy()
+            matched = 0
+            for player in combined_data['players']:
+                player_name = player['name']
+                if player_name in player_values:
+                    player['fantasy_value'] = player_values[player_name]
+                    matched += 1
 
-                # Save combined data
-                with open(output_file, 'w') as f:
-                    json.dump(combined_data, f, indent=2)
-                print(f"Successfully saved combined data to {output_file}")
-            else:
-                print(f"Warning: Fantasy values file not found at {input_file}")
-                combined_data = round_stats
-                with open(output_file, 'w') as f:
-                    json.dump(round_stats, f, indent=2)
-                print(f"Successfully saved combined data to {output_file}")
+            print(f"Matched values for {matched}/{len(combined_data['players'])} players")
+
+            # Save combined data
+            with open(output_file, 'w') as f:
+                json.dump(combined_data, f, indent=2)
+            print(f"Successfully saved combined data to {output_file}")
 
             # Save per-round diff
             diff = compare_extract(previous_data, combined_data, args.round, args.year)

@@ -11,7 +11,8 @@ YEAR = 2026
 API_BASE_URL = 'https://fantasy.sixnationsrugby.com/v1'
 API_ENDPOINTS = {
     'stats': f'{API_BASE_URL}/private/stats',
-    'user': f'{API_BASE_URL}/private/user'
+    'user': f'{API_BASE_URL}/private/user',
+    'players': f'{API_BASE_URL}/private/searchjoueurs'
 }
 
 # Token (valid for 30 days from issue)

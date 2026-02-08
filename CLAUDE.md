@@ -2,7 +2,7 @@
 
 ## Overview
 
-6NFantasy is a Python-based analytics tool for Six Nations Fantasy Rugby. It extracts player statistics from the official Six Nations Fantasy Rugby API, combines them with fantasy value data from Google Sheets, and generates interactive visualizations to support team selection.
+6NFantasy is a Python-based analytics tool for Six Nations Fantasy Rugby. It extracts player statistics and values from the official Six Nations Fantasy Rugby API, and generates interactive visualizations to support team selection.
 
 ## Tech Stack
 
@@ -60,9 +60,9 @@ python main.py --ppp 20
 
 ## Data Flow
 
-1. **Six Nations API** (JWT auth) → Raw player stats
-2. **Google Sheets CSV** → Fantasy values by player
-3. **Name matching** → Merge API data with fantasy values
+1. **Six Nations Stats API** (`/private/stats`) → Raw player stats with points
+2. **Six Nations Players API** (`/private/searchjoueurs`) → Player values (costs)
+3. **Name matching** → Merge stats with values
 4. **JSON output** → `data/output/six_nations_stats_YYYY_round_N.json`
 5. **Diff comparison** → Track changes between extracts
 6. **Analysis** → Interactive Plotly HTML charts
@@ -70,7 +70,8 @@ python main.py --ppp 20
 ## Key Modules
 
 ### src/api/client.py
-- `extract_six_nations_stats()` - Fetches all players from API with pagination
+- `extract_six_nations_stats()` - Fetches player stats from `/private/stats` with pagination
+- `extract_player_values()` - Fetches player costs from `/private/searchjoueurs` with pagination
 - `correct_player_position()` - Fixes position numbering from API
 - Handles JWT token validation
 

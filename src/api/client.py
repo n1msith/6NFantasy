@@ -166,3 +166,99 @@ def extract_six_nations_stats(token: str, matchday: int = 1) -> List[Dict[str, A
         raise
 
     return output_data
+
+
+def extract_player_values(token: str, player_names: list = None) -> Dict[str, float]:
+    """
+    Extract player values from the searchjoueurs API endpoint
+
+    Args:
+        token (str): Valid JWT token for authentication
+        player_names (list): Optional list of player names to look up
+
+    Returns:
+        Dict[str, float]: Dictionary mapping player display name to their fantasy value
+    """
+
+    # First validate the token
+    is_valid, message = validate_token(token)
+    if not is_valid:
+        raise TokenError(f"Token validation failed: {message}")
+
+    # Prepare headers with token
+    headers = {
+        **API_DEFAULT_HEADERS,
+        'Authorization': f'Token {token}'
+    }
+
+    player_values = {}
+    seen_ids = set()
+
+    print("\nExtracting player values from API...")
+
+    page = 0
+    while page < 30:  # Max 30 pages = 300 players
+        payload = {
+            "lg": "en",
+            "filters": {
+                "nom": "",
+                "club": "",
+                "position": "",
+                "budget_ok": False,
+                "valeur_max": 25,
+                "engage": False,
+                "partant": False,
+                "dreamteam": False,
+                "idj": "2",
+                "loadSelect": 0,
+                "pageIndex": page,
+                "pageSize": 10,
+                "quota": "",
+                "searchonly": 1
+            }
+        }
+
+        try:
+            response = requests.post(
+                API_ENDPOINTS['players'] + '?lg=en',
+                headers=headers,
+                json=payload,
+                timeout=REQUEST_TIMEOUT
+            )
+            response.raise_for_status()
+            data = response.json()
+            joueurs = data.get('joueurs', [])
+
+            if not joueurs:
+                break
+
+            new_count = 0
+            for player in joueurs:
+                player_id = player.get('idws', '')
+                if player_id in seen_ids:
+                    continue
+                seen_ids.add(player_id)
+
+                name = player.get('nom', '')
+                value = player.get('valeur', '')
+                if name and value:
+                    try:
+                        player_values[name] = float(value)
+                        new_count += 1
+                    except (ValueError, TypeError):
+                        pass
+
+            print(f"  Page {page}: {new_count} new players (total: {len(player_values)})")
+
+            # Stop if we got fewer than 10 (last page)
+            if len(joueurs) < 10:
+                break
+
+            page += 1
+
+        except requests.exceptions.RequestException as e:
+            print(f"  Request error: {e}")
+            break
+
+    print(f"Extracted values for {len(player_values)} players")
+    return player_values
