@@ -1074,6 +1074,14 @@ def optimize_squad(df, year=None, subtitle=''):
         position_players = df_valid[df_valid['position'] == position]['name'].tolist()
         prob += lpSum([player_vars[p] for p in position_players]) == required, f"Position_{position}"
 
+    # Country constraints - max 4 players per country (fantasy rule)
+    COUNTRIES = ['France', 'England', 'Ireland', 'Scotland', 'Wales', 'Italy']
+    MAX_PER_COUNTRY = 4
+    for country in COUNTRIES:
+        country_players = df_valid[df_valid['club'] == country]['name'].tolist()
+        if country_players:
+            prob += lpSum([player_vars[p] for p in country_players]) <= MAX_PER_COUNTRY, f"Country_{country}"
+
     # Solve the problem (suppress solver output)
     prob.solve(PULP_CBC_CMD(msg=0))
 
