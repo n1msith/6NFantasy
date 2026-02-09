@@ -1,12 +1,12 @@
 {
-  "generated_date": "2026-02-08 04:27",
+  "generated_date": "2026-02-09 04:17",
   "year": 2026,
   "rounds": [
     {
       "round": 1,
       "file": "six_nations_stats_2026_round_1.json",
-      "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "extraction_date": "2026-02-09",
+      "total_players": 202,
       "has_data": true,
       "players_added": [],
       "players_removed": [],
@@ -15,8 +15,8 @@
     {
       "round": 2,
       "file": "six_nations_stats_2026_round_2.json",
-      "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "extraction_date": "2026-02-09",
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
@@ -25,8 +25,8 @@
     {
       "round": 3,
       "file": "six_nations_stats_2026_round_3.json",
-      "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "extraction_date": "2026-02-09",
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
@@ -35,8 +35,8 @@
     {
       "round": 4,
       "file": "six_nations_stats_2026_round_4.json",
-      "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "extraction_date": "2026-02-09",
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
@@ -45,8 +45,8 @@
     {
       "round": 5,
       "file": "six_nations_stats_2026_round_5.json",
-      "extraction_date": "2026-02-08",
-      "total_players": 229,
+      "extraction_date": "2026-02-09",
+      "total_players": 196,
       "has_data": false,
       "players_added": [],
       "players_removed": [],
