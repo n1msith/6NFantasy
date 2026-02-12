@@ -1,38 +1,25 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-02-11",
-  "total_players": 208,
+  "extraction_date": "2026-02-12",
+  "total_players": 209,
   "has_data": true,
   "players_added": [
-    "A. Capuozzo",
-    "A. Fischer",
-    "C. Izuchukwu",
-    "E. Gailleton",
-    "E. Iyogun",
-    "F. Smith",
-    "G. Colombe",
-    "G. Kloska",
-    "H. Keenan",
-    "H. Slade",
-    "J. van Poortvliet",
-    "K. Gourgues",
-    "O. Lawrence",
-    "P. Boudehent",
-    "S. Gesi",
-    "T. Flament"
+    "A. Desperes",
+    "A. Roumat",
+    "B. Ward",
+    "C. Tiberghien",
+    "D. Rae",
+    "O. Smith",
+    "R. Elias"
   ],
   "players_removed": [
-    "C. Baille",
-    "C. Woki",
-    "D. Rae",
-    "E. Daly",
-    "F. Dingwall",
-    "J. van der Flier",
-    "O. Smith",
-    "R. Elias",
-    "S. Atkinson",
-    "T. Daubagna"
+    "A. Clark",
+    "A. Hastings",
+    "E. Iyogun",
+    "H. Slade",
+    "T. Dan",
+    "T. Staniforth"
   ],
   "stat_changes": []
 }
