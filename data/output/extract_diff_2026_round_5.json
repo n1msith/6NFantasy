@@ -1,34 +1,10 @@
 {
   "round": 5,
   "file": "six_nations_stats_2026_round_5.json",
-  "extraction_date": "2026-02-12",
+  "extraction_date": "2026-02-13",
   "total_players": 198,
   "has_data": false,
-  "players_added": [
-    "A. Desperes",
-    "B. Ward",
-    "C. Tiberghien",
-    "C. Woki",
-    "D. Rae",
-    "J. Dobie",
-    "R. Morgan-Williams",
-    "R. Neti",
-    "S. Costelow",
-    "T. Dan",
-    "T. Plumtree"
-  ],
-  "players_removed": [
-    "A. Clark",
-    "A. Garbisi",
-    "A. Zambonin",
-    "E. Iyogun",
-    "F. Brau-Boirie",
-    "N. Brex",
-    "S. Varney",
-    "T. Jordan",
-    "T. O'Toole",
-    "T. Rogers",
-    "T. Staniforth"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }

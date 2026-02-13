@@ -1,25 +1,10 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-02-12",
+  "extraction_date": "2026-02-13",
   "total_players": 209,
   "has_data": true,
-  "players_added": [
-    "A. Desperes",
-    "A. Roumat",
-    "B. Ward",
-    "C. Tiberghien",
-    "D. Rae",
-    "O. Smith",
-    "R. Elias"
-  ],
-  "players_removed": [
-    "A. Clark",
-    "A. Hastings",
-    "E. Iyogun",
-    "H. Slade",
-    "T. Dan",
-    "T. Staniforth"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
