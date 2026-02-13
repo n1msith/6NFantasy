@@ -515,37 +515,121 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
 
     round_points = df_sorted.points.sum()
     fantasy_values_rnd = math.ceil(df[df['round'] == fantasy_value_round]['fantasy_value'].sum())
-    
-    # Create figure
+
+    # --- Helper to compute per-category bar data for a subset ---
+    def build_breakdown_data(df_sub, fp_sub):
+        """Return (labels_list, category_dict) for a filtered subset."""
+        sub_sorted = df_sub.copy()
+        fv_map = sub_sorted.sort_values('round', ascending=False).groupby('name')['fantasy_value'].first()
+        sv = sub_sorted[sort_column].round(1 if is_ppm else 0).astype(str)
+        has_fv = fv_map.sum() > 0
+        if has_fv:
+            lbls = sub_sorted.apply(
+                lambda r: f"{r['name']} ({r['position']}) [{sv.loc[r.name]}, ${fv_map.loc[r['name']]}]", axis=1)
+        else:
+            lbls = sub_sorted.apply(
+                lambda r: f"{r['name']} ({r['position']}) [{sv.loc[r.name]}]", axis=1)
+
+        cat_data = {}
+        for category, pts in fp_sub.items():
+            ps = pd.Series(pts).reindex(sub_sorted.index).fillna(0)
+            if is_ppm:
+                ps = ps * sub_sorted['points_per_min'] / sub_sorted['points']
+            cat_data[category] = ps
+        return list(lbls), cat_data
+
+    # Pre-compute for "All"
+    all_categories = list(fantasy_points.keys())
+    labels_all_bd, cat_data_all = build_breakdown_data(df_sorted, fantasy_points)
+
+    # Pre-compute per country
+    countries = sorted(df_sorted['club'].unique())
+    country_bd = {}
+    for country in countries:
+        mask_c = df_sorted['club'] == country
+        df_c = df_sorted[mask_c]
+        fp_c = {cat: pd.Series(pts).reindex(df_c.index).fillna(0) for cat, pts in fantasy_points.items()}
+        lbls_c, cd_c = build_breakdown_data(df_c, fp_c)
+        country_bd[country] = (lbls_c, cd_c)
+
+    # Pre-compute per position
+    positions = sorted(df_sorted['position'].unique())
+    position_bd = {}
+    for pos in positions:
+        mask_p = df_sorted['position'] == pos
+        df_p = df_sorted[mask_p]
+        fp_p = {cat: pd.Series(pts).reindex(df_p.index).fillna(0) for cat, pts in fantasy_points.items()}
+        lbls_p, cd_p = build_breakdown_data(df_p, fp_p)
+        position_bd[pos] = (lbls_p, cd_p)
+
+    # Create figure with "All" data - always create a trace for every category
     fig = go.Figure()
-   
-    # Get plotly's qualitative color sequence
     colors = px.colors.qualitative.Set3
     color_cycle = cycle(colors)
-    
-    for category, points in fantasy_points.items():
-        # Align points with sorted DataFrame
-        points_subset = pd.Series(points).reindex(df_sorted.index).fillna(0)
-        
-        if is_ppm:
-            # Convert fantasy points to PPM for current round
-            points_subset = points_subset * df_sorted['points_per_min'] / df_sorted['points']
-            
-        mask = points_subset > 0
-       
-        if mask.any():
-            fig.add_trace(
-                go.Bar(
-                    y=all_labels,
-                    x=points_subset,
-                    orientation='h',
-                    name=category.replace('_', ' ').title(),
-                    marker_color=next(color_cycle),
-                    text=points_subset.round(1 if is_ppm else 0),
-                    textposition='inside',
-                )
+    row_height = 16
+
+    for category in all_categories:
+        ps = cat_data_all[category]
+        fig.add_trace(
+            go.Bar(
+                y=labels_all_bd,
+                x=ps,
+                orientation='h',
+                name=category.replace('_', ' ').title(),
+                marker_color=next(color_cycle),
+                text=ps.round(1 if is_ppm else 0),
+                textposition='inside',
+                visible=True if ps.sum() > 0 else 'legendonly',
             )
-   
+        )
+
+    # Build dropdown buttons
+    def make_button_args(lbls, cat_data_dict):
+        """Build restyle args dict for all traces."""
+        x_vals = [list(cat_data_dict[cat]) for cat in all_categories]
+        y_vals = [lbls for _ in all_categories]
+        txt_vals = [list(cat_data_dict[cat].round(1 if is_ppm else 0)) for cat in all_categories]
+        return x_vals, y_vals, txt_vals
+
+    x_all, y_all, t_all = make_button_args(labels_all_bd, cat_data_all)
+    buttons = [dict(
+        label='All Countries',
+        method='update',
+        args=[{'x': x_all, 'y': y_all, 'text': t_all},
+              {'height': max(600, len(set(labels_all_bd)) * row_height),
+               'yaxis.categoryarray': list(dict.fromkeys(labels_all_bd))}]
+    )]
+    for country in countries:
+        lbls_c, cd_c = country_bd[country]
+        x_c, y_c, t_c = make_button_args(lbls_c, cd_c)
+        buttons.append(dict(
+            label=country,
+            method='update',
+            args=[{'x': x_c, 'y': y_c, 'text': t_c},
+                  {'height': max(600, len(set(lbls_c)) * row_height),
+                   'yaxis.categoryarray': list(dict.fromkeys(lbls_c))}]
+        ))
+
+    # Position dropdown buttons
+    x_all_p, y_all_p, t_all_p = make_button_args(labels_all_bd, cat_data_all)
+    pos_buttons = [dict(
+        label='All Positions',
+        method='update',
+        args=[{'x': x_all_p, 'y': y_all_p, 'text': t_all_p},
+              {'height': max(600, len(set(labels_all_bd)) * row_height),
+               'yaxis.categoryarray': list(dict.fromkeys(labels_all_bd))}]
+    )]
+    for pos in positions:
+        lbls_p, cd_p = position_bd[pos]
+        x_p, y_p, t_p = make_button_args(lbls_p, cd_p)
+        pos_buttons.append(dict(
+            label=pos,
+            method='update',
+            args=[{'x': x_p, 'y': y_p, 'text': t_p},
+                  {'height': max(600, len(set(lbls_p)) * row_height),
+                   'yaxis.categoryarray': list(dict.fromkeys(lbls_p))}]
+        ))
+
     # Update title based on display mode
     display_type = 'PPM' if is_ppm else 'Points'
     fig.update_layout(
@@ -555,16 +639,38 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
         barmode='stack',
         showlegend=True,
         legend_title='Scoring Categories',
-        height=max(600, df_sorted['name'].nunique() * 20),
-        margin=dict(l=250),
+        height=max(600, len(set(labels_all_bd)) * row_height),
+        width=None,
+        margin=dict(l=250, r=200),
+        autosize=True,
         yaxis={
             'autorange': 'reversed',
             'categoryorder': 'array',
-            'categoryarray': list(dict.fromkeys(all_labels)),
+            'categoryarray': list(dict.fromkeys(labels_all_bd)),
             'dtick': 1
-        }
+        },
+        updatemenus=[
+            dict(
+                buttons=buttons,
+                direction='down',
+                showactive=True,
+                x=1.35,
+                xanchor='left',
+                y=1.0,
+                yanchor='top',
+            ),
+            dict(
+                buttons=pos_buttons,
+                direction='down',
+                showactive=True,
+                x=1.35,
+                xanchor='left',
+                y=0.85,
+                yanchor='top',
+            ),
+        ],
     )
-   
+
     # Update filename based on display mode
     type_text = 'ppm' if is_ppm else 'points'
     html_name = f'{type_text}_breakdown_{filter_text}.html'
@@ -647,48 +753,82 @@ def plot_player_round_heatmap(df, max_players=50, subtitle=''):
     Colour intensity = fantasy points scored that round.
     Players are grouped by position and sorted by total points descending.
     Quickly reveals who is trending up, down, or staying consistent.
+    Includes a dropdown filter for country.
     """
     rounds = sorted(df['round'].unique())
-
-    # Pivot: one row per player, one column per round
-    pivot = df.pivot_table(index=['name', 'club', 'position'],
-                           columns='round', values='points',
-                           aggfunc='sum', fill_value=0)
-
-    pivot['total'] = pivot.sum(axis=1)
-    pivot = pivot[pivot['total'] > 0]
-    pivot = pivot.sort_values(['position', 'total'], ascending=[True, False])
-
-    # Limit per position to keep the chart readable
-    pivot = pivot.groupby('position').head(max_players)
-
-    # Build labels: "Player (Country, Position) [total]"
-    labels = [f"{name} ({club}, {pos}) [{int(row['total'])}]"
-              for (name, club, pos), row in pivot.iterrows()]
-
-    z = pivot[rounds].values
     x_labels = [f"Round {r}" for r in rounds]
+    countries = sorted(df['club'].unique())
 
+    def build_heatmap_data(df_subset):
+        """Build pivot, labels and z-matrix for a subset of data."""
+        pivot = df_subset.pivot_table(index=['name', 'club', 'position'],
+                                      columns='round', values='points',
+                                      aggfunc='sum', fill_value=0)
+        pivot['total'] = pivot.sum(axis=1)
+        pivot = pivot[pivot['total'] > 0]
+        pivot = pivot.sort_values(['position', 'total'], ascending=[True, False])
+        pivot = pivot.groupby('position').head(max_players)
+
+        labels = [f"{name} ({club}, {pos}) [{int(row['total'])}]"
+                  for (name, club, pos), row in pivot.iterrows()]
+        z = pivot[rounds].values
+        return z, labels
+
+    # Pre-compute heatmap data for "All" and each country
+    z_all, labels_all = build_heatmap_data(df)
+    country_data = {}
+    for country in countries:
+        country_data[country] = build_heatmap_data(df[df['club'] == country])
+
+    # Create figure with "All" data
     fig = go.Figure(data=go.Heatmap(
-        z=z,
+        z=z_all,
         x=x_labels,
-        y=labels,
+        y=labels_all,
         colorscale='YlOrRd',
-        text=z.astype(int).astype(str),
+        text=z_all.astype(int).astype(str),
         texttemplate='%{text}',
         textfont=dict(size=10),
         colorbar=dict(title='Points'),
         hoverongaps=False,
     ))
 
+    # Build dropdown buttons (update data + chart height)
+    row_height = 18
+    buttons = [dict(
+        label='All Countries',
+        method='update',
+        args=[{'z': [z_all], 'y': [labels_all], 'text': [z_all.astype(int).astype(str)]},
+              {'height': max(600, len(labels_all) * row_height)}]
+    )]
+    for country in countries:
+        z_c, labels_c = country_data[country]
+        buttons.append(dict(
+            label=country,
+            method='update',
+            args=[{'z': [z_c], 'y': [labels_c], 'text': [z_c.astype(int).astype(str)]},
+                  {'height': max(600, len(labels_c) * row_height)}]
+        ))
+
     fig.update_layout(
         title=f'Player Fantasy Points per Round<br><sup>{subtitle}</sup>' if subtitle else 'Player Fantasy Points per Round',
         xaxis_title='Round',
         yaxis_title='Player',
-        height=max(600, len(labels) * 18),
-        width=800,
-        margin=dict(l=300),
+        height=max(600, len(labels_all) * 18),
+        width=None,
+        margin=dict(l=300, r=200),
+        autosize=True,
+        xaxis=dict(side='top'),
         yaxis=dict(autorange='reversed', dtick=1),
+        updatemenus=[dict(
+            buttons=buttons,
+            direction='down',
+            showactive=True,
+            x=1.22,
+            xanchor='left',
+            y=1.0,
+            yanchor='top',
+        )],
     )
 
     html_name = 'player_round_heatmap.html'

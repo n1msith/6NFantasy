@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
-Six Nations Fantasy Rugby Stats Extractor
+Six Nations Fantasy Rugby - CLI Entry Point
 
-Description:
-    Extracts player statistics from the Six Nations Fantasy Rugby API
-    and combines with fantasy values from spreadsheet data.
-    Spreadsheet:
-    https://docs.google.com/spreadsheets/d/1L77DVaq1ILyRjT9R5zoo5aiW_kbvXiOT/edit?gid=1409607056#gid=1409607056
+Extracts player statistics and fantasy values from the Six Nations API,
+tracks changes between extracts, and generates interactive Plotly visualizations
+to support fantasy team selection.
+
+Usage:
+    python main.py --extract --round 1    # Extract fresh data for round 1
+    python main.py --round 1              # Analyze existing round 1 data
+    python main.py --round 1 --match 2    # Filter to a specific match
+    python main.py --summary --year 2026  # Generate cross-round summary
 """
 
 import json
