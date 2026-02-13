@@ -4,7 +4,7 @@
   "players": [
     {
       "name": "G. Ford",
-      "club": "England",
+      "club": "Angleterre",
       "position": "Fly-Half",
       "stats": {
         "matches_played": 80,
@@ -88,7 +88,7 @@
     },
     {
       "name": "B. Earl",
-      "club": "England",
+      "club": "Angleterre",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -116,7 +116,7 @@
     },
     {
       "name": "T. Freeman",
-      "club": "England",
+      "club": "Angleterre",
       "position": "Back Three",
       "stats": {
         "matches_played": 80,
@@ -172,7 +172,7 @@
     },
     {
       "name": "H. Arundell",
-      "club": "England",
+      "club": "Angleterre",
       "position": "Back Three",
       "stats": {
         "matches_played": 80,
@@ -200,7 +200,7 @@
     },
     {
       "name": "L. Cannone",
-      "club": "Italy",
+      "club": "Italie",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -256,7 +256,7 @@
     },
     {
       "name": "J. Dempsey",
-      "club": "Scotland",
+      "club": "Ecosse",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
