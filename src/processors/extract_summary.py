@@ -13,6 +13,25 @@ from typing import Any, Dict, List, Optional
 from config.settings import get_fixtures, FIXTURE_DATES, TEAM_COLOURS, YEAR
 
 
+def _load_betting_odds(year):
+    """Load betting odds for a given year, returns {round: {(home, away): match_odds}}."""
+    odds_path = Path('data/output') / f'betting_odds_{year}.json'
+    if not odds_path.exists():
+        return {}
+    try:
+        with open(odds_path) as f:
+            data = json.load(f)
+        lookup = {}
+        for rnd_data in data.get('rounds', []):
+            rnd = rnd_data['round']
+            lookup[rnd] = {}
+            for m in rnd_data.get('matches', []):
+                lookup[rnd][(m['home'], m['away'])] = m
+        return lookup
+    except (json.JSONDecodeError, KeyError):
+        return {}
+
+
 def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
     """
     Generate a standalone fixtures HTML page for the given year.
@@ -26,6 +45,7 @@ def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
         return None
 
     fixture_dates = FIXTURE_DATES.get(year, {})
+    odds_lookup = _load_betting_odds(year)
 
     rounds_html = ""
     for rnd in sorted(fixtures.keys()):
@@ -41,10 +61,24 @@ def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
                 score_html = f'<span class="score">{h_score} - {a_score}</span>'
             else:
                 score_html = '<span class="vs">v</span>'
+
+            # Build odds line if available
+            odds_html = ''
+            if rnd in odds_lookup and (home, away) in odds_lookup[rnd]:
+                m = odds_lookup[rnd][(home, away)]
+                h_prob = m.get('home_win_prob', 0)
+                a_prob = m.get('away_win_prob', 0)
+                handicap = m.get('handicap', 0)
+                total = m.get('total_points', 0)
+                odds_html = f'<div class="odds">{h_prob*100:.0f}% v {a_prob*100:.0f}% &bull; Hcap {handicap:+.1f} &bull; O/U {total:.0f}</div>'
+
             rounds_html += f"""    <div class="fixture-card">
-      <span class="team" style="border-left: 4px solid {home_colour}; padding-left: 0.5rem;">{home}</span>
-      {score_html}
-      <span class="team" style="border-right: 4px solid {away_colour}; padding-right: 0.5rem; text-align: right;">{away}</span>
+      <div class="match-row">
+        <span class="team" style="border-left: 4px solid {home_colour}; padding-left: 0.5rem;">{home}</span>
+        {score_html}
+        <span class="team" style="border-right: 4px solid {away_colour}; padding-right: 0.5rem; text-align: right;">{away}</span>
+      </div>
+      {odds_html}
     </div>\n"""
         rounds_html += '  </div>\n'
 
@@ -59,10 +93,12 @@ def generate_fixtures_page(year: int = None, output_dir: str = None) -> str:
     h1 {{ border-bottom: 2px solid #333; padding-bottom: 0.5rem; }}
     h3 {{ margin-bottom: 0.5rem; }}
     .fixtures-round {{ display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }}
-    .fixture-card {{ display: flex; align-items: center; gap: 0.6rem; background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.6rem 1.2rem; min-width: 230px; }}
+    .fixture-card {{ background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 0.6rem 1.2rem; min-width: 230px; flex: 1; }}
+    .fixture-card .match-row {{ display: flex; align-items: center; gap: 0.6rem; }}
     .fixture-card .team {{ font-weight: 600; flex: 1; }}
     .fixture-card .vs {{ color: #999; font-size: 0.85em; }}
     .fixture-card .score {{ font-weight: 700; font-size: 0.95em; white-space: nowrap; }}
+    .fixture-card .odds {{ font-size: 0.78em; color: #888; margin-top: 0.3rem; text-align: center; border-top: 1px solid #eee; padding-top: 0.3rem; }}
     a {{ color: #1a6; }}
   </style>
 </head>
