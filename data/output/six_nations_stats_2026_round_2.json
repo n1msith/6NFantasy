@@ -4,7 +4,7 @@
   "players": [
     {
       "name": "T. Ramos",
-      "club": "France",
+      "club": "Francia",
       "position": "Back Three",
       "stats": {
         "matches_played": "",
@@ -32,7 +32,7 @@
     },
     {
       "name": "L. Bielle-Biarrey",
-      "club": "France",
+      "club": "Francia",
       "position": "Back Three",
       "stats": {
         "matches_played": "",
@@ -60,7 +60,7 @@
     },
     {
       "name": "B. Earl",
-      "club": "England",
+      "club": "Inghilterra",
       "position": "Back Row",
       "stats": {
         "matches_played": "",
@@ -88,7 +88,7 @@
     },
     {
       "name": "D. Sheehan",
-      "club": "Ireland",
+      "club": "Irlanda",
       "position": "Hooker",
       "stats": {
         "matches_played": "",
@@ -116,7 +116,7 @@
     },
     {
       "name": "C. Doris",
-      "club": "Ireland",
+      "club": "Irlanda",
       "position": "Back Row",
       "stats": {
         "matches_played": "",
@@ -144,7 +144,7 @@
     },
     {
       "name": "A. Dupont",
-      "club": "France",
+      "club": "Francia",
       "position": "Scrum-Half",
       "stats": {
         "matches_played": "",
@@ -172,7 +172,7 @@
     },
     {
       "name": "T. Freeman",
-      "club": "England",
+      "club": "Inghilterra",
       "position": "Back Three",
       "stats": {
         "matches_played": "",
@@ -200,7 +200,7 @@
     },
     {
       "name": "T. Menoncello",
-      "club": "Italy",
+      "club": "Italia",
       "position": "Centre",
       "stats": {
         "matches_played": "",
@@ -228,7 +228,7 @@
     },
     {
       "name": "G. Ford",
-      "club": "England",
+      "club": "Inghilterra",
       "position": "Fly-Half",
       "stats": {
         "matches_played": "",
@@ -256,7 +256,7 @@
     },
     {
       "name": "M. Jalibert",
-      "club": "France",
+      "club": "Francia",
       "position": "Fly-Half",
       "stats": {
         "matches_played": "",
