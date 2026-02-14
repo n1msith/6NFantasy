@@ -2,9 +2,32 @@
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
   "extraction_date": "2026-02-14",
-  "total_players": 209,
+  "total_players": 226,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "A. Clark",
+    "A. Grandidier Nkanang",
+    "C. Baille",
+    "C. Woki",
+    "E. Daly",
+    "E. Iyogun",
+    "F. Brau-Boirie",
+    "F. Dingwall",
+    "G. Drean",
+    "H. Slade",
+    "J. van der Flier",
+    "N. Nene",
+    "P. Odogwu",
+    "R. Buros",
+    "T. Dan",
+    "T. Daubagna",
+    "T. Matiu",
+    "T. O'Toole",
+    "T. Staniforth"
+  ],
+  "players_removed": [
+    "F. Thomas",
+    "G. da Re"
+  ],
   "stat_changes": []
 }
