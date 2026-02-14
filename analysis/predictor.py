@@ -701,11 +701,14 @@ def train_model(features: pd.DataFrame, target: pd.Series) -> tuple:
     model = xgb.XGBRegressor(**params)
 
     # Time series cross-validation (respects temporal ordering)
-    tscv = TimeSeriesSplit(n_splits=3)
-    cv_scores = cross_val_score(model, features, target,
-                                 cv=tscv, scoring='neg_mean_absolute_error')
-
-    print(f"\nCross-validation MAE: {-cv_scores.mean():.2f} (+/- {cv_scores.std():.2f})")
+    try:
+        tscv = TimeSeriesSplit(n_splits=3)
+        cv_scores = cross_val_score(model, features, target,
+                                     cv=tscv, scoring='neg_mean_absolute_error')
+        print(f"\nCross-validation MAE: {-cv_scores.mean():.2f} (+/- {cv_scores.std():.2f})")
+    except AttributeError as e:
+        # XGBoost/sklearn version mismatch (e.g. __sklearn_tags__)
+        print(f"\nSkipping cross-validation due to version incompatibility: {e}")
 
     # Train on full data
     model.fit(features, target)

@@ -11,6 +11,7 @@ from pulp import LpMaximize, LpProblem, LpVariable, lpSum, LpStatus, PULP_CBC_CM
 
 from config.settings import get_fixtures, get_scoring_rules
 from analysis.predictor import run_prediction_analysis
+from src.processors.extract_summary import generate_fixtures_page
 
 
 def run_analysis(round=None, match=None, max_players_per_position=15, year=None):
@@ -92,9 +93,12 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
     ]   
     
     try:
+        # Generate fixtures page
+        generate_fixtures_page(year=year)
+
         # Run visualizations
         #ppm_vs_player_bar_chart(df_cleaned)
-        
+
         df_supersub, filter_text = filter_by_supersubs(df_cleaned)
         ppm_vs_player_bar_chart(df_supersub, filter_text, subtitle=subtitle)
 
@@ -737,14 +741,13 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
     away_pts = []
     home_names = []
     away_names = []
-    odds_annotations = []
 
     for rnd in rounds_available:
         if rnd not in fixtures:
             continue
         round_data = club_round_pts[club_round_pts['round'] == rnd]
         for home, away, *_ in fixtures[rnd]:
-            # Build label with odds underneath
+            # Build x-axis label with odds embedded
             odds_line = ''
             if rnd in odds_lookup and (home, away) in odds_lookup[rnd]:
                 m = odds_lookup[rnd][(home, away)]
@@ -752,9 +755,9 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
                 a_prob = m.get('away_win_prob', 0)
                 handicap = m.get('handicap', 0)
                 total = m.get('total_points', 0)
-                odds_line = f"{h_prob*100:.0f}% v {a_prob*100:.0f}% | Hcap {handicap:+.1f} | O/U {total:.0f}"
+                odds_line = f"<br><span style='font-size:0.8em;color:#666'>{h_prob*100:.0f}% v {a_prob*100:.0f}% | Hcap {handicap:+.1f} | O/U {total:.0f}</span>"
 
-            label = f"R{rnd}: {home} v {away}"
+            label = f"R{rnd}: {home} v {away}{odds_line}"
             x_labels.append(label)
             h_pts = round_data.loc[round_data['club'] == home, 'points'].sum()
             a_pts = round_data.loc[round_data['club'] == away, 'points'].sum()
@@ -762,7 +765,6 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
             away_pts.append(a_pts)
             home_names.append(home)
             away_names.append(away)
-            odds_annotations.append(odds_line)
 
     fig.add_trace(go.Bar(
         x=x_labels,
@@ -781,31 +783,15 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
         marker_color='#ff7f0e',
     ))
 
-    # Add odds as annotations beneath each fixture
-    annotations = []
-    for i, (label, odds_text) in enumerate(zip(x_labels, odds_annotations)):
-        if odds_text:
-            annotations.append(dict(
-                x=label,
-                y=-0.15,
-                xref='x',
-                yref='paper',
-                text=f"<i>{odds_text}</i>",
-                showarrow=False,
-                font=dict(size=9, color='#666'),
-                align='center',
-            ))
-
     fig.update_layout(
         title=f'Fantasy Points: Head-to-Head per Match<br><sup>{subtitle}</sup>' if subtitle else 'Fantasy Points: Head-to-Head per Match',
         xaxis_title='Match',
         yaxis_title='Total Fantasy Points',
         barmode='group',
-        height=550,
+        height=600,
         width=1100,
-        margin=dict(b=150),
+        margin=dict(b=180),
         legend_title='Team',
-        annotations=annotations,
     )
     fig.update_xaxes(tickangle=30)
 
@@ -839,6 +825,10 @@ def plot_player_round_heatmap(df, max_players=50, subtitle=''):
 
         labels = [f"{name} ({club}, {pos}) [{int(row['total'])}]"
                   for (name, club, pos), row in pivot.iterrows()]
+        # Reindex to ensure all rounds are present (some countries may not have data for all rounds)
+        for r in rounds:
+            if r not in pivot.columns:
+                pivot[r] = 0
         z = pivot[rounds].values
         return z, labels
 
