@@ -4,7 +4,7 @@
   "players": [
     {
       "name": "G. Ford",
-      "club": "Angleterre",
+      "club": "England",
       "position": "Fly-Half",
       "stats": {
         "matches_played": 80,
@@ -88,7 +88,7 @@
     },
     {
       "name": "B. Earl",
-      "club": "Angleterre",
+      "club": "England",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -116,7 +116,7 @@
     },
     {
       "name": "T. Freeman",
-      "club": "Angleterre",
+      "club": "England",
       "position": "Back Three",
       "stats": {
         "matches_played": 80,
@@ -172,7 +172,7 @@
     },
     {
       "name": "H. Arundell",
-      "club": "Angleterre",
+      "club": "England",
       "position": "Back Three",
       "stats": {
         "matches_played": 80,
@@ -200,7 +200,7 @@
     },
     {
       "name": "L. Cannone",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -256,7 +256,7 @@
     },
     {
       "name": "J. Dempsey",
-      "club": "Ecosse",
+      "club": "Scotland",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -284,7 +284,7 @@
     },
     {
       "name": "T. Beirne",
-      "club": "Irlande",
+      "club": "Ireland",
       "position": "Second Row",
       "stats": {
         "matches_played": 80,
@@ -312,7 +312,7 @@
     },
     {
       "name": "M. Lamaro",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Back Row",
       "stats": {
         "matches_played": 69,
@@ -368,7 +368,7 @@
     },
     {
       "name": "C. Doris",
-      "club": "Irlande",
+      "club": "Ireland",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -396,7 +396,7 @@
     },
     {
       "name": "T. Menoncello",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Centre",
       "stats": {
         "matches_played": 80,
@@ -424,7 +424,7 @@
     },
     {
       "name": "N. Timoney",
-      "club": "Irlande",
+      "club": "Ireland",
       "position": "Back Row",
       "stats": {
         "matches_played": 30,
@@ -452,7 +452,7 @@
     },
     {
       "name": "S. Ferrari",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Prop",
       "stats": {
         "matches_played": 59,
@@ -480,7 +480,7 @@
     },
     {
       "name": "M. Zuliani",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Back Row",
       "stats": {
         "matches_played": 66,
@@ -508,7 +508,7 @@
     },
     {
       "name": "G. Pepper",
-      "club": "Angleterre",
+      "club": "England",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
@@ -536,7 +536,7 @@
     },
     {
       "name": "S. Prendergast",
-      "club": "Irlande",
+      "club": "Ireland",
       "position": "Fly-Half",
       "stats": {
         "matches_played": 80,
@@ -592,7 +592,7 @@
     },
     {
       "name": "N. Cannone",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Second Row",
       "stats": {
         "matches_played": 80,
@@ -676,7 +676,7 @@
     },
     {
       "name": "O. Chessum",
-      "club": "Angleterre",
+      "club": "England",
       "position": "Second Row",
       "stats": {
         "matches_played": 80,
@@ -732,7 +732,7 @@
     },
     {
       "name": "A. Zambonin",
-      "club": "Italie",
+      "club": "Italy",
       "position": "Second Row",
       "stats": {
         "matches_played": 69,
@@ -760,7 +760,7 @@
     },
     {
       "name": "S. McCloskey",
-      "club": "Irlande",
+      "club": "Ireland",
       "position": "Centre",
       "stats": {
         "matches_played": 80,
@@ -788,7 +788,7 @@
     },
     {
       "name": "B. White",
-      "club": "Ecosse",
+      "club": "Scotland",
       "position": "Scrum-Half",
       "stats": {
         "matches_played": 64,
@@ -816,7 +816,7 @@
     },
     {
       "name": "A. Wainwright",
-      "club": "Pays de Galles",
+      "club": "Wales",
       "position": "Back Row",
       "stats": {
         "matches_played": 80,
