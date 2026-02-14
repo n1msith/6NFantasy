@@ -10,6 +10,7 @@ import math
 from pulp import LpMaximize, LpProblem, LpVariable, lpSum, LpStatus, PULP_CBC_CMD
 
 from config.settings import get_fixtures, get_scoring_rules
+from analysis.predictor import run_prediction_analysis
 
 
 def run_analysis(round=None, match=None, max_players_per_position=15, year=None):
@@ -115,6 +116,12 @@ def run_analysis(round=None, match=None, max_players_per_position=15, year=None)
         plot_scatter_matrix(df_cleaned, subtitle=subtitle)
         plot_value_profile(df_cleaned, max_players_per_position=max_players_per_position, subtitle=subtitle)
         optimize_squad(df_cleaned, year=year, subtitle=subtitle)
+
+        # Generate prediction report
+        try:
+            run_prediction_analysis(output_html=True)
+        except Exception as pred_e:
+            print(f"Warning: Prediction report generation failed: {pred_e}")
 
         # calculate points for a selected team based on previous rounds
         player_list1 = [
