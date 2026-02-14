@@ -678,13 +678,46 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
     print(f"Written to {html_name}")
     return fig
 
+def _load_betting_odds(year):
+    """Load betting odds for a given year, returns {round: {(home, away): match_odds}}."""
+    odds_path = Path('data/output') / f'betting_odds_{year}.json'
+    if not odds_path.exists():
+        return {}
+    try:
+        with open(odds_path) as f:
+            data = json.load(f)
+        lookup = {}
+        for rnd_data in data.get('rounds', []):
+            rnd = rnd_data['round']
+            lookup[rnd] = {}
+            for m in rnd_data.get('matches', []):
+                lookup[rnd][(m['home'], m['away'])] = m
+        return lookup
+    except (json.JSONDecodeError, KeyError):
+        return {}
+
+
 def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
     """
     Grouped bar chart showing total fantasy points per team in each match,
     so you can see which team 'won' the fantasy battle per fixture.
+    Betting odds are displayed beneath each fixture.
     """
     if fixtures is None:
         fixtures = get_fixtures()
+
+    # Try to determine year from data or subtitle
+    year = None
+    if subtitle and any(c.isdigit() for c in subtitle):
+        import re
+        year_match = re.search(r'20\d{2}', subtitle)
+        if year_match:
+            year = int(year_match.group())
+    if year is None:
+        from config.settings import YEAR
+        year = YEAR
+
+    odds_lookup = _load_betting_odds(year)
 
     # Sum fantasy points per club per round
     club_round_pts = df.groupby(['round', 'club'])['points'].sum().reset_index()
@@ -697,12 +730,23 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
     away_pts = []
     home_names = []
     away_names = []
+    odds_annotations = []
 
     for rnd in rounds_available:
         if rnd not in fixtures:
             continue
         round_data = club_round_pts[club_round_pts['round'] == rnd]
         for home, away, *_ in fixtures[rnd]:
+            # Build label with odds underneath
+            odds_line = ''
+            if rnd in odds_lookup and (home, away) in odds_lookup[rnd]:
+                m = odds_lookup[rnd][(home, away)]
+                h_prob = m.get('home_win_prob', 0)
+                a_prob = m.get('away_win_prob', 0)
+                handicap = m.get('handicap', 0)
+                total = m.get('total_points', 0)
+                odds_line = f"{h_prob*100:.0f}% v {a_prob*100:.0f}% | Hcap {handicap:+.1f} | O/U {total:.0f}"
+
             label = f"R{rnd}: {home} v {away}"
             x_labels.append(label)
             h_pts = round_data.loc[round_data['club'] == home, 'points'].sum()
@@ -711,6 +755,7 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
             away_pts.append(a_pts)
             home_names.append(home)
             away_names.append(away)
+            odds_annotations.append(odds_line)
 
     fig.add_trace(go.Bar(
         x=x_labels,
@@ -729,15 +774,31 @@ def plot_match_fantasy_comparison(df, fixtures=None, subtitle=''):
         marker_color='#ff7f0e',
     ))
 
+    # Add odds as annotations beneath each fixture
+    annotations = []
+    for i, (label, odds_text) in enumerate(zip(x_labels, odds_annotations)):
+        if odds_text:
+            annotations.append(dict(
+                x=label,
+                y=-0.15,
+                xref='x',
+                yref='paper',
+                text=f"<i>{odds_text}</i>",
+                showarrow=False,
+                font=dict(size=9, color='#666'),
+                align='center',
+            ))
+
     fig.update_layout(
         title=f'Fantasy Points: Head-to-Head per Match<br><sup>{subtitle}</sup>' if subtitle else 'Fantasy Points: Head-to-Head per Match',
         xaxis_title='Match',
         yaxis_title='Total Fantasy Points',
         barmode='group',
-        height=500,
+        height=550,
         width=1100,
-        margin=dict(b=120),
+        margin=dict(b=150),
         legend_title='Team',
+        annotations=annotations,
     )
     fig.update_xaxes(tickangle=30)
 
