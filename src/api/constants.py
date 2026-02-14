@@ -28,6 +28,23 @@ PARAM_MAP = {
     'moyenne_points': 'points'
 }
 
+# Normalise club/country names (API sometimes returns French names)
+CLUB_NAME_MAPPING = {
+    'Angleterre': 'England',
+    'Écosse': 'Scotland',
+    'Ecosse': 'Scotland',
+    'Irlande': 'Ireland',
+    'Italie': 'Italy',
+    'Pays de Galles': 'Wales',
+    # Already English - pass through
+    'England': 'England',
+    'Scotland': 'Scotland',
+    'Ireland': 'Ireland',
+    'Italy': 'Italy',
+    'Wales': 'Wales',
+    'France': 'France',
+}
+
 # Mapping to correct incorrect position numbers from the website
 POSITION_MAPPING  = {
     '13': 'Hooker',

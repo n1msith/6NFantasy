@@ -1,8 +1,14 @@
 """
 Fantasy Rugby Prediction Module
 
-Uses XGBoost to predict player fantasy points based on historical performance.
-Analyzes 2025 data to predict 2026 outcomes.
+Uses XGBoost to predict player fantasy points based on multi-dimensional features:
+- Historical performance & rolling stats
+- Betting odds (scraped market data)
+- Fixture context (opponent strength, home/away)
+- Team form & momentum
+- Player form trajectory
+- Historical matchups (player vs specific opponent)
+- Position-specific interactions
 """
 
 import json
@@ -26,6 +32,21 @@ except ImportError:
 # Project paths
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_OUTPUT = PROJECT_ROOT / "data" / "output"
+
+
+def detect_target_round(year: int = 2026) -> int:
+    """Auto-detect the next unplayed round from fixtures data."""
+    from config.settings import FIXTURES
+
+    fixtures = FIXTURES.get(year, {})
+    for round_num in sorted(fixtures.keys()):
+        matches = fixtures[round_num]
+        # A round is unplayed if any match has score=None
+        if any(score is None for _, _, score in matches):
+            return round_num
+
+    # All rounds played - return last round
+    return max(fixtures.keys()) if fixtures else 1
 
 
 def load_round_data(year: int, round_num: int) -> Optional[pd.DataFrame]:
@@ -114,15 +135,87 @@ def filter_played_games(df: pd.DataFrame) -> pd.DataFrame:
     return df[df['played']].drop(columns=['played'])
 
 
-# Opponent strength ratings based on 2025 results (lower = easier to score against)
-OPPONENT_STRENGTH = {
-    'Wales': 0.0,     # Easiest - conceded most points
-    'Italy': 0.2,     # Second easiest
-    'Scotland': 0.5,  # Mid-tier
-    'England': 0.6,   # Mid-tier
-    'France': 0.8,    # Strong
-    'Ireland': 1.0,   # Hardest - conceded fewest points
-}
+def calculate_dynamic_opponent_strength() -> dict:
+    """Calculate opponent strength from actual match results instead of hardcoded values.
+
+    Returns dict of {team: strength_score} where higher = harder to score against.
+    Uses points conceded across all available fixture data.
+    """
+    from config.settings import FIXTURES
+
+    team_stats = {}  # {team: {'scored': [], 'conceded': []}}
+
+    for year in sorted(FIXTURES.keys()):
+        for round_num in sorted(FIXTURES[year].keys()):
+            for home, away, score in FIXTURES[year][round_num]:
+                if score is None:
+                    continue
+                home_pts, away_pts = score
+
+                for team in [home, away]:
+                    if team not in team_stats:
+                        team_stats[team] = {'scored': [], 'conceded': []}
+
+                team_stats[home]['scored'].append(home_pts)
+                team_stats[home]['conceded'].append(away_pts)
+                team_stats[away]['scored'].append(away_pts)
+                team_stats[away]['conceded'].append(home_pts)
+
+    if not team_stats:
+        return {}
+
+    # Calculate average conceded per team
+    avg_conceded = {}
+    for team, stats in team_stats.items():
+        if stats['conceded']:
+            avg_conceded[team] = np.mean(stats['conceded'])
+
+    if not avg_conceded:
+        return {}
+
+    # Normalize to 0-1 scale (lowest conceded = 1.0 = hardest)
+    min_c = min(avg_conceded.values())
+    max_c = max(avg_conceded.values())
+    range_c = max_c - min_c if max_c != min_c else 1
+
+    return {team: 1.0 - (avg - min_c) / range_c for team, avg in avg_conceded.items()}
+
+
+def get_team_results() -> dict:
+    """Get all match results per team from fixtures. Returns {team: [list of result dicts]}."""
+    from config.settings import FIXTURES
+
+    team_results = {}
+
+    for year in sorted(FIXTURES.keys()):
+        for round_num in sorted(FIXTURES[year].keys()):
+            for home, away, score in FIXTURES[year][round_num]:
+                if score is None:
+                    continue
+                home_pts, away_pts = score
+
+                for team in [home, away]:
+                    if team not in team_results:
+                        team_results[team] = []
+
+                team_results[home].append({
+                    'year': year, 'round': round_num,
+                    'scored': home_pts, 'conceded': away_pts,
+                    'is_home': True, 'opponent': away,
+                    'won': home_pts > away_pts
+                })
+                team_results[away].append({
+                    'year': year, 'round': round_num,
+                    'scored': away_pts, 'conceded': home_pts,
+                    'is_home': False, 'opponent': home,
+                    'won': away_pts > home_pts
+                })
+
+    return team_results
+
+
+# Calculate once at module level, refreshed on each run
+OPPONENT_STRENGTH = calculate_dynamic_opponent_strength()
 
 
 def get_fixture_context(club: str, year: int, round_num: int) -> dict:
@@ -140,12 +233,28 @@ def get_fixture_context(club: str, year: int, round_num: int) -> dict:
             is_home = False
             break
     else:
-        return {'opponent': None, 'opponent_strength': 0.5, 'is_home': False}
+        return {
+            'opponent': None, 'opponent_strength': 0.5, 'is_home': False,
+            'opponent_pts_conceded_avg': 25.0, 'opponent_pts_scored_avg': 25.0,
+        }
+
+    # Get detailed opponent stats from results
+    team_results = get_team_results()
+    opponent_results = team_results.get(opponent, [])
+
+    if opponent_results:
+        opp_conceded_avg = np.mean([r['conceded'] for r in opponent_results])
+        opp_scored_avg = np.mean([r['scored'] for r in opponent_results])
+    else:
+        opp_conceded_avg = 25.0
+        opp_scored_avg = 25.0
 
     return {
         'opponent': opponent,
         'opponent_strength': OPPONENT_STRENGTH.get(opponent, 0.5),
         'is_home': is_home,
+        'opponent_pts_conceded_avg': opp_conceded_avg,
+        'opponent_pts_scored_avg': opp_scored_avg,
     }
 
 
@@ -159,8 +268,146 @@ def add_fixture_features(df: pd.DataFrame) -> pd.DataFrame:
         axis=1
     )
     df['opponent'] = fixture_data['opponent']
-    df['opponent_strength'] = fixture_data['opponent_strength']
+    df['opponent_strength'] = fixture_data['opponent_strength'].astype(float)
     df['is_home'] = fixture_data['is_home'].astype(int)
+    df['opponent_pts_conceded_avg'] = fixture_data['opponent_pts_conceded_avg'].astype(float)
+    df['opponent_pts_scored_avg'] = fixture_data['opponent_pts_scored_avg'].astype(float)
+
+    return df
+
+
+def add_team_form_features(df: pd.DataFrame) -> pd.DataFrame:
+    """Add team-level form features derived from match results."""
+    df = df.copy()
+    team_results = get_team_results()
+
+    def get_team_form(club, year, round_num):
+        """Get team form metrics for matches BEFORE this round."""
+        results = team_results.get(club, [])
+        # Only use results before this game
+        prior = [r for r in results if (r['year'], r['round']) < (year, round_num)]
+
+        if not prior:
+            return {'team_wins_last_3': 0, 'team_pts_scored_avg': 25.0,
+                    'team_pts_conceded_avg': 25.0, 'team_form_momentum': 0.5}
+
+        # Last 3 results with recency weighting
+        recent = prior[-3:]
+        weights = list(range(1, len(recent) + 1))  # [1, 2, 3] - more recent = higher
+
+        wins_last_3 = sum(1 for r in recent if r['won'])
+        pts_scored_avg = np.mean([r['scored'] for r in recent])
+        pts_conceded_avg = np.mean([r['conceded'] for r in recent])
+
+        # Weighted momentum: weighted average of win (1.0) / loss (0.0)
+        momentum = np.average([1.0 if r['won'] else 0.0 for r in recent], weights=weights)
+
+        return {
+            'team_wins_last_3': wins_last_3,
+            'team_pts_scored_avg': pts_scored_avg,
+            'team_pts_conceded_avg': pts_conceded_avg,
+            'team_form_momentum': momentum,
+        }
+
+    form_data = df.apply(
+        lambda row: pd.Series(get_team_form(row['club'], row['year'], row['round'])),
+        axis=1
+    )
+    for col in form_data.columns:
+        df[col] = form_data[col].astype(float)
+
+    return df
+
+
+def add_matchup_features(df: pd.DataFrame, historical_df: pd.DataFrame = None) -> pd.DataFrame:
+    """Add historical matchup features: how did this player/position score against this opponent.
+
+    Args:
+        df: DataFrame to add features to
+        historical_df: Optional separate DataFrame with historical data for lookups.
+                       If None, uses df itself (training mode).
+    """
+    df = df.copy()
+
+    if 'opponent' not in df.columns:
+        df['vs_opponent_avg'] = 0.0
+        df['vs_opponent_max'] = 0.0
+        df['position_vs_opponent_avg'] = 0.0
+        return df
+
+    # Use historical data for lookups if provided, otherwise use df itself
+    lookup_df = historical_df if historical_df is not None else df
+
+    # Drop existing matchup columns if they exist (avoid duplicates on re-merge)
+    for col in ['vs_opponent_avg', 'vs_opponent_max', 'position_vs_opponent_avg']:
+        if col in df.columns:
+            df = df.drop(columns=[col])
+
+    # Calculate player vs specific opponent historical averages
+    if 'opponent' in lookup_df.columns and 'points' in lookup_df.columns:
+        player_vs_opp = lookup_df.groupby(['name', 'opponent'])['points'].agg(['mean', 'max']).reset_index()
+        player_vs_opp.columns = ['name', 'opponent', 'vs_opponent_avg', 'vs_opponent_max']
+
+        pos_vs_opp = lookup_df.groupby(['position', 'opponent'])['points'].mean().reset_index()
+        pos_vs_opp.columns = ['position', 'opponent', 'position_vs_opponent_avg']
+    else:
+        player_vs_opp = pd.DataFrame(columns=['name', 'opponent', 'vs_opponent_avg', 'vs_opponent_max'])
+        pos_vs_opp = pd.DataFrame(columns=['position', 'opponent', 'position_vs_opponent_avg'])
+
+    # Merge back
+    df = df.merge(player_vs_opp, on=['name', 'opponent'], how='left')
+    df = df.merge(pos_vs_opp, on=['position', 'opponent'], how='left')
+
+    # Fill missing with overall averages
+    overall_avg = lookup_df['points'].mean() if 'points' in lookup_df.columns else 10.0
+    overall_max = lookup_df['points'].max() * 0.5 if 'points' in lookup_df.columns else 20.0
+    df['vs_opponent_avg'] = df['vs_opponent_avg'].fillna(overall_avg)
+    df['vs_opponent_max'] = df['vs_opponent_max'].fillna(overall_max)
+    df['position_vs_opponent_avg'] = df['position_vs_opponent_avg'].fillna(overall_avg)
+
+    return df
+
+
+def add_home_away_history(df: pd.DataFrame, historical_df: pd.DataFrame = None) -> pd.DataFrame:
+    """Add player-specific home vs away performance history.
+
+    Args:
+        df: DataFrame to add features to
+        historical_df: Optional separate DataFrame with historical data for lookups.
+    """
+    df = df.copy()
+
+    if 'is_home' not in df.columns:
+        df['player_home_avg'] = 0.0
+        df['player_away_avg'] = 0.0
+        df['home_away_diff'] = 0.0
+        return df
+
+    lookup_df = historical_df if historical_df is not None else df
+
+    # Drop existing columns to avoid merge conflicts
+    for col in ['player_home_avg', 'player_away_avg', 'home_away_diff']:
+        if col in df.columns:
+            df = df.drop(columns=[col])
+
+    # Calculate per-player home and away averages from lookup data
+    if 'is_home' in lookup_df.columns:
+        home_avg = lookup_df[lookup_df['is_home'] == 1].groupby('name')['points'].mean().reset_index()
+        home_avg.columns = ['name', 'player_home_avg']
+
+        away_avg = lookup_df[lookup_df['is_home'] == 0].groupby('name')['points'].mean().reset_index()
+        away_avg.columns = ['name', 'player_away_avg']
+    else:
+        home_avg = pd.DataFrame(columns=['name', 'player_home_avg'])
+        away_avg = pd.DataFrame(columns=['name', 'player_away_avg'])
+
+    df = df.merge(home_avg, on='name', how='left')
+    df = df.merge(away_avg, on='name', how='left')
+
+    overall_avg = lookup_df['points'].mean() if 'points' in lookup_df.columns else 10.0
+    df['player_home_avg'] = df['player_home_avg'].fillna(overall_avg)
+    df['player_away_avg'] = df['player_away_avg'].fillna(overall_avg)
+    df['home_away_diff'] = df['player_home_avg'] - df['player_away_avg']
 
     return df
 
@@ -187,11 +434,38 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     # Discipline (negative indicator)
     df['discipline_issues'] = df['penalties_conceded'] + df['yellow_cards'] * 2 + df['red_cards'] * 5
 
+    # --- Enhanced position features ---
+    # Binary position flags
+    forward_positions = {'Prop', 'Hooker', 'Second Row', 'Back Row'}
+    df['is_forward'] = df['position'].isin(forward_positions).astype(int)
+
+    # Kicker detection (data-driven: did they kick in any game?)
+    kicker_names = df[df['conversions'] + df['penalties'] > 0]['name'].unique()
+    df['is_kicker'] = df['name'].isin(kicker_names).astype(int)
+
+    # Position average points (how much does this position typically score?)
+    pos_avg = df.groupby('position')['points'].mean()
+    df['position_avg_points'] = df['position'].map(pos_avg)
+
+    # Position ceiling (90th percentile)
+    pos_ceiling = df.groupby('position')['points'].quantile(0.9)
+    df['position_ceiling'] = df['position'].map(pos_ceiling)
+
+    # Position × opponent interaction
+    if 'opponent' in df.columns:
+        pos_opp_avg = df.groupby(['position', 'opponent'])['points'].mean()
+        df['position_vs_opponent_strength'] = df.apply(
+            lambda row: pos_opp_avg.get((row['position'], row.get('opponent', '')), row.get('position_avg_points', 0)),
+            axis=1
+        )
+    else:
+        df['position_vs_opponent_strength'] = df['position_avg_points']
+
     return df
 
 
 def calculate_rolling_stats(df: pd.DataFrame, window: int = 3) -> pd.DataFrame:
-    """Calculate rolling averages for each player across rounds."""
+    """Calculate rolling averages and form trajectory for each player across rounds."""
     df = df.sort_values(['name', 'year', 'round'])
 
     # Stats to calculate rolling averages for
@@ -208,25 +482,177 @@ def calculate_rolling_stats(df: pd.DataFrame, window: int = 3) -> pd.DataFrame:
                 lambda x: x.shift(1).rolling(window=window, min_periods=1).std()
             )
 
-    # Fill NaN rolling stats with overall mean for that column
-    for col in df.columns:
-        if 'rolling' in col:
-            df[col] = df[col].fillna(df[col].mean())
+    # --- Player form trajectory features ---
+    # Form trend: slope of recent points (positive = improving, negative = declining)
+    def calc_trend(series):
+        shifted = series.shift(1)
+        result = shifted.rolling(window=window, min_periods=2).apply(
+            lambda x: np.polyfit(range(len(x)), x, 1)[0] if len(x) >= 2 else 0.0,
+            raw=True
+        )
+        return result
+
+    df['form_trend'] = df.groupby('name')['points'].transform(calc_trend)
+
+    # Ceiling and floor scores (expanding - uses all prior games)
+    df['ceiling_score'] = df.groupby('name')['points'].transform(
+        lambda x: x.shift(1).expanding(min_periods=1).max()
+    )
+    df['floor_score'] = df.groupby('name')['points'].transform(
+        lambda x: x.shift(1).expanding(min_periods=1).min()
+    )
+
+    # Games since peak performance
+    def games_since_peak(series):
+        result = []
+        peak = -np.inf
+        games = 0
+        for val in series:
+            if val >= peak:
+                peak = val
+                games = 0
+            else:
+                games += 1
+            result.append(games)
+        return result
+
+    df['games_since_peak'] = df.groupby('name')['points'].transform(
+        lambda x: pd.Series(games_since_peak(x.values), index=x.index)
+    )
+
+    # Above average streak
+    def above_avg_streak(arr):
+        result = []
+        running_sum = 0.0
+        streak = 0
+        for i, val in enumerate(arr):
+            running_sum += val
+            avg = running_sum / (i + 1)
+            if val > avg:
+                streak += 1
+            else:
+                streak = 0
+            result.append(streak)
+        return result
+
+    df['above_avg_streak'] = df.groupby('name')['points'].transform(
+        lambda x: pd.Series(above_avg_streak(x.values), index=x.index)
+    )
+
+    # Fill NaN rolling/trajectory stats with overall mean
+    trajectory_cols = [col for col in df.columns
+                       if any(s in col for s in ['rolling', 'form_trend', 'ceiling_score',
+                                                  'floor_score', 'games_since_peak', 'above_avg_streak'])]
+    for col in trajectory_cols:
+        col_mean = df[col].mean()
+        df[col] = df[col].fillna(col_mean if not np.isnan(col_mean) else 0.0)
+
+    return df
+
+
+def merge_betting_odds(df: pd.DataFrame) -> pd.DataFrame:
+    """Merge betting odds data into the dataframe if available.
+
+    Looks for betting_odds_{year}.json in the data output directory.
+    Adds: team_win_probability, opponent_win_probability, match_total_implied, handicap_line
+    """
+    df = df.copy()
+    odds_cols = ['team_win_probability', 'opponent_win_probability',
+                 'match_total_implied', 'handicap_line']
+
+    # Try to load odds for each year in the data
+    years = df['year'].unique() if 'year' in df.columns else []
+    all_odds = []
+
+    for year in years:
+        odds_path = DATA_OUTPUT / f"betting_odds_{int(year)}.json"
+        if odds_path.exists():
+            try:
+                with open(odds_path, 'r') as f:
+                    odds_data = json.load(f)
+                for round_odds in odds_data.get('rounds', []):
+                    round_num = round_odds['round']
+                    for match in round_odds.get('matches', []):
+                        home = match['home']
+                        away = match['away']
+                        home_prob = match.get('home_win_prob', 0.5)
+                        away_prob = match.get('away_win_prob', 0.5)
+                        total = match.get('total_points', 45.0)
+                        handicap = match.get('handicap', 0.0)
+
+                        # Home team row
+                        all_odds.append({
+                            'year': year, 'round': round_num, 'club': home,
+                            'team_win_probability': home_prob,
+                            'opponent_win_probability': away_prob,
+                            'match_total_implied': total,
+                            'handicap_line': handicap,
+                        })
+                        # Away team row
+                        all_odds.append({
+                            'year': year, 'round': round_num, 'club': away,
+                            'team_win_probability': away_prob,
+                            'opponent_win_probability': home_prob,
+                            'match_total_implied': total,
+                            'handicap_line': -handicap,
+                        })
+                print(f"Loaded betting odds for {int(year)}")
+            except (json.JSONDecodeError, KeyError) as e:
+                print(f"Warning: Could not parse betting odds for {int(year)}: {e}")
+
+    if all_odds:
+        odds_df = pd.DataFrame(all_odds)
+        df = df.merge(odds_df, on=['year', 'round', 'club'], how='left')
+
+    # Fill missing odds with neutral values
+    defaults = {'team_win_probability': 0.5, 'opponent_win_probability': 0.5,
+                'match_total_implied': 45.0, 'handicap_line': 0.0}
+    for col, default in defaults.items():
+        if col not in df.columns:
+            df[col] = default
+        else:
+            df[col] = df[col].fillna(default)
 
     return df
 
 
 def prepare_training_data(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, list, list]:
-    """Prepare features and target for model training."""
+    """Prepare features and target for model training.
+
+    Applies all feature engineering steps:
+    1. Filter to played games only
+    2. Fixture context (opponent strength, home/away, opponent stats)
+    3. Team form features (wins, momentum, recent results)
+    4. Matchup features (player/position vs specific opponent)
+    5. Home/away player history
+    6. Engineered features (efficiency, position, kicker detection)
+    7. Rolling stats & form trajectory
+    8. Betting odds (if available)
+    """
     # Filter to only games where players actually played
     df = filter_played_games(df)
     print(f"After filtering non-played games: {len(df)} records")
 
-    # Add fixture context (opponent strength, home/away)
+    # Add fixture context (opponent strength, home/away, opponent stats)
     df = add_fixture_features(df)
 
+    # Add team form features
+    df = add_team_form_features(df)
+
+    # Add historical matchup features
+    df = add_matchup_features(df)
+
+    # Add home/away player history
+    df = add_home_away_history(df)
+
+    # Engineered features (including enhanced position features)
     df = engineer_features(df)
+
+    # Rolling stats and form trajectory
     df = calculate_rolling_stats(df)
+
+    # Load and merge betting odds if available
+    df = merge_betting_odds(df)
 
     # Encode categorical variables
     position_encoder = LabelEncoder()
@@ -237,11 +663,11 @@ def prepare_training_data(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, li
 
     # Feature columns (exclude target and identifiers)
     exclude_cols = ['name', 'club', 'position', 'points', 'year', 'round',
-                    'matches_played', 'man_of_match', 'opponent']
+                    'matches_played', 'man_of_match', 'opponent', 'played']
 
     feature_cols = [col for col in df.columns
                     if col not in exclude_cols
-                    and df[col].dtype in ['int64', 'float64']]
+                    and df[col].dtype in ['int64', 'float64', 'int32', 'float32', 'bool']]
 
     # Target variable
     target = df['points']
@@ -249,6 +675,8 @@ def prepare_training_data(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series, li
 
     # Handle any remaining NaN values
     features = features.fillna(0)
+
+    print(f"Total features: {len(feature_cols)}")
 
     return features, target, feature_cols, df
 
@@ -349,6 +777,9 @@ def predict_round(model, df: pd.DataFrame, target_year: int, target_round: int,
                   min_games: int = 4) -> pd.DataFrame:
     """Generate predictions for a future round.
 
+    Applies the same feature engineering pipeline used in training so that
+    the prediction features are consistent with what the model learned.
+
     Args:
         min_games: Minimum games required for a prediction to be considered reliable
     """
@@ -362,16 +793,34 @@ def predict_round(model, df: pd.DataFrame, target_year: int, target_round: int,
     }).reset_index()
     player_games.columns = ['name', 'games_played', 'historical_avg', 'historical_std']
 
+    # Only predict for players who are in the target year's squad
+    current_year_players = full_df[full_df['year'] == target_year]['name'].unique()
+
     # Get the latest game each player ACTUALLY PLAYED (not just appeared in squad)
     latest_data = played_df.sort_values(['year', 'round']).groupby('name').last().reset_index()
+
+    # Filter to only players in the current year's squad
+    latest_data = latest_data[latest_data['name'].isin(current_year_players)]
 
     # Set fixture context for the TARGET round (not the player's last game)
     latest_data['year'] = target_year
     latest_data['round'] = target_round
-    latest_data = add_fixture_features(latest_data)
 
-    # Prepare features for prediction
+    # Apply the same feature pipeline as training
+    # Enrich historical data with fixture features for lookups
+    historical_with_fixtures = add_fixture_features(played_df)
+
+    latest_data = add_fixture_features(latest_data)
+    latest_data = add_team_form_features(latest_data)
+    latest_data = add_matchup_features(latest_data, historical_df=historical_with_fixtures)
+    latest_data = add_home_away_history(latest_data, historical_df=historical_with_fixtures)
     latest_data = engineer_features(latest_data)
+    latest_data = merge_betting_odds(latest_data)
+
+    # Ensure all feature columns exist (some rolling stats may be missing)
+    for col in feature_cols:
+        if col not in latest_data.columns:
+            latest_data[col] = 0
 
     # Use rolling averages from historical data
     features = latest_data[feature_cols].fillna(0)
@@ -434,9 +883,10 @@ def run_prediction_analysis(output_html: bool = True) -> dict:
     print("\nTop 15 Most Important Features:")
     print(importance.head(15).to_string(index=False))
 
-    # Generate predictions for 2026 Round 2
-    print("\n--- Predictions for 2026 Round 2 ---")
-    predictions = predict_round(model, df, 2026, 2, feature_cols, prepared_df)
+    # Auto-detect the next unplayed round
+    target_round = detect_target_round(2026)
+    print(f"\n--- Predictions for 2026 Round {target_round} (auto-detected) ---")
+    predictions = predict_round(model, df, 2026, target_round, feature_cols, prepared_df)
 
     # Data quality summary
     print("\n=== DATA QUALITY SUMMARY ===")
@@ -537,7 +987,7 @@ def generate_prediction_report(predictions: pd.DataFrame, trends: dict,
 
     fig.update_layout(
         height=900,
-        title_text="6N Fantasy Rugby - 2026 Round 2 Predictions",
+        title_text="6N Fantasy Rugby - 2026 Predictions",
         showlegend=False
     )
 

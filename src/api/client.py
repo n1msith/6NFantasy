@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import List, Dict, Any
 
 from ..auth.token_validator import TokenError, validate_token
-from .constants import PARAM_MAP, POSITION_MAPPING
+from .constants import PARAM_MAP, POSITION_MAPPING, CLUB_NAME_MAPPING
 from config.settings import (
     API_ENDPOINTS, 
     API_DEFAULT_HEADERS, 
@@ -117,9 +117,13 @@ def extract_six_nations_stats(token: str, matchday: int = 1) -> List[Dict[str, A
                         stat_name = PARAM_MAP.get(stat['nom'], stat['nom'])
                         translated_stats[stat_name] = stat['value']
 
+                    # Normalise club name (API sometimes returns French)
+                    raw_club = player['club']
+                    normalised_club = CLUB_NAME_MAPPING.get(raw_club, raw_club)
+
                     player_data = {
                         'name': player_name,
-                        'club': player['club'],
+                        'club': normalised_club,
                         'position': player['position'],
                         'stats': translated_stats
                     }

@@ -41,10 +41,10 @@ FIXTURES = {
         2: [('Italy', 'Wales', (22, 15)), ('England', 'France', (26, 25)), ('Scotland', 'Ireland', (18, 32))],
         3: [('Wales', 'Ireland', (18, 27)), ('England', 'Scotland', (16, 15)), ('Italy', 'France', (24, 73))],
         4: [('Ireland', 'France', (27, 42)), ('Scotland', 'Wales', (35, 29)), ('England', 'Italy', (47, 24))],
-        5: [('Italy', 'Ireland', (17, 22)), ('Wales', 'Englang', (14, 68)), ('France', 'Scotland', (35, 16))],
+        5: [('Italy', 'Ireland', (17, 22)), ('Wales', 'England', (14, 68)), ('France', 'Scotland', (35, 16))],
     },
     2026: {
-        1: [('France', 'Ireland', None), ('Italy', 'Scotland', None), ('England', 'Wales', None)],
+        1: [('France', 'Ireland', (36, 14)), ('Italy', 'Scotland', (18, 15)), ('England', 'Wales', (29, 7))],
         2: [('Ireland', 'Italy', None), ('Scotland', 'England', None), ('Wales', 'France', None)],
         3: [('England', 'Ireland', None), ('Wales', 'Scotland', None), ('France', 'Italy', None)],
         4: [('Ireland', 'Wales', None), ('Scotland', 'France', None), ('Italy', 'England', None)],
