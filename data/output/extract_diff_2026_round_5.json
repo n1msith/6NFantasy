@@ -4,19 +4,7 @@
   "extraction_date": "2026-02-15",
   "total_players": 205,
   "has_data": false,
-  "players_added": [
-    "A. Mann",
-    "D. Aldegheri",
-    "D. Lake",
-    "G. da Re",
-    "H. Jones",
-    "R. Montagne"
-  ],
-  "players_removed": [
-    "A. Wainwright",
-    "R. Neti",
-    "S. Prendergast",
-    "T. Rogers"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
