@@ -428,7 +428,7 @@ def ppm_per_position_bar_chart(df, filter_text='all_players', subtitle=''):
     return fig
 
 
-def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20, filter_text="None", is_ppm=False, subtitle='', year=None):
+def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20, filter_text="", is_ppm=False, subtitle='', year=None):
     """
     Creates a horizontal bar chart showing the breakdown of fantasy points or points per minute for rugby players,
     sorted by their total points or overall PPM (total points / total minutes) within each position.
@@ -684,7 +684,7 @@ def plot_player_points_breakdown(df, min_points=10, max_players_per_position=20,
 
     # Update filename based on display mode
     type_text = 'ppm' if is_ppm else 'points'
-    html_name = f'{type_text}_breakdown_{filter_text}.html'
+    html_name = f'{type_text}_breakdown_{filter_text}.html' if filter_text else f'{type_text}_breakdown.html'
     fig.write_html(html_name)
     print(f"Written to {html_name}")
     return fig
@@ -832,11 +832,16 @@ def plot_player_round_heatmap(df, max_players=50, subtitle=''):
         z = pivot[rounds].values
         return z, labels
 
-    # Pre-compute heatmap data for "All" and each country
+    # Pre-compute heatmap data for "All" and each country/position
     z_all, labels_all = build_heatmap_data(df)
     country_data = {}
     for country in countries:
         country_data[country] = build_heatmap_data(df[df['club'] == country])
+
+    positions = sorted(df['position'].unique())
+    position_data = {}
+    for pos in positions:
+        position_data[pos] = build_heatmap_data(df[df['position'] == pos])
 
     # Create figure with "All" data
     fig = go.Figure(data=go.Heatmap(
@@ -851,9 +856,9 @@ def plot_player_round_heatmap(df, max_players=50, subtitle=''):
         hoverongaps=False,
     ))
 
-    # Build dropdown buttons (update data + chart height)
+    # Build country dropdown buttons
     row_height = 18
-    buttons = [dict(
+    country_buttons = [dict(
         label='All Countries',
         method='update',
         args=[{'z': [z_all], 'y': [labels_all], 'text': [z_all.astype(int).astype(str)]},
@@ -861,11 +866,27 @@ def plot_player_round_heatmap(df, max_players=50, subtitle=''):
     )]
     for country in countries:
         z_c, labels_c = country_data[country]
-        buttons.append(dict(
+        country_buttons.append(dict(
             label=country,
             method='update',
             args=[{'z': [z_c], 'y': [labels_c], 'text': [z_c.astype(int).astype(str)]},
                   {'height': max(600, len(labels_c) * row_height)}]
+        ))
+
+    # Build position dropdown buttons
+    position_buttons = [dict(
+        label='All Positions',
+        method='update',
+        args=[{'z': [z_all], 'y': [labels_all], 'text': [z_all.astype(int).astype(str)]},
+              {'height': max(600, len(labels_all) * row_height)}]
+    )]
+    for pos in positions:
+        z_p, labels_p = position_data[pos]
+        position_buttons.append(dict(
+            label=pos,
+            method='update',
+            args=[{'z': [z_p], 'y': [labels_p], 'text': [z_p.astype(int).astype(str)]},
+                  {'height': max(600, len(labels_p) * row_height)}]
         ))
 
     fig.update_layout(
@@ -878,15 +899,26 @@ def plot_player_round_heatmap(df, max_players=50, subtitle=''):
         autosize=True,
         xaxis=dict(side='top'),
         yaxis=dict(autorange='reversed', dtick=1),
-        updatemenus=[dict(
-            buttons=buttons,
-            direction='down',
-            showactive=True,
-            x=1.22,
-            xanchor='left',
-            y=1.0,
-            yanchor='top',
-        )],
+        updatemenus=[
+            dict(
+                buttons=country_buttons,
+                direction='down',
+                showactive=True,
+                x=1.22,
+                xanchor='left',
+                y=1.0,
+                yanchor='top',
+            ),
+            dict(
+                buttons=position_buttons,
+                direction='down',
+                showactive=True,
+                x=1.22,
+                xanchor='left',
+                y=0.85,
+                yanchor='top',
+            ),
+        ],
     )
 
     html_name = 'player_round_heatmap.html'
