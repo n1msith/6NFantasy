@@ -2,27 +2,14 @@
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
   "extraction_date": "2026-02-15",
-  "total_players": 216,
+  "total_players": 215,
   "has_data": true,
   "players_added": [
-    "A. Izekor",
-    "F. Thomas",
-    "M. Gallagher"
+    "S. Gesi"
   ],
   "players_removed": [
-    "A. Clark",
-    "A. Grandidier Nkanang",
-    "A. Roumat",
-    "C. Woki",
-    "E. Iyogun",
-    "G. Colombe",
-    "H. Slade",
-    "R. Buros",
-    "S. Gesi",
-    "S. Varney",
-    "T. Daubagna",
-    "T. Matiu",
-    "T. Staniforth"
+    "F. Dingwall",
+    "T. Rogers"
   ],
   "stat_changes": []
 }
