@@ -1,10 +1,30 @@
 {
   "round": 2,
   "file": "six_nations_stats_2026_round_2.json",
-  "extraction_date": "2026-02-16",
+  "extraction_date": "2026-02-17",
   "total_players": 212,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "C. Murley",
+    "E. Iyogun",
+    "G. Arfeuil",
+    "G. Colombe",
+    "G. da Re",
+    "O. Smith",
+    "T. Dan",
+    "T. Daubagna",
+    "T. Staniforth"
+  ],
+  "players_removed": [
+    "C. Tiberghien",
+    "C. Woki",
+    "D. Priso",
+    "H. Slade",
+    "N. Depoortere",
+    "S. Costelow",
+    "S. Gesi",
+    "T. Tatafu",
+    "Y. Moefana"
+  ],
   "stat_changes": []
 }
