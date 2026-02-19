@@ -1,30 +1,10 @@
 {
   "round": 2,
   "file": "six_nations_stats_2026_round_2.json",
-  "extraction_date": "2026-02-18",
+  "extraction_date": "2026-02-19",
   "total_players": 214,
   "has_data": true,
-  "players_added": [
-    "A. Clark",
-    "F. Dingwall",
-    "G. Bertaccini",
-    "G. Thomas",
-    "G. Villiere",
-    "L. Barre",
-    "P. Barassi",
-    "R. Slimani",
-    "S. Zegueur",
-    "T. Francis"
-  ],
-  "players_removed": [
-    "A. Izekor",
-    "C. Murley",
-    "G. Hamer-Webb",
-    "J. Dempsey",
-    "J. Dobie",
-    "J. Ritchie",
-    "S. Locatelli",
-    "T. Daubagna"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }

@@ -1,35 +1,10 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-02-18",
+  "extraction_date": "2026-02-19",
   "total_players": 210,
   "has_data": true,
-  "players_added": [
-    "A. Clark",
-    "D. Mazza",
-    "G. Arfeuil",
-    "G. Bertaccini",
-    "G. Villiere",
-    "L. Barre",
-    "M. Page-Relo",
-    "P. Barassi",
-    "R. Slimani",
-    "S. Zegueur"
-  ],
-  "players_removed": [
-    "A. Beard",
-    "A. Izekor",
-    "C. Baille",
-    "E. Daly",
-    "G. Hamer-Webb",
-    "J. Dempsey",
-    "J. Dobie",
-    "J. Hawkins",
-    "M. Gallagher",
-    "O. Smith",
-    "S. Costelow",
-    "T. Daubagna",
-    "T. Rogers"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }

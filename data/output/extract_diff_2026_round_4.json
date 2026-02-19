@@ -1,40 +1,10 @@
 {
   "round": 4,
   "file": "six_nations_stats_2026_round_4.json",
-  "extraction_date": "2026-02-18",
+  "extraction_date": "2026-02-19",
   "total_players": 206,
   "has_data": false,
-  "players_added": [
-    "A. Clark",
-    "A. Wainwright",
-    "D. Lake",
-    "F. Dingwall",
-    "G. Bertaccini",
-    "G. Villiere",
-    "H. Deaves",
-    "J. van der Flier",
-    "L. Barre",
-    "M. Grady",
-    "M. Page-Relo",
-    "P. Barassi",
-    "P. Odogwu",
-    "P. Schoeman",
-    "R. Slimani",
-    "S. McDowall",
-    "S. Tuipulotu",
-    "S. Zegueur"
-  ],
-  "players_removed": [
-    "A. Capuozzo",
-    "A. Izekor",
-    "E. James",
-    "F. Brau-Boirie",
-    "F. Burke",
-    "J. Dempsey",
-    "J. Dobie",
-    "N. Smith",
-    "R. Hutchinson",
-    "T. Daubagna"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
