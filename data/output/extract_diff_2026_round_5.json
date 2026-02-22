@@ -2,30 +2,22 @@
   "round": 5,
   "file": "six_nations_stats_2026_round_5.json",
   "extraction_date": "2026-02-22",
-  "total_players": 208,
+  "total_players": 207,
   "has_data": false,
   "players_added": [
-    "A. Izekor",
-    "G. Arfeuil",
-    "J. Loughman",
-    "L. Lynagh",
-    "L. Nouchi",
-    "M. Williamson",
-    "R. Elias",
-    "R. Hutchinson",
-    "T. Matiu",
-    "T. Plumtree",
-    "U. Seunes"
+    "F. Burke",
+    "G. Drean",
+    "J. van Poortvliet",
+    "R. Morgan-Williams",
+    "T. Jordan"
   ],
   "players_removed": [
-    "A. Jelonch",
-    "A. Mann",
-    "A. Zambonin",
-    "C. Baille",
-    "E. Daly",
-    "J. van der Flier",
-    "T. Dan",
-    "T. Jordan"
+    "F. Ruzza",
+    "J. Hawkins",
+    "L. Hennessey",
+    "R. Elias",
+    "R. Neti",
+    "S. Costelow"
   ],
   "stat_changes": []
 }

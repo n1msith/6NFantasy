@@ -4,18 +4,7 @@
   "extraction_date": "2026-02-22",
   "total_players": 216,
   "has_data": true,
-  "players_added": [
-    "C. Baille",
-    "G. Drean",
-    "G. Thomas",
-    "J. Kenningham",
-    "T. Matiu"
-  ],
-  "players_removed": [
-    "A. Izekor",
-    "M. Gallagher",
-    "S. Costelow",
-    "T. Dan"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }

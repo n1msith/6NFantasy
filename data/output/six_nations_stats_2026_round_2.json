@@ -1461,33 +1461,6 @@
       }
     },
     {
-      "name": "G. Turner",
-      "club": "Scotland",
-      "position": "Hooker",
-      "stats": {
-        "matches_played": 50,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 7,
-        "meters_carried": 4,
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": 1,
-        "kicks_retained": "",
-        "scrum_wins": 3,
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "15.0"
-      }
-    },
-    {
       "name": "L. Marin",
       "club": "Italy",
       "position": "Fly-Half",
@@ -1508,6 +1481,33 @@
         "breakdown_steals": "",
         "kicks_retained": "",
         "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "15.0"
+      }
+    },
+    {
+      "name": "G. Turner",
+      "club": "Scotland",
+      "position": "Hooker",
+      "stats": {
+        "matches_played": 50,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 7,
+        "meters_carried": 4,
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": 1,
+        "kicks_retained": "",
+        "scrum_wins": 3,
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
@@ -4080,9 +4080,9 @@
       }
     },
     {
-      "name": "F. Bealham",
-      "club": "Ireland",
-      "position": "Prop",
+      "name": "P. Barassi",
+      "club": "France",
+      "position": "Centre",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4107,9 +4107,9 @@
       }
     },
     {
-      "name": "P. Barassi",
-      "club": "France",
-      "position": "Centre",
+      "name": "F. Bealham",
+      "club": "Ireland",
+      "position": "Prop",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4701,6 +4701,33 @@
       }
     },
     {
+      "name": "G. Colombe",
+      "club": "France",
+      "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "J. Botham",
       "club": "Wales",
       "position": "Back Row",
@@ -4731,33 +4758,6 @@
       "name": "G. Bertaccini",
       "club": "Italy",
       "position": "Centre",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "G. Colombe",
-      "club": "France",
-      "position": "Prop",
       "stats": {
         "matches_played": "",
         "man_of_match": "",

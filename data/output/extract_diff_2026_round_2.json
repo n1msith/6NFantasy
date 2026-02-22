@@ -4,16 +4,7 @@
   "extraction_date": "2026-02-22",
   "total_players": 216,
   "has_data": true,
-  "players_added": [
-    "G. Hiddleston",
-    "G. Thomas",
-    "J. Gray"
-  ],
-  "players_removed": [
-    "G. Arfeuil",
-    "G. Drean",
-    "G. da Re",
-    "T. Matiu"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
