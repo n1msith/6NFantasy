@@ -1,10 +1,25 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-02-21",
-  "total_players": 210,
+  "extraction_date": "2026-02-22",
+  "total_players": 215,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "A. Beard",
+    "A. Izekor",
+    "C. Murley",
+    "E. Daly",
+    "J. Hawkins",
+    "M. Gallagher",
+    "O. Smith",
+    "S. Costelow",
+    "T. Rogers"
+  ],
+  "players_removed": [
+    "G. Kloska",
+    "G. Thomas",
+    "R. Elias",
+    "S. Gesi"
+  ],
   "stat_changes": []
 }
