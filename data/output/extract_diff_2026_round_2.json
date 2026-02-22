@@ -2,22 +2,18 @@
   "round": 2,
   "file": "six_nations_stats_2026_round_2.json",
   "extraction_date": "2026-02-22",
-  "total_players": 217,
+  "total_players": 216,
   "has_data": true,
   "players_added": [
-    "C. Murley",
-    "G. Drean",
-    "M. Page-Relo",
-    "S. Costelow",
-    "S. Gesi",
-    "S. Locatelli",
-    "T. Matiu"
-  ],
-  "players_removed": [
     "G. Hiddleston",
-    "G. Kloska",
     "G. Thomas",
     "J. Gray"
+  ],
+  "players_removed": [
+    "G. Arfeuil",
+    "G. Drean",
+    "G. da Re",
+    "T. Matiu"
   ],
   "stat_changes": []
 }

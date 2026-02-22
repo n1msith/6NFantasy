@@ -2,32 +2,30 @@
   "round": 5,
   "file": "six_nations_stats_2026_round_5.json",
   "extraction_date": "2026-02-22",
-  "total_players": 205,
+  "total_players": 208,
   "has_data": false,
   "players_added": [
-    "A. Beard",
-    "A. Capuozzo",
-    "E. James",
-    "F. Brau-Boirie",
-    "G. Thomas",
-    "H. Jones",
-    "J. Stockdale",
-    "L. Hennessey",
-    "N. Smith",
-    "T. Rogers"
-  ],
-  "players_removed": [
-    "F. Steward",
+    "A. Izekor",
     "G. Arfeuil",
-    "G. Kloska",
     "J. Loughman",
     "L. Lynagh",
     "L. Nouchi",
-    "M. Grady",
     "M. Williamson",
     "R. Elias",
+    "R. Hutchinson",
+    "T. Matiu",
     "T. Plumtree",
     "U. Seunes"
+  ],
+  "players_removed": [
+    "A. Jelonch",
+    "A. Mann",
+    "A. Zambonin",
+    "C. Baille",
+    "E. Daly",
+    "J. van der Flier",
+    "T. Dan",
+    "T. Jordan"
   ],
   "stat_changes": []
 }
