@@ -1,23 +1,10 @@
 {
   "round": 4,
   "file": "six_nations_stats_2026_round_4.json",
-  "extraction_date": "2026-02-22",
+  "extraction_date": "2026-02-23",
   "total_players": 207,
   "has_data": false,
-  "players_added": [
-    "F. Burke",
-    "G. Drean",
-    "J. van Poortvliet",
-    "R. Morgan-Williams",
-    "T. Jordan"
-  ],
-  "players_removed": [
-    "F. Ruzza",
-    "J. Hawkins",
-    "L. Hennessey",
-    "R. Elias",
-    "R. Neti",
-    "S. Costelow"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
