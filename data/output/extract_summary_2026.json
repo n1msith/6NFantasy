@@ -1,11 +1,11 @@
 {
-  "generated_date": "2026-02-28 03:47",
+  "generated_date": "2026-03-01 04:14",
   "year": 2026,
   "rounds": [
     {
       "round": 1,
       "file": "six_nations_stats_2026_round_1.json",
-      "extraction_date": "2026-02-28",
+      "extraction_date": "2026-03-01",
       "total_players": 216,
       "has_data": true,
       "players_added": [],
@@ -15,7 +15,7 @@
     {
       "round": 2,
       "file": "six_nations_stats_2026_round_2.json",
-      "extraction_date": "2026-02-28",
+      "extraction_date": "2026-03-01",
       "total_players": 216,
       "has_data": true,
       "players_added": [],
@@ -25,7 +25,7 @@
     {
       "round": 3,
       "file": "six_nations_stats_2026_round_3.json",
-      "extraction_date": "2026-02-28",
+      "extraction_date": "2026-03-01",
       "total_players": 215,
       "has_data": true,
       "players_added": [],
@@ -35,7 +35,7 @@
     {
       "round": 4,
       "file": "six_nations_stats_2026_round_4.json",
-      "extraction_date": "2026-02-28",
+      "extraction_date": "2026-03-01",
       "total_players": 207,
       "has_data": false,
       "players_added": [],
@@ -45,7 +45,7 @@
     {
       "round": 5,
       "file": "six_nations_stats_2026_round_5.json",
-      "extraction_date": "2026-02-28",
+      "extraction_date": "2026-03-01",
       "total_players": 207,
       "has_data": false,
       "players_added": [],
