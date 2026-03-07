@@ -1,260 +1,4689 @@
 {
-  "generated_date": "2026-03-07 21:10",
+  "generated_date": "2026-03-07 21:19",
   "year": 2026,
   "rounds": [
     {
       "round": 1,
       "file": "six_nations_stats_2026_round_1.json",
-      "extraction_date": "2026-03-03",
-      "total_players": 224,
+      "extraction_date": "2026-03-07",
+      "total_players": 229,
       "has_data": true,
       "players_added": [
-        "A. Roumat",
-        "B. Aki",
-        "C. Woki",
-        "D. Bamba",
-        "D. Priso",
-        "G. Hamer-Webb",
-        "G. Kloska",
-        "G. Lucchesi",
-        "J. Dempsey",
-        "J. O'Brien",
-        "K. Assiratti",
-        "N. Depoortere",
-        "N. le Garrec",
-        "R. Quirke",
-        "R. Woodman",
-        "S. Costelow",
-        "S. Gesi",
-        "S. Varney",
-        "T. Allan",
-        "T. Dan",
-        "T. Laclayat",
-        "Y. Moefana"
+        "H. Slade",
+        "J. Brennan",
+        "L. Hennessey",
+        "M. Gallagher",
+        "M. Walker",
+        "O. Smith",
+        "R. Elias",
+        "S. Atkinson",
+        "S. Stephen"
       ],
       "players_removed": [
-        "A. Desperes",
-        "B. Bohan",
-        "C. Baille",
-        "G. Drean",
-        "H. Auradou",
-        "J. Brennan",
-        "J. Kenningham",
-        "N. Nene",
-        "O. Smith",
-        "R. Davies",
-        "R. Montagne",
-        "R. Slimani",
-        "S. Zegueur",
-        "T. Plumtree"
+        "C. Woki",
+        "G. Hamer-Webb",
+        "G. Kloska",
+        "S. Costelow"
       ],
       "stat_changes": []
     },
     {
       "round": 2,
       "file": "six_nations_stats_2026_round_2.json",
-      "extraction_date": "2026-03-03",
-      "total_players": 222,
+      "extraction_date": "2026-03-07",
+      "total_players": 224,
       "has_data": true,
       "players_added": [
-        "A. Roumat",
-        "B. Aki",
-        "C. Woki",
-        "D. Bamba",
-        "D. Priso",
-        "G. Arfeuil",
-        "G. Drean",
-        "G. Hamer-Webb",
-        "G. Kloska",
-        "G. Lucchesi",
-        "G. da Re",
-        "J. Dempsey",
-        "J. O'Brien",
-        "K. Assiratti",
-        "N. Depoortere",
-        "N. le Garrec",
-        "R. Quirke",
-        "R. Woodman",
-        "S. Varney",
-        "T. Allan",
-        "T. Laclayat",
-        "Y. Moefana"
-      ],
-      "players_removed": [
-        "A. Desperes",
-        "B. Bohan",
-        "C. Baille",
-        "H. Auradou",
         "H. Keenan",
+        "H. Slade",
         "J. Brennan",
         "L. Barre",
-        "M. Gallagher",
-        "N. Nene",
-        "R. Davies",
-        "R. Montagne",
-        "R. Slimani",
-        "S. Gesi",
-        "S. Zegueur",
-        "T. Plumtree",
+        "L. Hennessey",
+        "M. Walker",
+        "S. Stephen",
+        "T. Matiu",
         "T. Stewart"
+      ],
+      "players_removed": [
+        "A. Capuozzo",
+        "A. Roumat",
+        "B. Murray",
+        "G. Hamer-Webb",
+        "G. Kloska",
+        "G. Thomas",
+        "P. Boudehent"
       ],
       "stat_changes": []
     },
     {
       "round": 3,
       "file": "six_nations_stats_2026_round_3.json",
-      "extraction_date": "2026-03-03",
-      "total_players": 219,
+      "extraction_date": "2026-03-07",
+      "total_players": 230,
       "has_data": true,
       "players_added": [
-        "A. Roumat",
-        "B. Aki",
-        "C. Woki",
-        "D. Bamba",
-        "D. Mazza",
-        "G. Arfeuil",
-        "G. Kloska",
-        "G. Lucchesi",
-        "J. Dempsey",
-        "J. O'Brien",
-        "K. Assiratti",
-        "M. Page-Relo",
-        "N. Depoortere",
-        "N. le Garrec",
-        "R. Quirke",
-        "R. Woodman",
-        "S. Gesi",
-        "S. Prendergast",
-        "S. Varney",
-        "T. Allan",
-        "T. Laclayat",
-        "Y. Moefana"
-      ],
-      "players_removed": [
-        "A. Desperes",
-        "B. Bohan",
-        "C. Baille",
+        "D. Priso",
         "E. Ashman",
-        "H. Auradou",
         "H. Deaves",
         "H. Keenan",
+        "H. Slade",
         "J. Brennan",
         "L. Barre",
-        "M. Gallagher",
-        "M. Grady",
-        "N. Nene",
-        "R. Davies",
-        "R. Montagne",
-        "R. Slimani",
-        "S. Zegueur",
-        "T. Plumtree",
+        "L. Hennessey",
+        "M. Walker",
+        "S. Atkinson",
+        "S. Stephen",
         "T. Rogers"
+      ],
+      "players_removed": [
+        "P. Boudehent"
       ],
       "stat_changes": []
     },
     {
       "round": 4,
       "file": "six_nations_stats_2026_round_4.json",
-      "extraction_date": "2026-03-03",
-      "total_players": 216,
-      "has_data": false,
+      "extraction_date": "2026-03-07",
+      "total_players": 228,
+      "has_data": true,
       "players_added": [
-        "A. Jelonch",
-        "A. Mann",
-        "B. Aki",
-        "D. Bamba",
-        "D. Priso",
-        "E. Daly",
-        "F. Ruzza",
-        "F. Steward",
-        "G. Kloska",
-        "G. Lucchesi",
-        "J. Dempsey",
-        "J. Hawkins",
-        "J. Kenningham",
-        "J. O'Brien",
-        "J. van der Flier",
-        "K. Assiratti",
-        "M. Grady",
-        "N. Depoortere",
-        "N. le Garrec",
-        "R. Quirke",
-        "R. Woodman",
-        "T. Allan",
-        "T. Dan",
-        "T. Laclayat",
-        "Y. Moefana"
-      ],
-      "players_removed": [
-        "A. Desperes",
-        "B. Bohan",
+        "A. Zambonin",
+        "C. Murley",
+        "C. Woki",
         "D. Cherry",
         "E. James",
         "F. Bealham",
         "G. Drean",
-        "H. Auradou",
+        "G. Fisilau",
         "H. Slade",
-        "N. Nene",
+        "L. Hennessey",
+        "M. Walker",
         "R. Baloucoune",
-        "R. Davies",
-        "R. Montagne",
-        "R. Slimani",
-        "S. Zegueur",
-        "T. Matiu",
-        "T. Plumtree"
+        "R. Elias",
+        "R. Neti",
+        "S. Atkinson",
+        "S. Stephen",
+        "S. Varney",
+        "T. Matiu"
       ],
-      "stat_changes": []
+      "players_removed": [
+        "A. Izekor",
+        "G. Thomas",
+        "J. Kenningham",
+        "M. Gallagher",
+        "M. Page-Relo",
+        "S. Gesi"
+      ],
+      "stat_changes": [
+        {
+          "player": "A. Beard",
+          "field": "matches_played",
+          "old": "",
+          "new": 24
+        },
+        {
+          "player": "A. Beard",
+          "field": "meters_carried",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Beard",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "A. Beard",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "A. Beard",
+          "field": "tackles",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Coles",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Coles",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Coles",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "A. Coles",
+          "field": "meters_carried",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "A. Coles",
+          "field": "points",
+          "old": "",
+          "new": "24.0"
+        },
+        {
+          "player": "A. Coles",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "A. Coles",
+          "field": "tackles",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "A. Dupont",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Dupont",
+          "field": "matches_played",
+          "old": "",
+          "new": 69
+        },
+        {
+          "player": "A. Dupont",
+          "field": "meters_carried",
+          "old": "",
+          "new": 38
+        },
+        {
+          "player": "A. Dupont",
+          "field": "points",
+          "old": "",
+          "new": "21.0"
+        },
+        {
+          "player": "A. Dupont",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "A. Dupont",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Fusco",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "A. Fusco",
+          "field": "matches_played",
+          "old": "",
+          "new": 29
+        },
+        {
+          "player": "A. Fusco",
+          "field": "meters_carried",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "A. Fusco",
+          "field": "points",
+          "old": "",
+          "new": "7.0"
+        },
+        {
+          "player": "A. Fusco",
+          "field": "tackles",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "matches_played",
+          "old": "",
+          "new": 51
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "meters_carried",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "A. Garbisi",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "A. Griffin",
+          "field": "matches_played",
+          "old": "",
+          "new": 24
+        },
+        {
+          "player": "A. Griffin",
+          "field": "meters_carried",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Griffin",
+          "field": "points",
+          "old": "",
+          "new": "6.0"
+        },
+        {
+          "player": "A. Griffin",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "A. Griffin",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Jelonch",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Jelonch",
+          "field": "matches_played",
+          "old": "",
+          "new": 42
+        },
+        {
+          "player": "A. Jelonch",
+          "field": "meters_carried",
+          "old": "",
+          "new": 19
+        },
+        {
+          "player": "A. Jelonch",
+          "field": "points",
+          "old": "",
+          "new": "21.0"
+        },
+        {
+          "player": "A. Jelonch",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Jelonch",
+          "field": "tackles",
+          "old": "",
+          "new": 16
+        },
+        {
+          "player": "A. Mann",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Mann",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "A. Mann",
+          "field": "meters_carried",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "A. Mann",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Mann",
+          "field": "points",
+          "old": "",
+          "new": "43.0"
+        },
+        {
+          "player": "A. Mann",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "A. Mann",
+          "field": "tackles",
+          "old": "",
+          "new": 33
+        },
+        {
+          "player": "A. Wainwright",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "A. Wainwright",
+          "field": "matches_played",
+          "old": "",
+          "new": 45
+        },
+        {
+          "player": "A. Wainwright",
+          "field": "meters_carried",
+          "old": "",
+          "new": 31
+        },
+        {
+          "player": "A. Wainwright",
+          "field": "points",
+          "old": "",
+          "new": "23.0"
+        },
+        {
+          "player": "A. Wainwright",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "A. Wainwright",
+          "field": "tackles",
+          "old": "",
+          "new": 16
+        },
+        {
+          "player": "B. Carter",
+          "field": "matches_played",
+          "old": "",
+          "new": 56
+        },
+        {
+          "player": "B. Carter",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "B. Carter",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "B. Carter",
+          "field": "points",
+          "old": "",
+          "new": "24.0"
+        },
+        {
+          "player": "B. Carter",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "B. Carter",
+          "field": "tackles",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "B. Earl",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "B. Earl",
+          "field": "matches_played",
+          "old": "",
+          "new": 73
+        },
+        {
+          "player": "B. Earl",
+          "field": "meters_carried",
+          "old": "",
+          "new": 56
+        },
+        {
+          "player": "B. Earl",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "B. Earl",
+          "field": "points",
+          "old": "",
+          "new": "26.0"
+        },
+        {
+          "player": "B. Earl",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "B. Earl",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "meters_carried",
+          "old": "",
+          "new": 73
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "offloads",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "points",
+          "old": "",
+          "new": "29.0"
+        },
+        {
+          "player": "B. Kinghorn",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "B. Rodd",
+          "field": "matches_played",
+          "old": "",
+          "new": 23
+        },
+        {
+          "player": "B. Rodd",
+          "field": "meters_carried",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "B. Rodd",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "B. Rodd",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "B. Serin",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "B. Serin",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "B. Serin",
+          "field": "matches_played",
+          "old": "",
+          "new": 11
+        },
+        {
+          "player": "B. Serin",
+          "field": "meters_carried",
+          "old": "",
+          "new": 16
+        },
+        {
+          "player": "B. Serin",
+          "field": "points",
+          "old": "",
+          "new": "7.0"
+        },
+        {
+          "player": "B. Spencer",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "B. Spencer",
+          "field": "matches_played",
+          "old": "",
+          "new": 57
+        },
+        {
+          "player": "B. Spencer",
+          "field": "meters_carried",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "B. Spencer",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "B. White",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "B. White",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "B. White",
+          "field": "matches_played",
+          "old": "",
+          "new": 64
+        },
+        {
+          "player": "B. White",
+          "field": "meters_carried",
+          "old": "",
+          "new": 12
+        },
+        {
+          "player": "B. White",
+          "field": "points",
+          "old": "",
+          "new": "21.0"
+        },
+        {
+          "player": "B. White",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "B. White",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "C. Cunningham-South",
+          "field": "matches_played",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "C. Cunningham-South",
+          "field": "points",
+          "old": "",
+          "new": "2.0"
+        },
+        {
+          "player": "C. Cunningham-South",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "C. Doris",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "C. Doris",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "C. Doris",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "C. Doris",
+          "field": "meters_carried",
+          "old": "",
+          "new": 23
+        },
+        {
+          "player": "C. Doris",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "C. Doris",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "C. Doris",
+          "field": "points",
+          "old": "",
+          "new": "30.0"
+        },
+        {
+          "player": "C. Doris",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "C. Doris",
+          "field": "tackles",
+          "old": "",
+          "new": 18
+        },
+        {
+          "player": "C. Frawley",
+          "field": "matches_played",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "C. Frawley",
+          "field": "meters_carried",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "C. Frawley",
+          "field": "points",
+          "old": "",
+          "new": "2.0"
+        },
+        {
+          "player": "C. Ollivon",
+          "field": "matches_played",
+          "old": "",
+          "new": 44
+        },
+        {
+          "player": "C. Ollivon",
+          "field": "meters_carried",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "C. Ollivon",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "C. Ollivon",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "C. Ollivon",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "D. Aldegheri",
+          "field": "matches_played",
+          "old": "",
+          "new": 52
+        },
+        {
+          "player": "D. Aldegheri",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Aldegheri",
+          "field": "points",
+          "old": "",
+          "new": "8.0"
+        },
+        {
+          "player": "D. Aldegheri",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "D. Aldegheri",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "D. Bamba",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Bamba",
+          "field": "matches_played",
+          "old": "",
+          "new": 28
+        },
+        {
+          "player": "D. Bamba",
+          "field": "meters_carried",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "D. Bamba",
+          "field": "points",
+          "old": "",
+          "new": "6.0"
+        },
+        {
+          "player": "D. Bamba",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Bamba",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "D. Edwards",
+          "field": "conversions",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "D. Edwards",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "D. Edwards",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Edwards",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "D. Edwards",
+          "field": "meters_carried",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "D. Edwards",
+          "field": "penalties",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Edwards",
+          "field": "points",
+          "old": "",
+          "new": "17.0"
+        },
+        {
+          "player": "D. Edwards",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "D. Fischetti",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Fischetti",
+          "field": "matches_played",
+          "old": "",
+          "new": 58
+        },
+        {
+          "player": "D. Fischetti",
+          "field": "meters_carried",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "D. Fischetti",
+          "field": "points",
+          "old": "",
+          "new": "15.0"
+        },
+        {
+          "player": "D. Fischetti",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Fischetti",
+          "field": "tackles",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "D. Graham",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "D. Graham",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "D. Graham",
+          "field": "meters_carried",
+          "old": "",
+          "new": 50
+        },
+        {
+          "player": "D. Graham",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Graham",
+          "field": "points",
+          "old": "",
+          "new": "47.0"
+        },
+        {
+          "player": "D. Graham",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "D. Graham",
+          "field": "tries",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "D. Jenkins",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "D. Jenkins",
+          "field": "meters_carried",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "D. Jenkins",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Jenkins",
+          "field": "points",
+          "old": "",
+          "new": "32.0"
+        },
+        {
+          "player": "D. Jenkins",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "D. Jenkins",
+          "field": "tackles",
+          "old": "",
+          "new": 27
+        },
+        {
+          "player": "D. Lake",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Lake",
+          "field": "matches_played",
+          "old": "",
+          "new": 56
+        },
+        {
+          "player": "D. Lake",
+          "field": "meters_carried",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "D. Lake",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Lake",
+          "field": "points",
+          "old": "",
+          "new": "32.0"
+        },
+        {
+          "player": "D. Lake",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "D. Lake",
+          "field": "tackles",
+          "old": "",
+          "new": 25
+        },
+        {
+          "player": "D. Rae",
+          "field": "matches_played",
+          "old": "",
+          "new": 39
+        },
+        {
+          "player": "D. Rae",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "D. Rae",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "D. Rae",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "D. Rae",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "E. Ashman",
+          "field": "matches_played",
+          "old": "",
+          "new": 28
+        },
+        {
+          "player": "E. Ashman",
+          "field": "meters_carried",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "E. Ashman",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "E. Ashman",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "E. Ashman",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "E. Ashman",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "E. Daly",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "E. Daly",
+          "field": "matches_played",
+          "old": "",
+          "new": 73
+        },
+        {
+          "player": "E. Daly",
+          "field": "meters_carried",
+          "old": "",
+          "new": 53
+        },
+        {
+          "player": "E. Daly",
+          "field": "points",
+          "old": "",
+          "new": "13.0"
+        },
+        {
+          "player": "E. Genge",
+          "field": "matches_played",
+          "old": "",
+          "new": 57
+        },
+        {
+          "player": "E. Genge",
+          "field": "meters_carried",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "E. Genge",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "E. Genge",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "E. Genge",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "E. Genge",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "E. Meafou",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "E. Meafou",
+          "field": "matches_played",
+          "old": "",
+          "new": 36
+        },
+        {
+          "player": "E. Meafou",
+          "field": "meters_carried",
+          "old": "",
+          "new": 22
+        },
+        {
+          "player": "E. Meafou",
+          "field": "offloads",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "E. Meafou",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "E. Meafou",
+          "field": "points",
+          "old": "",
+          "new": "18.0"
+        },
+        {
+          "player": "E. Meafou",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "E. Meafou",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "E. Mee",
+          "field": "matches_played",
+          "old": "",
+          "new": 69
+        },
+        {
+          "player": "E. Mee",
+          "field": "meters_carried",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "E. Mee",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "E. Mee",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "F. Cros",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "F. Cros",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "F. Cros",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Cros",
+          "field": "points",
+          "old": "",
+          "new": "20.0"
+        },
+        {
+          "player": "F. Cros",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "F. Cros",
+          "field": "tackles",
+          "old": "",
+          "new": 18
+        },
+        {
+          "player": "F. Douglas",
+          "field": "matches_played",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "F. Douglas",
+          "field": "points",
+          "old": "",
+          "new": "6.0"
+        },
+        {
+          "player": "F. Douglas",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "F. Russell",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Russell",
+          "field": "conversions",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "F. Russell",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Russell",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "F. Russell",
+          "field": "meters_carried",
+          "old": "",
+          "new": 17
+        },
+        {
+          "player": "F. Russell",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Russell",
+          "field": "penalties",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Russell",
+          "field": "points",
+          "old": "",
+          "new": "27.0"
+        },
+        {
+          "player": "F. Russell",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "F. Ruzza",
+          "field": "matches_played",
+          "old": "",
+          "new": 31
+        },
+        {
+          "player": "F. Ruzza",
+          "field": "meters_carried",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "F. Ruzza",
+          "field": "points",
+          "old": "",
+          "new": "4.0"
+        },
+        {
+          "player": "F. Ruzza",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "F. Smith",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Smith",
+          "field": "conversions",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Smith",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Smith",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Smith",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "F. Smith",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "F. Smith",
+          "field": "penalties",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "F. Smith",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "F. Smith",
+          "field": "points",
+          "old": "",
+          "new": "19.0"
+        },
+        {
+          "player": "F. Smith",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "G. Brown",
+          "field": "matches_played",
+          "old": "",
+          "new": 34
+        },
+        {
+          "player": "G. Brown",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Brown",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "G. Brown",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "G. Brown",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "G. Gilchrist",
+          "field": "matches_played",
+          "old": "",
+          "new": 46
+        },
+        {
+          "player": "G. Gilchrist",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "G. Gilchrist",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "G. Gilchrist",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "G. Gilchrist",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "G. Horne",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Horne",
+          "field": "matches_played",
+          "old": "",
+          "new": 16
+        },
+        {
+          "player": "G. Horne",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Horne",
+          "field": "points",
+          "old": "",
+          "new": "6.0"
+        },
+        {
+          "player": "G. Horne",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "G. Nicotera",
+          "field": "matches_played",
+          "old": "",
+          "new": 52
+        },
+        {
+          "player": "G. Nicotera",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Nicotera",
+          "field": "points",
+          "old": "",
+          "new": "11.0"
+        },
+        {
+          "player": "G. Nicotera",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Nicotera",
+          "field": "tackles",
+          "old": "",
+          "new": 16
+        },
+        {
+          "player": "G. Nicotera",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Pepper",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Pepper",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "G. Pepper",
+          "field": "matches_played",
+          "old": "",
+          "new": 75
+        },
+        {
+          "player": "G. Pepper",
+          "field": "meters_carried",
+          "old": "",
+          "new": 25
+        },
+        {
+          "player": "G. Pepper",
+          "field": "points",
+          "old": "",
+          "new": "32.0"
+        },
+        {
+          "player": "G. Pepper",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "G. Pepper",
+          "field": "tackles",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "G. Ringrose",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "G. Ringrose",
+          "field": "matches_played",
+          "old": "",
+          "new": 70
+        },
+        {
+          "player": "G. Ringrose",
+          "field": "meters_carried",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "G. Ringrose",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Ringrose",
+          "field": "points",
+          "old": "",
+          "new": "16.0"
+        },
+        {
+          "player": "G. Ringrose",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "G. Turner",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "G. Turner",
+          "field": "matches_played",
+          "old": "",
+          "new": 52
+        },
+        {
+          "player": "G. Turner",
+          "field": "meters_carried",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "G. Turner",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "G. Turner",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "G. Turner",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "H. Jones",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "H. Jones",
+          "field": "matches_played",
+          "old": "",
+          "new": 56
+        },
+        {
+          "player": "H. Jones",
+          "field": "meters_carried",
+          "old": "",
+          "new": 27
+        },
+        {
+          "player": "H. Jones",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "H. Jones",
+          "field": "points",
+          "old": "",
+          "new": "15.0"
+        },
+        {
+          "player": "H. Jones",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "H. Pollock",
+          "field": "matches_played",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "H. Pollock",
+          "field": "meters_carried",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Adams",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Adams",
+          "field": "meters_carried",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "J. Adams",
+          "field": "points",
+          "old": "",
+          "new": "7.0"
+        },
+        {
+          "player": "J. Adams",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "J. Bayliss",
+          "field": "matches_played",
+          "old": "",
+          "new": 26
+        },
+        {
+          "player": "J. Bayliss",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Bayliss",
+          "field": "points",
+          "old": "",
+          "new": "1.0"
+        },
+        {
+          "player": "J. Bayliss",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Bayliss",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "J. Bayliss",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Botham",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Botham",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Botham",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Botham",
+          "field": "meters_carried",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "J. Botham",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Botham",
+          "field": "points",
+          "old": "",
+          "new": "53.0"
+        },
+        {
+          "player": "J. Botham",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "J. Botham",
+          "field": "tackles",
+          "old": "",
+          "new": 26
+        },
+        {
+          "player": "J. Botham",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Conan",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Conan",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Conan",
+          "field": "man_of_match",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Conan",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Conan",
+          "field": "meters_carried",
+          "old": "",
+          "new": 37
+        },
+        {
+          "player": "J. Conan",
+          "field": "offloads",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Conan",
+          "field": "points",
+          "old": "",
+          "new": "68.0"
+        },
+        {
+          "player": "J. Conan",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Conan",
+          "field": "tackles",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "J. Conan",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Crowley",
+          "field": "conversions",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Crowley",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Crowley",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Crowley",
+          "field": "meters_carried",
+          "old": "",
+          "new": 27
+        },
+        {
+          "player": "J. Crowley",
+          "field": "penalties",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Crowley",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Crowley",
+          "field": "points",
+          "old": "",
+          "new": "39.0"
+        },
+        {
+          "player": "J. Crowley",
+          "field": "tackles",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "J. Crowley",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "meters_carried",
+          "old": "",
+          "new": 42
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "points",
+          "old": "",
+          "new": "23.0"
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "J. Dempsey",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "J. George",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. George",
+          "field": "matches_played",
+          "old": "",
+          "new": 75
+        },
+        {
+          "player": "J. George",
+          "field": "meters_carried",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "J. George",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "J. George",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. George",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "matches_played",
+          "old": "",
+          "new": 67
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "meters_carried",
+          "old": "",
+          "new": 58
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "points",
+          "old": "",
+          "new": "26.0"
+        },
+        {
+          "player": "J. Gibson-Park",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Gros",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Gros",
+          "field": "matches_played",
+          "old": "",
+          "new": 52
+        },
+        {
+          "player": "J. Gros",
+          "field": "meters_carried",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Gros",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Gros",
+          "field": "points",
+          "old": "",
+          "new": "25.0"
+        },
+        {
+          "player": "J. Gros",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Gros",
+          "field": "tackles",
+          "old": "",
+          "new": 22
+        },
+        {
+          "player": "J. Hawkins",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Hawkins",
+          "field": "meters_carried",
+          "old": "",
+          "new": 18
+        },
+        {
+          "player": "J. Hawkins",
+          "field": "points",
+          "old": "",
+          "new": "15.0"
+        },
+        {
+          "player": "J. Hawkins",
+          "field": "tackles",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "J. Heyes",
+          "field": "matches_played",
+          "old": "",
+          "new": 67
+        },
+        {
+          "player": "J. Heyes",
+          "field": "meters_carried",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Heyes",
+          "field": "points",
+          "old": "",
+          "new": "10.0"
+        },
+        {
+          "player": "J. Heyes",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "J. Heyes",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "J. Marchand",
+          "field": "matches_played",
+          "old": "",
+          "new": 44
+        },
+        {
+          "player": "J. Marchand",
+          "field": "meters_carried",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Marchand",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Marchand",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "J. Marchand",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Marchand",
+          "field": "tackles",
+          "old": "",
+          "new": 11
+        },
+        {
+          "player": "J. McCarthy",
+          "field": "lineout_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. McCarthy",
+          "field": "matches_played",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "J. McCarthy",
+          "field": "meters_carried",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "J. McCarthy",
+          "field": "points",
+          "old": "",
+          "new": "15.0"
+        },
+        {
+          "player": "J. McCarthy",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "J. Osborne",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "J. Osborne",
+          "field": "meters_carried",
+          "old": "",
+          "new": 24
+        },
+        {
+          "player": "J. Osborne",
+          "field": "offloads",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Osborne",
+          "field": "points",
+          "old": "",
+          "new": "22.0"
+        },
+        {
+          "player": "J. Osborne",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Osborne",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Ryan",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Ryan",
+          "field": "matches_played",
+          "old": "",
+          "new": 60
+        },
+        {
+          "player": "J. Ryan",
+          "field": "meters_carried",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "J. Ryan",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. Ryan",
+          "field": "points",
+          "old": "",
+          "new": "10.0"
+        },
+        {
+          "player": "J. Ryan",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Ryan",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "matches_played",
+          "old": "",
+          "new": 70
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "meters_carried",
+          "old": "",
+          "new": 39
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "points",
+          "old": "",
+          "new": "30.0"
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "J. Stockdale",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. van Poortvliet",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "J. van Poortvliet",
+          "field": "matches_played",
+          "old": "",
+          "new": 23
+        },
+        {
+          "player": "J. van Poortvliet",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "J. van Poortvliet",
+          "field": "tackles",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. van der Flier",
+          "field": "matches_played",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "J. van der Flier",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "J. van der Flier",
+          "field": "points",
+          "old": "",
+          "new": "10.0"
+        },
+        {
+          "player": "J. van der Flier",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "K. Steyn",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "K. Steyn",
+          "field": "man_of_match",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "K. Steyn",
+          "field": "matches_played",
+          "old": "",
+          "new": 67
+        },
+        {
+          "player": "K. Steyn",
+          "field": "meters_carried",
+          "old": "",
+          "new": 117
+        },
+        {
+          "player": "K. Steyn",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "K. Steyn",
+          "field": "points",
+          "old": "",
+          "new": "61.0"
+        },
+        {
+          "player": "K. Steyn",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "K. Steyn",
+          "field": "tries",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "assists",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "meters_carried",
+          "old": "",
+          "new": 96
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "points",
+          "old": "",
+          "new": "49.0"
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "L. Bielle-Biarrey",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Cannone",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "L. Cannone",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "L. Cannone",
+          "field": "meters_carried",
+          "old": "",
+          "new": 44
+        },
+        {
+          "player": "L. Cannone",
+          "field": "points",
+          "old": "",
+          "new": "27.0"
+        },
+        {
+          "player": "L. Cannone",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Cannone",
+          "field": "tackles",
+          "old": "",
+          "new": 12
+        },
+        {
+          "player": "L. Cowan-Dickie",
+          "field": "matches_played",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "L. Cowan-Dickie",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Lynagh",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Lynagh",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "L. Lynagh",
+          "field": "meters_carried",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "L. Lynagh",
+          "field": "offloads",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Lynagh",
+          "field": "points",
+          "old": "",
+          "new": "17.0"
+        },
+        {
+          "player": "L. Lynagh",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "L. Marin",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Marin",
+          "field": "matches_played",
+          "old": "",
+          "new": 29
+        },
+        {
+          "player": "L. Marin",
+          "field": "meters_carried",
+          "old": "",
+          "new": 18
+        },
+        {
+          "player": "L. Marin",
+          "field": "points",
+          "old": "",
+          "new": "14.0"
+        },
+        {
+          "player": "L. Marin",
+          "field": "tackles",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Marin",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "matches_played",
+          "old": "",
+          "new": 27
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "meters_carried",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "L. Nouchi",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Pani",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Pani",
+          "field": "matches_played",
+          "old": "",
+          "new": 73
+        },
+        {
+          "player": "L. Pani",
+          "field": "meters_carried",
+          "old": "",
+          "new": 38
+        },
+        {
+          "player": "L. Pani",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Pani",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Pani",
+          "field": "points",
+          "old": "",
+          "new": "10.0"
+        },
+        {
+          "player": "L. Pani",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "kick_50_22",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "meters_carried",
+          "old": "",
+          "new": 28
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "points",
+          "old": "",
+          "new": "18.0"
+        },
+        {
+          "player": "L. Rees-Zammit",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "M. Fagerson",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Fagerson",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "M. Fagerson",
+          "field": "meters_carried",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "M. Fagerson",
+          "field": "points",
+          "old": "",
+          "new": "16.0"
+        },
+        {
+          "player": "M. Fagerson",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "M. Fagerson",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "M. Guillard",
+          "field": "matches_played",
+          "old": "",
+          "new": 44
+        },
+        {
+          "player": "M. Guillard",
+          "field": "meters_carried",
+          "old": "",
+          "new": 11
+        },
+        {
+          "player": "M. Guillard",
+          "field": "points",
+          "old": "",
+          "new": "14.0"
+        },
+        {
+          "player": "M. Guillard",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "M. Guillard",
+          "field": "tackles",
+          "old": "",
+          "new": 11
+        },
+        {
+          "player": "M. Hasa",
+          "field": "matches_played",
+          "old": "",
+          "new": 29
+        },
+        {
+          "player": "M. Hasa",
+          "field": "meters_carried",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "M. Hasa",
+          "field": "points",
+          "old": "",
+          "new": "3.0"
+        },
+        {
+          "player": "M. Hasa",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "M. Ioane",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Ioane",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "M. Ioane",
+          "field": "meters_carried",
+          "old": "",
+          "new": 50
+        },
+        {
+          "player": "M. Ioane",
+          "field": "offloads",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "M. Ioane",
+          "field": "points",
+          "old": "",
+          "new": "23.0"
+        },
+        {
+          "player": "M. Ioane",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "M. Itoje",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "M. Itoje",
+          "field": "matches_played",
+          "old": "",
+          "new": 69
+        },
+        {
+          "player": "M. Itoje",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Itoje",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Itoje",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "M. Itoje",
+          "field": "points",
+          "old": "",
+          "new": "23.0"
+        },
+        {
+          "player": "M. Itoje",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "M. Itoje",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "M. Itoje",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "matches_played",
+          "old": "",
+          "new": 70
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "meters_carried",
+          "old": "",
+          "new": 54
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "points",
+          "old": "",
+          "new": "14.0"
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "M. Jalibert",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Lamaro",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Lamaro",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "M. Lamaro",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "M. Lamaro",
+          "field": "points",
+          "old": "",
+          "new": "16.0"
+        },
+        {
+          "player": "M. Lamaro",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Lamaro",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "M. Milne",
+          "field": "matches_played",
+          "old": "",
+          "new": 17
+        },
+        {
+          "player": "M. Milne",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Milne",
+          "field": "points",
+          "old": "",
+          "new": "6.0"
+        },
+        {
+          "player": "M. Milne",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "M. Smith",
+          "field": "matches_played",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "M. Spagnolo",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Spagnolo",
+          "field": "matches_played",
+          "old": "",
+          "new": 22
+        },
+        {
+          "player": "M. Spagnolo",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "M. Spagnolo",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "matches_played",
+          "old": "",
+          "new": 73
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "meters_carried",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "points",
+          "old": "",
+          "new": "20.0"
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "M. Zuliani",
+          "field": "tackles",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "N. Brex",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Brex",
+          "field": "matches_played",
+          "old": "",
+          "new": 51
+        },
+        {
+          "player": "N. Brex",
+          "field": "meters_carried",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "N. Brex",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "N. Brex",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "N. Cannone",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Cannone",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "N. Cannone",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Cannone",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "N. Cannone",
+          "field": "points",
+          "old": "",
+          "new": "10.0"
+        },
+        {
+          "player": "N. Cannone",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Cannone",
+          "field": "tackles",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "N. Depoortere",
+          "field": "matches_played",
+          "old": "",
+          "new": 44
+        },
+        {
+          "player": "N. Depoortere",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Depoortere",
+          "field": "points",
+          "old": "",
+          "new": "8.0"
+        },
+        {
+          "player": "N. Depoortere",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "N. Doak",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Doak",
+          "field": "matches_played",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "N. Doak",
+          "field": "points",
+          "old": "",
+          "new": "3.0"
+        },
+        {
+          "player": "N. Doak",
+          "field": "tackles",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Smith",
+          "field": "matches_played",
+          "old": "",
+          "new": 35
+        },
+        {
+          "player": "N. Smith",
+          "field": "points",
+          "old": "",
+          "new": "7.0"
+        },
+        {
+          "player": "N. Smith",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "N. Smith",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "N. Timoney",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "N. Timoney",
+          "field": "matches_played",
+          "old": "",
+          "new": 60
+        },
+        {
+          "player": "N. Timoney",
+          "field": "meters_carried",
+          "old": "",
+          "new": 24
+        },
+        {
+          "player": "N. Timoney",
+          "field": "points",
+          "old": "",
+          "new": "19.0"
+        },
+        {
+          "player": "N. Timoney",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "N. Timoney",
+          "field": "tackles",
+          "old": "",
+          "new": 11
+        },
+        {
+          "player": "O. Chessum",
+          "field": "lineout_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "O. Chessum",
+          "field": "matches_played",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "O. Chessum",
+          "field": "meters_carried",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "O. Chessum",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "O. Chessum",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "O. Cracknell",
+          "field": "matches_played",
+          "old": "",
+          "new": 35
+        },
+        {
+          "player": "O. Cracknell",
+          "field": "meters_carried",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "O. Cracknell",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "O. Cracknell",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "O. Cracknell",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "O. Jegou",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "O. Jegou",
+          "field": "meters_carried",
+          "old": "",
+          "new": 22
+        },
+        {
+          "player": "O. Jegou",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "O. Jegou",
+          "field": "points",
+          "old": "",
+          "new": "47.0"
+        },
+        {
+          "player": "O. Jegou",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "O. Jegou",
+          "field": "tackles",
+          "old": "",
+          "new": 28
+        },
+        {
+          "player": "O. Jegou",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "P. Barassi",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "P. Barassi",
+          "field": "matches_played",
+          "old": "",
+          "new": 36
+        },
+        {
+          "player": "P. Barassi",
+          "field": "meters_carried",
+          "old": "",
+          "new": 22
+        },
+        {
+          "player": "P. Barassi",
+          "field": "points",
+          "old": "",
+          "new": "12.0"
+        },
+        {
+          "player": "P. Barassi",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "conversions",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "penalties",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "points",
+          "old": "",
+          "new": "30.0"
+        },
+        {
+          "player": "P. Garbisi",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "P. Mauvaka",
+          "field": "matches_played",
+          "old": "",
+          "new": 36
+        },
+        {
+          "player": "P. Mauvaka",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "P. Mauvaka",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "P. Mauvaka",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "matches_played",
+          "old": "",
+          "new": 64
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "meters_carried",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "points",
+          "old": "",
+          "new": "24.0"
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "P. Schoeman",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Carre",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "R. Carre",
+          "field": "matches_played",
+          "old": "",
+          "new": 45
+        },
+        {
+          "player": "R. Carre",
+          "field": "meters_carried",
+          "old": "",
+          "new": 38
+        },
+        {
+          "player": "R. Carre",
+          "field": "points",
+          "old": "",
+          "new": "37.0"
+        },
+        {
+          "player": "R. Carre",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "R. Carre",
+          "field": "tackles",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "R. Carre",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Darge",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "R. Darge",
+          "field": "meters_carried",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "R. Darge",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Darge",
+          "field": "points",
+          "old": "",
+          "new": "23.0"
+        },
+        {
+          "player": "R. Darge",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "R. Darge",
+          "field": "tackles",
+          "old": "",
+          "new": 15
+        },
+        {
+          "player": "R. Favretto",
+          "field": "matches_played",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "R. Favretto",
+          "field": "points",
+          "old": "",
+          "new": "1.0"
+        },
+        {
+          "player": "R. Favretto",
+          "field": "tackles",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "matches_played",
+          "old": "",
+          "new": 63
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "meters_carried",
+          "old": "",
+          "new": 30
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "points",
+          "old": "",
+          "new": "35.0"
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "R. Kelleher",
+          "field": "tackles",
+          "old": "",
+          "new": 17
+        },
+        {
+          "player": "R. Sutherland",
+          "field": "matches_played",
+          "old": "",
+          "new": 16
+        },
+        {
+          "player": "R. Sutherland",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "R. Sutherland",
+          "field": "points",
+          "old": "",
+          "new": "5.0"
+        },
+        {
+          "player": "R. Sutherland",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "S. Cummings",
+          "field": "lineout_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Cummings",
+          "field": "matches_played",
+          "old": "",
+          "new": 52
+        },
+        {
+          "player": "S. Cummings",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Cummings",
+          "field": "points",
+          "old": "",
+          "new": "16.0"
+        },
+        {
+          "player": "S. Cummings",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "S. Cummings",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "S. Ferrari",
+          "field": "matches_played",
+          "old": "",
+          "new": 51
+        },
+        {
+          "player": "S. Ferrari",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "S. Ferrari",
+          "field": "points",
+          "old": "",
+          "new": "8.0"
+        },
+        {
+          "player": "S. Ferrari",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Ferrari",
+          "field": "tackles",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "meters_carried",
+          "old": "",
+          "new": 48
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "offloads",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "points",
+          "old": "",
+          "new": "32.0"
+        },
+        {
+          "player": "S. McCloskey",
+          "field": "tackles",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "S. Tuipulotu",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Tuipulotu",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "S. Tuipulotu",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "S. Tuipulotu",
+          "field": "meters_carried",
+          "old": "",
+          "new": 32
+        },
+        {
+          "player": "S. Tuipulotu",
+          "field": "points",
+          "old": "",
+          "new": "23.0"
+        },
+        {
+          "player": "S. Tuipulotu",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "S. Underhill",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Underhill",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "S. Underhill",
+          "field": "matches_played",
+          "old": "",
+          "new": 56
+        },
+        {
+          "player": "S. Underhill",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "S. Underhill",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "S. Underhill",
+          "field": "points",
+          "old": "",
+          "new": "16.0"
+        },
+        {
+          "player": "S. Underhill",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "S. Underhill",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "S. Underhill",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Allan",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Allan",
+          "field": "matches_played",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "T. Allan",
+          "field": "meters_carried",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Allan",
+          "field": "points",
+          "old": "",
+          "new": "2.0"
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "meters_carried",
+          "old": "",
+          "new": 63
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "points",
+          "old": "",
+          "new": "25.0"
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "T. Attissogbe",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Beirne",
+          "field": "breakdown_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Beirne",
+          "field": "lineout_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Beirne",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "T. Beirne",
+          "field": "meters_carried",
+          "old": "",
+          "new": 9
+        },
+        {
+          "player": "T. Beirne",
+          "field": "offloads",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Beirne",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Beirne",
+          "field": "points",
+          "old": "",
+          "new": "32.0"
+        },
+        {
+          "player": "T. Beirne",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "T. Beirne",
+          "field": "tackles",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "T. Clarkson",
+          "field": "matches_played",
+          "old": "",
+          "new": 20
+        },
+        {
+          "player": "T. Clarkson",
+          "field": "points",
+          "old": "",
+          "new": "3.0"
+        },
+        {
+          "player": "T. Clarkson",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "T. Davison",
+          "field": "matches_played",
+          "old": "",
+          "new": 13
+        },
+        {
+          "player": "T. Davison",
+          "field": "points",
+          "old": "",
+          "new": "2.0"
+        },
+        {
+          "player": "T. Davison",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Farrell",
+          "field": "matches_played",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "T. Farrell",
+          "field": "meters_carried",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "T. Farrell",
+          "field": "points",
+          "old": "",
+          "new": "2.0"
+        },
+        {
+          "player": "T. Farrell",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Flament",
+          "field": "lineout_steals",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Flament",
+          "field": "matches_played",
+          "old": "",
+          "new": 36
+        },
+        {
+          "player": "T. Flament",
+          "field": "meters_carried",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "T. Flament",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Flament",
+          "field": "points",
+          "old": "",
+          "new": "17.0"
+        },
+        {
+          "player": "T. Flament",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Flament",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        },
+        {
+          "player": "T. Francis",
+          "field": "matches_played",
+          "old": "",
+          "new": 56
+        },
+        {
+          "player": "T. Francis",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Francis",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Francis",
+          "field": "points",
+          "old": "",
+          "new": "16.0"
+        },
+        {
+          "player": "T. Francis",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Francis",
+          "field": "tackles",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "T. Freeman",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Freeman",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "T. Freeman",
+          "field": "meters_carried",
+          "old": "",
+          "new": 47
+        },
+        {
+          "player": "T. Freeman",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Freeman",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Freeman",
+          "field": "points",
+          "old": "",
+          "new": "20.0"
+        },
+        {
+          "player": "T. Freeman",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Freeman",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Furlong",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Furlong",
+          "field": "matches_played",
+          "old": "",
+          "new": 60
+        },
+        {
+          "player": "T. Furlong",
+          "field": "meters_carried",
+          "old": "",
+          "new": 14
+        },
+        {
+          "player": "T. Furlong",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Furlong",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Furlong",
+          "field": "points",
+          "old": "",
+          "new": "13.0"
+        },
+        {
+          "player": "T. Furlong",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "T. Furlong",
+          "field": "tackles",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "T. Jordan",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Jordan",
+          "field": "matches_played",
+          "old": "",
+          "new": 24
+        },
+        {
+          "player": "T. Jordan",
+          "field": "meters_carried",
+          "old": "",
+          "new": 33
+        },
+        {
+          "player": "T. Jordan",
+          "field": "points",
+          "old": "",
+          "new": "19.0"
+        },
+        {
+          "player": "T. Jordan",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Jordan",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "meters_carried",
+          "old": "",
+          "new": 87
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "points",
+          "old": "",
+          "new": "39.0"
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "tackles",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "T. Menoncello",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. O'Toole",
+          "field": "matches_played",
+          "old": "",
+          "new": 63
+        },
+        {
+          "player": "T. O'Toole",
+          "field": "points",
+          "old": "",
+          "new": "14.0"
+        },
+        {
+          "player": "T. O'Toole",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "T. O'Toole",
+          "field": "tackles",
+          "old": "",
+          "new": 10
+        },
+        {
+          "player": "T. Ramos",
+          "field": "conversions",
+          "old": "",
+          "new": 5
+        },
+        {
+          "player": "T. Ramos",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "T. Ramos",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "T. Ramos",
+          "field": "meters_carried",
+          "old": "",
+          "new": 83
+        },
+        {
+          "player": "T. Ramos",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Ramos",
+          "field": "points",
+          "old": "",
+          "new": "45.0"
+        },
+        {
+          "player": "T. Ramos",
+          "field": "tackles",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Ramos",
+          "field": "tries",
+          "old": "",
+          "new": 2
+        },
+        {
+          "player": "T. Roebuck",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 7
+        },
+        {
+          "player": "T. Roebuck",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "T. Roebuck",
+          "field": "meters_carried",
+          "old": "",
+          "new": 81
+        },
+        {
+          "player": "T. Roebuck",
+          "field": "points",
+          "old": "",
+          "new": "36.0"
+        },
+        {
+          "player": "T. Roebuck",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "T. Roebuck",
+          "field": "tries",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Stewart",
+          "field": "matches_played",
+          "old": "",
+          "new": 17
+        },
+        {
+          "player": "T. Stewart",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "T. Stewart",
+          "field": "points",
+          "old": "",
+          "new": "3.0"
+        },
+        {
+          "player": "T. Stewart",
+          "field": "tackles",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "T. Williams",
+          "field": "assists",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Williams",
+          "field": "kicks_retained",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. Williams",
+          "field": "matches_played",
+          "old": "",
+          "new": 71
+        },
+        {
+          "player": "T. Williams",
+          "field": "meters_carried",
+          "old": "",
+          "new": 3
+        },
+        {
+          "player": "T. Williams",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "T. Williams",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "T. Williams",
+          "field": "yellow_cards",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. di Bartolomeo",
+          "field": "matches_played",
+          "old": "",
+          "new": 17
+        },
+        {
+          "player": "T. di Bartolomeo",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "T. di Bartolomeo",
+          "field": "points",
+          "old": "",
+          "new": "3.0"
+        },
+        {
+          "player": "T. di Bartolomeo",
+          "field": "tackles",
+          "old": "",
+          "new": 4
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "matches_played",
+          "old": "",
+          "new": 80
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "meters_carried",
+          "old": "",
+          "new": 34
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "offloads",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "penalties_conceded",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "points",
+          "old": "",
+          "new": "14.0"
+        },
+        {
+          "player": "Y. Moefana",
+          "field": "tackles",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "Z. Fagerson",
+          "field": "defenders_beaten",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "Z. Fagerson",
+          "field": "matches_played",
+          "old": "",
+          "new": 41
+        },
+        {
+          "player": "Z. Fagerson",
+          "field": "meters_carried",
+          "old": "",
+          "new": 8
+        },
+        {
+          "player": "Z. Fagerson",
+          "field": "points",
+          "old": "",
+          "new": "9.0"
+        },
+        {
+          "player": "Z. Fagerson",
+          "field": "scrum_wins",
+          "old": "",
+          "new": 1
+        },
+        {
+          "player": "Z. Fagerson",
+          "field": "tackles",
+          "old": "",
+          "new": 6
+        }
+      ]
     },
     {
       "round": 5,
       "file": "six_nations_stats_2026_round_5.json",
-      "extraction_date": "2026-03-03",
-      "total_players": 216,
+      "extraction_date": "2026-03-07",
+      "total_players": 218,
       "has_data": false,
       "players_added": [
-        "A. Jelonch",
-        "A. Mann",
-        "B. Aki",
-        "D. Bamba",
-        "D. Priso",
-        "E. Daly",
-        "F. Ruzza",
-        "F. Steward",
-        "G. Kloska",
-        "G. Lucchesi",
-        "J. Dempsey",
-        "J. Hawkins",
-        "J. Kenningham",
-        "J. O'Brien",
-        "J. van der Flier",
-        "K. Assiratti",
-        "M. Grady",
-        "N. Depoortere",
-        "N. le Garrec",
-        "R. Quirke",
-        "R. Woodman",
-        "T. Allan",
-        "T. Dan",
-        "T. Laclayat",
-        "Y. Moefana"
+        "A. Roumat",
+        "A. Zambonin",
+        "C. Murley",
+        "C. Woki",
+        "D. Cherry",
+        "F. Bealham",
+        "H. Slade",
+        "L. Hennessey",
+        "M. Walker",
+        "R. Baloucoune",
+        "R. Elias",
+        "R. Neti",
+        "S. Atkinson",
+        "S. Stephen",
+        "T. Matiu"
       ],
       "players_removed": [
-        "A. Desperes",
-        "B. Bohan",
-        "D. Cherry",
-        "E. James",
-        "F. Bealham",
-        "G. Drean",
-        "H. Auradou",
-        "H. Slade",
-        "N. Nene",
-        "R. Baloucoune",
-        "R. Davies",
-        "R. Montagne",
-        "R. Slimani",
-        "S. Zegueur",
-        "T. Matiu",
-        "T. Plumtree"
+        "A. Mitchell",
+        "G. Kloska",
+        "G. Lucchesi",
+        "G. Thomas",
+        "G. da Re",
+        "J. Brennan",
+        "J. Kenningham",
+        "M. Bradbury",
+        "M. Grady",
+        "N. Depoortere",
+        "R. Sutherland",
+        "T. Attissogbe",
+        "T. Stewart"
       ],
       "stat_changes": []
     }
