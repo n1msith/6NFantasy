@@ -1,40 +1,15 @@
 {
   "round": 5,
   "file": "six_nations_stats_2026_round_5.json",
-  "extraction_date": "2026-03-07",
-  "total_players": 218,
+  "extraction_date": "2026-03-08",
+  "total_players": 219,
   "has_data": false,
   "players_added": [
-    "A. Roumat",
-    "A. Zambonin",
-    "C. Murley",
-    "C. Woki",
-    "D. Cherry",
-    "F. Bealham",
-    "H. Slade",
-    "L. Hennessey",
-    "M. Walker",
-    "R. Baloucoune",
-    "R. Elias",
-    "R. Neti",
-    "S. Atkinson",
-    "S. Stephen",
-    "T. Matiu"
+    "E. James",
+    "G. Drean"
   ],
   "players_removed": [
-    "A. Mitchell",
-    "G. Kloska",
-    "G. Lucchesi",
-    "G. Thomas",
-    "G. da Re",
-    "J. Brennan",
-    "J. Kenningham",
-    "M. Bradbury",
-    "M. Grady",
-    "N. Depoortere",
-    "R. Sutherland",
-    "T. Attissogbe",
-    "T. Stewart"
+    "L. Lynagh"
   ],
   "stat_changes": []
 }

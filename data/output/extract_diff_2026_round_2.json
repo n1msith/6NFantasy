@@ -1,28 +1,12 @@
 {
   "round": 2,
   "file": "six_nations_stats_2026_round_2.json",
-  "extraction_date": "2026-03-07",
-  "total_players": 224,
+  "extraction_date": "2026-03-08",
+  "total_players": 225,
   "has_data": true,
   "players_added": [
-    "H. Keenan",
-    "H. Slade",
-    "J. Brennan",
-    "L. Barre",
-    "L. Hennessey",
-    "M. Walker",
-    "S. Stephen",
-    "T. Matiu",
-    "T. Stewart"
-  ],
-  "players_removed": [
-    "A. Capuozzo",
-    "A. Roumat",
-    "B. Murray",
-    "G. Hamer-Webb",
-    "G. Kloska",
-    "G. Thomas",
     "P. Boudehent"
   ],
+  "players_removed": [],
   "stat_changes": []
 }

@@ -1,5 +1,5 @@
 {
-  "extraction_date": "2026-03-07",
+  "extraction_date": "2026-03-08",
   "round": 3,
   "players": [
     {
@@ -2865,33 +2865,6 @@
       }
     },
     {
-      "name": "D. Fischetti",
-      "club": "Italy",
-      "position": "Prop",
-      "stats": {
-        "matches_played": 54,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 4,
-        "meters_carried": 1,
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": 2,
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "6.0"
-      }
-    },
-    {
       "name": "L. Cowan-Dickie",
       "club": "England",
       "position": "Hooker",
@@ -2912,6 +2885,33 @@
         "breakdown_steals": "",
         "kicks_retained": "",
         "scrum_wins": 1,
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "6.0"
+      }
+    },
+    {
+      "name": "D. Fischetti",
+      "club": "Italy",
+      "position": "Prop",
+      "stats": {
+        "matches_played": 54,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 4,
+        "meters_carried": 1,
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": 2,
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",

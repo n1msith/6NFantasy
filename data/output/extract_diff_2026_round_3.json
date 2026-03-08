@@ -1,25 +1,10 @@
 {
   "round": 3,
   "file": "six_nations_stats_2026_round_3.json",
-  "extraction_date": "2026-03-07",
+  "extraction_date": "2026-03-08",
   "total_players": 230,
   "has_data": true,
-  "players_added": [
-    "D. Priso",
-    "E. Ashman",
-    "H. Deaves",
-    "H. Keenan",
-    "H. Slade",
-    "J. Brennan",
-    "L. Barre",
-    "L. Hennessey",
-    "M. Walker",
-    "S. Atkinson",
-    "S. Stephen",
-    "T. Rogers"
-  ],
-  "players_removed": [
-    "P. Boudehent"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }

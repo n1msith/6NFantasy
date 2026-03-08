@@ -1,25 +1,12 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-03-07",
-  "total_players": 229,
+  "extraction_date": "2026-03-08",
+  "total_players": 228,
   "has_data": true,
-  "players_added": [
-    "H. Slade",
-    "J. Brennan",
-    "L. Hennessey",
-    "M. Gallagher",
-    "M. Walker",
-    "O. Smith",
-    "R. Elias",
-    "S. Atkinson",
-    "S. Stephen"
-  ],
+  "players_added": [],
   "players_removed": [
-    "C. Woki",
-    "G. Hamer-Webb",
-    "G. Kloska",
-    "S. Costelow"
+    "T. Francis"
   ],
   "stat_changes": []
 }
