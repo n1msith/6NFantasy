@@ -1,35 +1,31 @@
 {
-  "generated_date": "2026-03-08 04:03",
+  "generated_date": "2026-03-09 04:07",
   "year": 2026,
   "rounds": [
     {
       "round": 1,
       "file": "six_nations_stats_2026_round_1.json",
-      "extraction_date": "2026-03-08",
+      "extraction_date": "2026-03-09",
       "total_players": 228,
       "has_data": true,
       "players_added": [],
-      "players_removed": [
-        "T. Francis"
-      ],
+      "players_removed": [],
       "stat_changes": []
     },
     {
       "round": 2,
       "file": "six_nations_stats_2026_round_2.json",
-      "extraction_date": "2026-03-08",
+      "extraction_date": "2026-03-09",
       "total_players": 225,
       "has_data": true,
-      "players_added": [
-        "P. Boudehent"
-      ],
+      "players_added": [],
       "players_removed": [],
       "stat_changes": []
     },
     {
       "round": 3,
       "file": "six_nations_stats_2026_round_3.json",
-      "extraction_date": "2026-03-08",
+      "extraction_date": "2026-03-09",
       "total_players": 230,
       "has_data": true,
       "players_added": [],
@@ -39,327 +35,21 @@
     {
       "round": 4,
       "file": "six_nations_stats_2026_round_4.json",
-      "extraction_date": "2026-03-08",
+      "extraction_date": "2026-03-09",
       "total_players": 228,
       "has_data": true,
       "players_added": [],
       "players_removed": [],
-      "stat_changes": [
-        {
-          "player": "A. Coles",
-          "field": "meters_carried",
-          "old": 8,
-          "new": 3
-        },
-        {
-          "player": "A. Fusco",
-          "field": "defenders_beaten",
-          "old": "",
-          "new": 1
-        },
-        {
-          "player": "A. Fusco",
-          "field": "points",
-          "old": "7.0",
-          "new": "9.0"
-        },
-        {
-          "player": "A. Zambonin",
-          "field": "meters_carried",
-          "old": 7,
-          "new": 8
-        },
-        {
-          "player": "B. Rodd",
-          "field": "points",
-          "old": "5.0",
-          "new": "4.0"
-        },
-        {
-          "player": "B. Rodd",
-          "field": "tackles",
-          "old": 5,
-          "new": 4
-        },
-        {
-          "player": "C. Murley",
-          "field": "meters_carried",
-          "old": 42,
-          "new": 45
-        },
-        {
-          "player": "C. Murley",
-          "field": "points",
-          "old": "15.0",
-          "new": "16.0"
-        },
-        {
-          "player": "C. Murley",
-          "field": "tackles",
-          "old": 5,
-          "new": 6
-        },
-        {
-          "player": "E. Genge",
-          "field": "meters_carried",
-          "old": 7,
-          "new": 5
-        },
-        {
-          "player": "E. Genge",
-          "field": "points",
-          "old": "9.0",
-          "new": "8.0"
-        },
-        {
-          "player": "E. Genge",
-          "field": "tackles",
-          "old": 7,
-          "new": 6
-        },
-        {
-          "player": "F. Ruzza",
-          "field": "points",
-          "old": "4.0",
-          "new": "7.0"
-        },
-        {
-          "player": "F. Ruzza",
-          "field": "tackles",
-          "old": 3,
-          "new": 6
-        },
-        {
-          "player": "F. Smith",
-          "field": "meters_carried",
-          "old": 3,
-          "new": 6
-        },
-        {
-          "player": "G. Nicotera",
-          "field": "points",
-          "old": "11.0",
-          "new": "12.0"
-        },
-        {
-          "player": "G. Nicotera",
-          "field": "tackles",
-          "old": 16,
-          "new": 17
-        },
-        {
-          "player": "G. Pepper",
-          "field": "meters_carried",
-          "old": 25,
-          "new": 30
-        },
-        {
-          "player": "G. Pepper",
-          "field": "tackles",
-          "old": 14,
-          "new": 13
-        },
-        {
-          "player": "J. George",
-          "field": "meters_carried",
-          "old": 9,
-          "new": 10
-        },
-        {
-          "player": "J. George",
-          "field": "points",
-          "old": "12.0",
-          "new": "13.0"
-        },
-        {
-          "player": "J. Heyes",
-          "field": "points",
-          "old": "10.0",
-          "new": "11.0"
-        },
-        {
-          "player": "J. Heyes",
-          "field": "tackles",
-          "old": 7,
-          "new": 8
-        },
-        {
-          "player": "J. van Poortvliet",
-          "field": "meters_carried",
-          "old": "",
-          "new": 9
-        },
-        {
-          "player": "J. van Poortvliet",
-          "field": "offloads",
-          "old": "",
-          "new": 1
-        },
-        {
-          "player": "J. van Poortvliet",
-          "field": "points",
-          "old": "5.0",
-          "new": "8.0"
-        },
-        {
-          "player": "J. van Poortvliet",
-          "field": "tackles",
-          "old": 1,
-          "new": 2
-        },
-        {
-          "player": "L. Cannone",
-          "field": "defenders_beaten",
-          "old": 5,
-          "new": 7
-        },
-        {
-          "player": "L. Cannone",
-          "field": "points",
-          "old": "27.0",
-          "new": "32.0"
-        },
-        {
-          "player": "L. Cannone",
-          "field": "tackles",
-          "old": 12,
-          "new": 13
-        },
-        {
-          "player": "L. Cowan-Dickie",
-          "field": "meters_carried",
-          "old": 1,
-          "new": 6
-        },
-        {
-          "player": "L. Cowan-Dickie",
-          "field": "points",
-          "old": "",
-          "new": "1.0"
-        },
-        {
-          "player": "L. Cowan-Dickie",
-          "field": "tackles",
-          "old": "",
-          "new": 1
-        },
-        {
-          "player": "L. Lynagh",
-          "field": "points",
-          "old": "17.0",
-          "new": "18.0"
-        },
-        {
-          "player": "L. Lynagh",
-          "field": "tackles",
-          "old": 6,
-          "new": 7
-        },
-        {
-          "player": "M. Hasa",
-          "field": "points",
-          "old": "3.0",
-          "new": "1.0"
-        },
-        {
-          "player": "M. Hasa",
-          "field": "tackles",
-          "old": 3,
-          "new": 1
-        },
-        {
-          "player": "M. Spagnolo",
-          "field": "points",
-          "old": "9.0",
-          "new": "11.0"
-        },
-        {
-          "player": "M. Spagnolo",
-          "field": "tackles",
-          "old": 4,
-          "new": 6
-        },
-        {
-          "player": "M. Zuliani",
-          "field": "defenders_beaten",
-          "old": 1,
-          "new": 2
-        },
-        {
-          "player": "M. Zuliani",
-          "field": "points",
-          "old": "20.0",
-          "new": "22.0"
-        },
-        {
-          "player": "O. Chessum",
-          "field": "meters_carried",
-          "old": 2,
-          "new": 25
-        },
-        {
-          "player": "O. Chessum",
-          "field": "points",
-          "old": "9.0",
-          "new": "11.0"
-        },
-        {
-          "player": "S. Atkinson",
-          "field": "meters_carried",
-          "old": 28,
-          "new": 29
-        },
-        {
-          "player": "S. Underhill",
-          "field": "points",
-          "old": "16.0",
-          "new": "15.0"
-        },
-        {
-          "player": "S. Underhill",
-          "field": "tackles",
-          "old": 10,
-          "new": 9
-        },
-        {
-          "player": "T. Freeman",
-          "field": "meters_carried",
-          "old": 47,
-          "new": 50
-        },
-        {
-          "player": "T. Freeman",
-          "field": "points",
-          "old": "20.0",
-          "new": "21.0"
-        },
-        {
-          "player": "T. Menoncello",
-          "field": "man_of_match",
-          "old": "",
-          "new": 1
-        },
-        {
-          "player": "T. Menoncello",
-          "field": "points",
-          "old": "39.0",
-          "new": "54.0"
-        }
-      ]
+      "stat_changes": []
     },
     {
       "round": 5,
       "file": "six_nations_stats_2026_round_5.json",
-      "extraction_date": "2026-03-08",
+      "extraction_date": "2026-03-09",
       "total_players": 219,
       "has_data": false,
-      "players_added": [
-        "E. James",
-        "G. Drean"
-      ],
-      "players_removed": [
-        "L. Lynagh"
-      ],
+      "players_added": [],
+      "players_removed": [],
       "stat_changes": []
     }
   ]
