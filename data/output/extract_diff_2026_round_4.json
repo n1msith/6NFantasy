@@ -1,10 +1,35 @@
 {
   "round": 4,
   "file": "six_nations_stats_2026_round_4.json",
-  "extraction_date": "2026-03-09",
-  "total_players": 228,
+  "extraction_date": "2026-03-10",
+  "total_players": 219,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "A. Desperes",
+    "B. Bohan",
+    "G. Thomas",
+    "H. Auradou",
+    "M. Gallagher",
+    "M. Page-Relo",
+    "S. Zegueur"
+  ],
+  "players_removed": [
+    "A. Hastings",
+    "B. Ward",
+    "C. Izuchukwu",
+    "D. Odiase",
+    "D. van der Merwe",
+    "E. Millar-Mills",
+    "G. Brown",
+    "G. Drean",
+    "G. da Re",
+    "J. Postlethwaite",
+    "N. Depoortere",
+    "N. McBeth",
+    "N. le Garrec",
+    "S. Cummings",
+    "S. Ferrari",
+    "T. Matiu"
+  ],
   "stat_changes": []
 }
