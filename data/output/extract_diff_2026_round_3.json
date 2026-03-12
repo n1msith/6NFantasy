@@ -1,32 +1,10 @@
 {
   "round": 3,
   "file": "six_nations_stats_2026_round_3.json",
-  "extraction_date": "2026-03-11",
+  "extraction_date": "2026-03-12",
   "total_players": 226,
   "has_data": true,
-  "players_added": [
-    "A. Beard",
-    "A. Hepburn",
-    "A. Izekor",
-    "A. Reed",
-    "A. Samuel",
-    "E. Ferrie",
-    "G. Thomas",
-    "H. Slade",
-    "J. Brennan",
-    "M. Grady",
-    "M. Lucu",
-    "M. Riccioni",
-    "T. Matiu"
-  ],
-  "players_removed": [
-    "A. Clark",
-    "E. Daly",
-    "G. Fisilau",
-    "K. Assiratti",
-    "M. Page-Relo",
-    "R. Sutherland",
-    "S. Gesi"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
