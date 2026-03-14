@@ -1,10 +1,16 @@
 {
   "round": 2,
   "file": "six_nations_stats_2026_round_2.json",
-  "extraction_date": "2026-03-13",
-  "total_players": 225,
+  "extraction_date": "2026-03-14",
+  "total_players": 227,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "D. Murray",
+    "H. Slade",
+    "K. Assiratti"
+  ],
+  "players_removed": [
+    "E. Iyogun"
+  ],
   "stat_changes": []
 }

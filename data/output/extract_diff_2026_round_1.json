@@ -1,10 +1,19 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-03-13",
-  "total_players": 223,
+  "extraction_date": "2026-03-14",
+  "total_players": 222,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "D. Murray",
+    "K. Assiratti",
+    "T. Rogers"
+  ],
+  "players_removed": [
+    "C. Woki",
+    "D. Cherry",
+    "E. Iyogun",
+    "G. Drean"
+  ],
   "stat_changes": []
 }

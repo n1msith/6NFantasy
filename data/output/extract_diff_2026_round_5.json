@@ -1,10 +1,21 @@
 {
   "round": 5,
   "file": "six_nations_stats_2026_round_5.json",
-  "extraction_date": "2026-03-13",
-  "total_players": 213,
+  "extraction_date": "2026-03-14",
+  "total_players": 216,
   "has_data": false,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "A. Garbisi",
+    "D. Mazza",
+    "D. Murray",
+    "G. Thomas",
+    "H. Auradou",
+    "H. Slade"
+  ],
+  "players_removed": [
+    "E. Iyogun",
+    "S. McDowall",
+    "T. Matiu"
+  ],
   "stat_changes": []
 }

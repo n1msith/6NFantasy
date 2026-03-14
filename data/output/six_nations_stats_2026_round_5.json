@@ -1,5 +1,5 @@
 {
-  "extraction_date": "2026-03-13",
+  "extraction_date": "2026-03-14",
   "round": 5,
   "players": [
     {
@@ -3459,9 +3459,9 @@
       }
     },
     {
-      "name": "G. Villiere",
-      "club": "France",
-      "position": "Back Three",
+      "name": "A. Griffin",
+      "club": "Wales",
+      "position": "Prop",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -3486,9 +3486,9 @@
       }
     },
     {
-      "name": "A. Griffin",
-      "club": "Wales",
-      "position": "Prop",
+      "name": "G. Villiere",
+      "club": "France",
+      "position": "Back Three",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -3567,9 +3567,9 @@
       }
     },
     {
-      "name": "A. Reed",
-      "club": "Scotland",
-      "position": "Back Three",
+      "name": "H. Slade",
+      "club": "England",
+      "position": "Centre",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -3810,9 +3810,63 @@
       }
     },
     {
+      "name": "A. Reed",
+      "club": "Scotland",
+      "position": "Back Three",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "M. Page-Relo",
       "club": "Italy",
       "position": "Scrum-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "G. Thomas",
+      "club": "Wales",
+      "position": "Prop",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4242,33 +4296,6 @@
       }
     },
     {
-      "name": "H. Byrne",
-      "club": "Ireland",
-      "position": "Fly-Half",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
       "name": "K. Rowe",
       "club": "Scotland",
       "position": "Back Three",
@@ -4296,8 +4323,8 @@
       }
     },
     {
-      "name": "F. Burke",
-      "club": "Scotland",
+      "name": "H. Byrne",
+      "club": "Ireland",
       "position": "Fly-Half",
       "stats": {
         "matches_played": "",
@@ -4323,9 +4350,36 @@
       }
     },
     {
-      "name": "S. McDowall",
+      "name": "H. Auradou",
+      "club": "France",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "F. Burke",
       "club": "Scotland",
-      "position": "Centre",
+      "position": "Fly-Half",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4998,6 +5052,33 @@
       }
     },
     {
+      "name": "A. Garbisi",
+      "club": "Italy",
+      "position": "Scrum-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "T. Dan",
       "club": "England",
       "position": "Hooker",
@@ -5106,9 +5187,9 @@
       }
     },
     {
-      "name": "T. Matiu",
-      "club": "France",
-      "position": "Back Row",
+      "name": "D. Mazza",
+      "club": "Italy",
+      "position": "Centre",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5565,9 +5646,9 @@
       }
     },
     {
-      "name": "E. Iyogun",
-      "club": "England",
-      "position": "Prop",
+      "name": "T. Staniforth",
+      "club": "France",
+      "position": "Second Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5592,8 +5673,8 @@
       }
     },
     {
-      "name": "T. Staniforth",
-      "club": "France",
+      "name": "D. Murray",
+      "club": "Ireland",
       "position": "Second Row",
       "stats": {
         "matches_played": "",
