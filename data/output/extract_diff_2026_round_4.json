@@ -1,21 +1,10 @@
 {
   "round": 4,
   "file": "six_nations_stats_2026_round_4.json",
-  "extraction_date": "2026-03-15",
+  "extraction_date": "2026-03-16",
   "total_players": 226,
   "has_data": true,
-  "players_added": [
-    "D. Cherry",
-    "E. Iyogun",
-    "R. Quirke",
-    "S. Varney",
-    "T. Matiu",
-    "T. Rogers"
-  ],
-  "players_removed": [
-    "G. Arfeuil",
-    "H. Arundell",
-    "M. Gallagher"
-  ],
+  "players_added": [],
+  "players_removed": [],
   "stat_changes": []
 }
