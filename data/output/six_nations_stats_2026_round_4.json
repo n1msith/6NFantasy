@@ -1,5 +1,5 @@
 {
-  "extraction_date": "2026-03-27",
+  "extraction_date": "2026-03-28",
   "round": 4,
   "players": [
     {
@@ -1542,6 +1542,33 @@
       }
     },
     {
+      "name": "S. Cummings",
+      "club": "Scotland",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": 52,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 5,
+        "meters_carried": 1,
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": 1,
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": 4,
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "16.0"
+      }
+    },
+    {
       "name": "C. Murley",
       "club": "England",
       "position": "Back Three",
@@ -2406,6 +2433,33 @@
       }
     },
     {
+      "name": "G. Brown",
+      "club": "Scotland",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": 34,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 6,
+        "meters_carried": 1,
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": 3,
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "9.0"
+      }
+    },
+    {
       "name": "A. Fusco",
       "club": "Italy",
       "position": "Scrum-Half",
@@ -2595,6 +2649,33 @@
       }
     },
     {
+      "name": "N. Depoortere",
+      "club": "France",
+      "position": "Centre",
+      "stats": {
+        "matches_played": 44,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 8,
+        "meters_carried": 1,
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "8.0"
+      }
+    },
+    {
       "name": "J. van Poortvliet",
       "club": "England",
       "position": "Scrum-Half",
@@ -2616,6 +2697,33 @@
         "kicks_retained": 2,
         "scrum_wins": "",
         "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "8.0"
+      }
+    },
+    {
+      "name": "S. Ferrari",
+      "club": "Italy",
+      "position": "Prop",
+      "stats": {
+        "matches_played": 51,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 9,
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": 1,
+        "penalties_conceded": 2,
         "yellow_cards": "",
         "red_cards": "",
         "points": "8.0"
@@ -3000,33 +3108,6 @@
       }
     },
     {
-      "name": "A. Beard",
-      "club": "Wales",
-      "position": "Second Row",
-      "stats": {
-        "matches_played": 24,
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": 1,
-        "meters_carried": 2,
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": 4,
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": "5.0"
-      }
-    },
-    {
       "name": "E. Mee",
       "club": "Wales",
       "position": "Back Three",
@@ -3047,6 +3128,33 @@
         "breakdown_steals": "",
         "kicks_retained": "",
         "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": "5.0"
+      }
+    },
+    {
+      "name": "A. Beard",
+      "club": "Wales",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": 24,
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": 1,
+        "meters_carried": 2,
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": 4,
         "penalties_conceded": "",
         "yellow_cards": "",
         "red_cards": "",
@@ -3675,6 +3783,33 @@
       }
     },
     {
+      "name": "D. van der Merwe",
+      "club": "Scotland",
+      "position": "Back Three",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "T. O'Brien",
       "club": "Ireland",
       "position": "Back Three",
@@ -3731,6 +3866,33 @@
     {
       "name": "A. Capuozzo",
       "club": "Italy",
+      "position": "Back Three",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "H. Arundell",
+      "club": "England",
       "position": "Back Three",
       "stats": {
         "matches_played": "",
@@ -3840,6 +4002,60 @@
       "name": "M. Lucu",
       "club": "France",
       "position": "Scrum-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "J. Ritchie",
+      "club": "Scotland",
+      "position": "Back Row",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "T. Plumtree",
+      "club": "Wales",
+      "position": "Back Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4161,6 +4377,33 @@
       }
     },
     {
+      "name": "A. Hastings",
+      "club": "Scotland",
+      "position": "Fly-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "P. Boudehent",
       "club": "France",
       "position": "Back Row",
@@ -4242,6 +4485,33 @@
       }
     },
     {
+      "name": "C. Casey",
+      "club": "Ireland",
+      "position": "Scrum-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "M. Bradbury",
       "club": "Scotland",
       "position": "Back Row",
@@ -4269,8 +4539,8 @@
       }
     },
     {
-      "name": "C. Casey",
-      "club": "Ireland",
+      "name": "J. Dobie",
+      "club": "Scotland",
       "position": "Scrum-Half",
       "stats": {
         "matches_played": "",
@@ -4377,9 +4647,9 @@
       }
     },
     {
-      "name": "A. Reed",
+      "name": "D. Cherry",
       "club": "Scotland",
-      "position": "Back Three",
+      "position": "Hooker",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4431,9 +4701,9 @@
       }
     },
     {
-      "name": "G. Hiddleston",
-      "club": "Scotland",
-      "position": "Hooker",
+      "name": "U. Seunes",
+      "club": "France",
+      "position": "Fly-Half",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4458,9 +4728,36 @@
       }
     },
     {
-      "name": "U. Seunes",
-      "club": "France",
-      "position": "Fly-Half",
+      "name": "C. Izuchukwu",
+      "club": "Ireland",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "G. Hiddleston",
+      "club": "Scotland",
+      "position": "Hooker",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4542,33 +4839,6 @@
       "name": "R. Hutchinson",
       "club": "Scotland",
       "position": "Centre",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "D. Cherry",
-      "club": "Scotland",
-      "position": "Hooker",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4782,9 +5052,9 @@
       }
     },
     {
-      "name": "K. Hardy",
-      "club": "Wales",
-      "position": "Scrum-Half",
+      "name": "N. Nene",
+      "club": "France",
+      "position": "Centre",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -4811,6 +5081,33 @@
     {
       "name": "S. Varney",
       "club": "Italy",
+      "position": "Scrum-Half",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "K. Hardy",
+      "club": "Wales",
       "position": "Scrum-Half",
       "stats": {
         "matches_played": "",
@@ -4917,6 +5214,33 @@
       }
     },
     {
+      "name": "R. Montagne",
+      "club": "France",
+      "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "K. Rowe",
       "club": "Scotland",
       "position": "Back Three",
@@ -4971,35 +5295,8 @@
       }
     },
     {
-      "name": "S. McDowall",
-      "club": "Scotland",
-      "position": "Centre",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "F. Burke",
-      "club": "Scotland",
+      "name": "G. da Re",
+      "club": "Italy",
       "position": "Fly-Half",
       "stats": {
         "matches_played": "",
@@ -5052,6 +5349,33 @@
       }
     },
     {
+      "name": "S. McDowall",
+      "club": "Scotland",
+      "position": "Centre",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "M. Williamson",
       "club": "Scotland",
       "position": "Second Row",
@@ -5079,9 +5403,9 @@
       }
     },
     {
-      "name": "J. Macleod",
-      "club": "Wales",
-      "position": "Back Row",
+      "name": "F. Burke",
+      "club": "Scotland",
+      "position": "Fly-Half",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5133,8 +5457,8 @@
       }
     },
     {
-      "name": "T. Matiu",
-      "club": "France",
+      "name": "J. Macleod",
+      "club": "Wales",
       "position": "Back Row",
       "stats": {
         "matches_played": "",
@@ -5187,9 +5511,9 @@
       }
     },
     {
-      "name": "G. Zilocchi",
-      "club": "Italy",
-      "position": "Prop",
+      "name": "T. Matiu",
+      "club": "France",
+      "position": "Back Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5430,6 +5754,33 @@
       }
     },
     {
+      "name": "E. Millar-Mills",
+      "club": "Scotland",
+      "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "T. Dan",
       "club": "England",
       "position": "Hooker",
@@ -5457,90 +5808,9 @@
       }
     },
     {
-      "name": "K. Assiratti",
-      "club": "Wales",
-      "position": "Prop",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
       "name": "D. Priso",
       "club": "France",
       "position": "Prop",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "R. Morgan-Williams",
-      "club": "Wales",
-      "position": "Scrum-Half",
-      "stats": {
-        "matches_played": "",
-        "man_of_match": "",
-        "tries": "",
-        "assists": "",
-        "conversions": "",
-        "penalties": "",
-        "drop_goals": "",
-        "tackles": "",
-        "meters_carried": "",
-        "defenders_beaten": "",
-        "offloads": "",
-        "kick_50_22": "",
-        "lineout_steals": "",
-        "breakdown_steals": "",
-        "kicks_retained": "",
-        "scrum_wins": "",
-        "penalties_conceded": "",
-        "yellow_cards": "",
-        "red_cards": "",
-        "points": ""
-      }
-    },
-    {
-      "name": "A. Izekor",
-      "club": "Italy",
-      "position": "Back Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5673,9 +5943,9 @@
       }
     },
     {
-      "name": "G. Hamer-Webb",
-      "club": "Wales",
-      "position": "Back Three",
+      "name": "G. Warr",
+      "club": "Scotland",
+      "position": "Scrum-Half",
       "stats": {
         "matches_played": "",
         "man_of_match": "",
@@ -5700,8 +5970,8 @@
       }
     },
     {
-      "name": "G. Warr",
-      "club": "Scotland",
+      "name": "R. Morgan-Williams",
+      "club": "Wales",
       "position": "Scrum-Half",
       "stats": {
         "matches_played": "",
@@ -5754,8 +6024,89 @@
       }
     },
     {
+      "name": "R. Davies",
+      "club": "Wales",
+      "position": "Second Row",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "K. Assiratti",
+      "club": "Wales",
+      "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
       "name": "J. Loughman",
       "club": "Ireland",
+      "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "N. McBeth",
+      "club": "Scotland",
       "position": "Prop",
       "stats": {
         "matches_played": "",
@@ -5943,8 +6294,8 @@
       }
     },
     {
-      "name": "T. Staniforth",
-      "club": "France",
+      "name": "A. Clark",
+      "club": "England",
       "position": "Second Row",
       "stats": {
         "matches_played": "",
@@ -5973,6 +6324,33 @@
       "name": "E. Iyogun",
       "club": "England",
       "position": "Prop",
+      "stats": {
+        "matches_played": "",
+        "man_of_match": "",
+        "tries": "",
+        "assists": "",
+        "conversions": "",
+        "penalties": "",
+        "drop_goals": "",
+        "tackles": "",
+        "meters_carried": "",
+        "defenders_beaten": "",
+        "offloads": "",
+        "kick_50_22": "",
+        "lineout_steals": "",
+        "breakdown_steals": "",
+        "kicks_retained": "",
+        "scrum_wins": "",
+        "penalties_conceded": "",
+        "yellow_cards": "",
+        "red_cards": "",
+        "points": ""
+      }
+    },
+    {
+      "name": "T. Staniforth",
+      "club": "France",
+      "position": "Second Row",
       "stats": {
         "matches_played": "",
         "man_of_match": "",

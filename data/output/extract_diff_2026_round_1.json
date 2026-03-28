@@ -1,10 +1,35 @@
 {
   "round": 1,
   "file": "six_nations_stats_2026_round_1.json",
-  "extraction_date": "2026-03-27",
-  "total_players": 226,
+  "extraction_date": "2026-03-28",
+  "total_players": 243,
   "has_data": true,
-  "players_added": [],
-  "players_removed": [],
+  "players_added": [
+    "A. Clark",
+    "A. Hastings",
+    "C. Izuchukwu",
+    "D. van der Merwe",
+    "E. Millar-Mills",
+    "G. Brown",
+    "G. Thomas",
+    "G. da Re",
+    "H. Slade",
+    "J. Dobie",
+    "J. Ritchie",
+    "N. Depoortere",
+    "N. McBeth",
+    "N. Nene",
+    "R. Davies",
+    "R. Montagne",
+    "R. Sutherland",
+    "S. Cummings",
+    "S. Ferrari",
+    "T. Plumtree"
+  ],
+  "players_removed": [
+    "G. Hamer-Webb",
+    "J. Kenningham",
+    "R. Morgan-Williams"
+  ],
   "stat_changes": []
 }
